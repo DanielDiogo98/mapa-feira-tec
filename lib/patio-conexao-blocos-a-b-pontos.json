@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "mapId": "patio-conexao-blocos-a-b",
+  "width": 7000,
+  "height": 9404,
+  "nodes": [
+    { "id": "patio-entrada", "label": "Entrada da escola", "kind": "entrance", "x": 782.89, "y": 8680.62, "elementId": "entrada-principal" },
+    { "id": "patio-sul", "label": "Pátio sul", "kind": "corridor", "x": 3273.82, "y": 8680.62, "elementId": "area-patio" },
+    { "id": "patio-conexao-a", "label": "Conexão com o Bloco A", "kind": "corridor", "x": 3273.82, "y": 6379.97 },
+    { "id": "patio-meio", "label": "Pátio central", "kind": "corridor", "x": 2986.24, "y": 3670 },
+    { "id": "patio-norte", "label": "Pátio norte", "kind": "corridor", "x": 2986.24, "y": 1098.94 },
+    { "id": "patio-escada-a", "label": "Escada para as salas do Bloco A", "kind": "stairs", "x": 502.58, "y": 6379.97, "elementId": "escadas-bloco-a-salas" },
+    { "id": "patio-corredor-b", "label": "Corredor para o Bloco B", "kind": "corridor", "x": 2960.09, "y": 393.06 },
+    { "id": "patio-acesso-b", "label": "Acesso ao Bloco B", "kind": "destination", "x": 6777.08, "y": 393.06, "elementId": "acesso-bloco-b" },
+    { "id": "patio-cantina", "label": "Cantina", "kind": "destination", "x": 1500, "y": 1271, "elementId": "cantina" },
+    { "id": "patio-refeitorio", "label": "Refeitório", "kind": "destination", "x": 1500, "y": 3670, "elementId": "refeitorio" }
+  ],
+  "edges": [
+    { "id": "patio-e01", "from": "patio-entrada", "to": "patio-sul" },
+    { "id": "patio-e02", "from": "patio-sul", "to": "patio-conexao-a" },
+    { "id": "patio-e03", "from": "patio-conexao-a", "to": "patio-escada-a" },
+    { "id": "patio-e04", "from": "patio-conexao-a", "to": "patio-meio" },
+    { "id": "patio-e05", "from": "patio-meio", "to": "patio-norte" },
+    { "id": "patio-e06", "from": "patio-norte", "to": "patio-corredor-b" },
+    { "id": "patio-e07", "from": "patio-corredor-b", "to": "patio-acesso-b" },
+    { "id": "patio-e08", "from": "patio-norte", "to": "patio-cantina" },
+    { "id": "patio-e09", "from": "patio-meio", "to": "patio-refeitorio" }
+  ]
+}

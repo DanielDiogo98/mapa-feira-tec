@@ -1,0 +1,15 @@
+[
+  {
+    "id": "escada-patio-bloco-a-salas",
+    "kind": "stairs",
+    "label": "Escada do pátio para as salas do Bloco A",
+    "from": {
+      "mapId": "patio-biblioteca-auditorio",
+      "elementId": "escadas-bloco-a-salas"
+    },
+    "to": {
+      "mapId": "bloco-a-salas",
+      "elementId": "patio-das-salas"
+    }
+  }
+]

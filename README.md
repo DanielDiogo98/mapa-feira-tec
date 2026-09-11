@@ -1,34 +1,54 @@
 # Mapa da Feira Tecnológica
 
-Editor visual do mapa piloto do Bloco A.
+Aplicação responsiva para visitantes encontrarem projetos e receberem uma rota visual pela escola. O projeto também contém um editor técnico, separado da experiência pública, para cadastrar pontos e conexões diretamente sobre os SVGs.
 
-## Abrir no computador
+## Executar o frontend
 
-Dentro desta pasta, execute:
+```powershell
+npm install
+npm run dev
+```
 
-    npm run dev
+Abra `http://localhost:3000`. A central dos editores fica em `http://localhost:3000/editor/mapas` durante o desenvolvimento.
 
-Abra o endereço mostrado no terminal, normalmente `http://localhost:3000`.
+## Mapas atuais
 
-## Fluxo do editor
+| Mapa | SVG | Grafo |
+|---|---|---|
+| Pátio, biblioteca e auditório | pronto | 26 pontos / 25 conexões |
+| Bloco A · Salas | pronto | 25 pontos / 24 conexões |
+| Bloco B · 1º andar | referência | aguardando revisão manual |
+| Bloco B · 2º andar | aguardando SVG | será ligado à escada do auditório |
+
+A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a passagem da biblioteca e do auditório, o elevador, os banheiros e a escada do futuro Bloco B. Rotas para salas do Bloco A aparecem em duas partes: primeiro o pátio e depois o interior do bloco.
+
+## Editor
 
 1. Escolha **Ponto** e clique nas portas, mudanças de direção e destinos.
-2. Use **Mover** para reposicionar os pontos.
+2. Use **Mover** para ajustar um ponto.
 3. Escolha **Conectar** e clique nos pontos na ordem do caminho.
-4. Abra **Testar rota**, selecione origem e destino e calcule o trajeto.
-5. Clique em **Salvar** para manter o trabalho neste navegador e em **Exportar** para guardar uma cópia JSON.
+4. Use **Testar rota** antes de exportar.
+5. Clique em **Salvar** para manter o trabalho no navegador e **Exportar** para gerar o JSON oficial.
 
-O botão **Importar** aceita somente arquivos JSON compatíveis com esta planta. Quando já existem pontos, o editor pede confirmação antes de substituí-los.
+Em builds de produção, o editor fica bloqueado por padrão. Uma implantação administrativa pode habilitá-lo com `NEXT_PUBLIC_MAP_EDITOR_ENABLED=true`. Isso ainda não substitui autenticação no servidor; mantenha essa implantação restrita à equipe.
 
-## Dados
+## API PHP e MariaDB
 
-- `public/mapas/bloco-a-salas.svg`: SVG original, preservado.
-- `public/mapas/bloco-a-salas-visual.svg`: cópia com cores de apresentação.
-- Os pontos usam as coordenadas originais de `12861 × 42113`.
-- O recorte inicial da câmera apenas esconde a margem vazia; ele não altera as coordenadas.
-- O salvamento atual usa o navegador. A integração com PHP/MariaDB será feita em uma etapa posterior.
+As instruções estão em `backend/README.md`. O backend fornece projetos, catálogo de mapas e grafos somente para leitura. As migrações ficam em `database/` e preservam as tabelas atuais.
+
+## Dados ainda pendentes
+
+- Localização de `Valid` e `ShowMe`.
+- Alunos, cursos e séries ligados a esses projetos.
+- SVG e pontos do segundo andar do Bloco B.
+- Pontos do primeiro andar do Bloco B.
+
+Esses itens aparecem como indisponíveis ou “Local a confirmar”; a aplicação não inventa rotas para eles.
 
 ## Verificação
 
-    node --test tests/graph.test.mjs
-    npm run build
+```powershell
+npm run check
+```
+
+Esse comando valida os tipos e testa cálculo de rotas, integridade dos grafos e filtros de projetos.

@@ -1,0 +1,321 @@
+{
+  "version": 1,
+  "mapId": "bloco-a-salas",
+  "width": 12861,
+  "height": 42113,
+  "nodes": [
+    {
+      "id": "point-ec1c8366-91ac-4db4-a5a7-35ac3b311f97",
+      "label": "porta sala 2 Bloco A",
+      "x": 5070.59,
+      "y": 13004.39,
+      "kind": "door",
+      "elementId": "porta-01"
+    },
+    {
+      "id": "point-5729c145-142b-4bfc-b6de-8a98dbae9288",
+      "label": "Porta sala 1 Bloco A",
+      "x": 5041.53,
+      "y": 8770.72,
+      "kind": "door"
+    },
+    {
+      "id": "point-8a3ef943-d9f6-4750-888c-277b6c9fff73",
+      "label": "Porta 3 Bloco A",
+      "x": 5105.98,
+      "y": 28390.93,
+      "kind": "door",
+      "elementId": "porta-02"
+    },
+    {
+      "id": "point-7b72dba8-cec0-4d76-ac10-8e339aa4b696",
+      "label": "Porta 4 Bloco A",
+      "x": 6746.78,
+      "y": 31518.79,
+      "kind": "door",
+      "elementId": "porta-03"
+    },
+    {
+      "id": "point-07cdedc2-68a3-44f1-9e1e-9b762a262ee6",
+      "label": "Porta 5 Bloco A",
+      "x": 5131.22,
+      "y": 32972.14,
+      "kind": "door",
+      "elementId": "porta-04"
+    },
+    {
+      "id": "point-53fe1e6d-701c-4382-aeea-5ea8376591fe",
+      "label": "Porta 6 Bloco A",
+      "x": 6772.02,
+      "y": 36036.81,
+      "kind": "door",
+      "elementId": "porta-05"
+    },
+    {
+      "id": "point-017dc9e3-365a-4c44-9020-b10de2809fd9",
+      "label": "Porta 7 Bloco A",
+      "x": 5121.33,
+      "y": 37679.73,
+      "kind": "door",
+      "elementId": "porta-06"
+    },
+    {
+      "id": "point-5b817953-4c14-45f6-8029-a1ee0e5915d4",
+      "label": "Porta 8 Bloco A",
+      "x": 6839.32,
+      "y": 37679.73,
+      "kind": "door",
+      "elementId": "porta-07"
+    },
+    {
+      "id": "point-8d84b532-9539-42ce-96c2-4c1cc684f945",
+      "label": "Entrada pelo Patio - Bloco A",
+      "x": 3541.74,
+      "y": 22092.24,
+      "kind": "entrance",
+      "elementId": "patio-das-salas"
+    },
+    {
+      "id": "point-c402a366-bc33-426c-88c1-73fdd5f3e031",
+      "label": "Meio corredor salas bloco A",
+      "x": 5965.66,
+      "y": 22092.24,
+      "kind": "corridor"
+    },
+    {
+      "id": "point-67056680-a81b-492f-a9f8-ea5cb61c9525",
+      "label": "Sala 1 Bloco A",
+      "kind": "destination",
+      "x": 2518.52,
+      "y": 10368.62,
+      "elementId": "sala-01"
+    },
+    {
+      "id": "point-26977485-f656-4022-8e6f-9862a37150f4",
+      "label": "Sala 2 Bloco A",
+      "kind": "destination",
+      "x": 2650.23,
+      "y": 14616.18,
+      "elementId": "sala-02"
+    },
+    {
+      "id": "point-e52572ae-4bac-4973-b170-cc7e9a5aebd0",
+      "label": "Sala 3 Bloco A",
+      "kind": "destination",
+      "x": 2485.59,
+      "y": 29960.06,
+      "elementId": "sala-03"
+    },
+    {
+      "id": "point-cbd0e946-8560-488e-a63c-37047b62cf75",
+      "label": "Sala 4 Bloco A",
+      "kind": "destination",
+      "x": 9663.63,
+      "y": 29960.06,
+      "elementId": "sala-04"
+    },
+    {
+      "id": "point-29219c08-d623-4539-b93f-dc5b5cb1147d",
+      "label": "Sala 5 Bloco A",
+      "kind": "destination",
+      "x": 2518.52,
+      "y": 34602.74,
+      "elementId": "sala-05"
+    },
+    {
+      "id": "point-59797ffc-2dd5-4eb5-a188-8fa0a1792083",
+      "label": "Sala 6 Bloco A",
+      "kind": "destination",
+      "x": 9466.07,
+      "y": 34701.52,
+      "elementId": "sala-06"
+    },
+    {
+      "id": "point-9a5b2e37-7289-4b47-9c1e-5c55c177e822",
+      "label": "Sala 7 Bloco A",
+      "kind": "destination",
+      "x": 2386.81,
+      "y": 39311.27,
+      "elementId": "sala-07"
+    },
+    {
+      "id": "point-0e8ad8b5-cf50-4cf7-a50d-e41f9781540b",
+      "label": "Sala 8 Bloco A",
+      "kind": "destination",
+      "x": 9531.93,
+      "y": 39245.42,
+      "elementId": "sala-08"
+    },
+    {
+      "id": "point-0f4643f7-d5e1-4440-af95-2f21d08c4796",
+      "label": "caminho Sala 3 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 28390.93
+    },
+    {
+      "id": "point-d9b120b0-b92a-47b3-b48e-5f0cf089915a",
+      "label": "caminho sala 4 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 31518.79
+    },
+    {
+      "id": "point-3fafcd7b-6df8-48c7-9c6a-10ae5417eb97",
+      "label": "caminho sala 5 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 32972.14
+    },
+    {
+      "id": "point-9bbb78f2-72dc-40c3-b921-98ea9a13c07e",
+      "label": "caminho sala 6 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 36036.81
+    },
+    {
+      "id": "point-b2f7ac9b-ef09-4844-a846-cbba62b8a728",
+      "label": "caminho sala 7 8 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 37679.73
+    },
+    {
+      "id": "point-7985ef2b-1544-4966-af38-3b0739debef3",
+      "label": "Caminho  sala 2 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 13004.39
+    },
+    {
+      "id": "point-403d8e1f-0e44-49cc-8813-81abf0f844e4",
+      "label": "Caminho sala 1 bloco A",
+      "kind": "corridor",
+      "x": 5965.66,
+      "y": 8770.72
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-9af36591-4ce9-43e8-9bdd-d7833be065dc",
+      "from": "point-8d84b532-9539-42ce-96c2-4c1cc684f945",
+      "to": "point-c402a366-bc33-426c-88c1-73fdd5f3e031"
+    },
+    {
+      "id": "edge-bfd6e1bb-56d8-4209-b8e9-571067ff379d",
+      "from": "point-ec1c8366-91ac-4db4-a5a7-35ac3b311f97",
+      "to": "point-26977485-f656-4022-8e6f-9862a37150f4"
+    },
+    {
+      "id": "edge-c531f519-95b5-47a3-ba9f-67c726f0661f",
+      "from": "point-5729c145-142b-4bfc-b6de-8a98dbae9288",
+      "to": "point-67056680-a81b-492f-a9f8-ea5cb61c9525"
+    },
+    {
+      "id": "edge-5bd51191-1bf5-4f66-95ea-070cefbb3a59",
+      "from": "point-5b817953-4c14-45f6-8029-a1ee0e5915d4",
+      "to": "point-0e8ad8b5-cf50-4cf7-a50d-e41f9781540b"
+    },
+    {
+      "id": "edge-5868c149-de1d-43e6-afea-6d5301402789",
+      "from": "point-017dc9e3-365a-4c44-9020-b10de2809fd9",
+      "to": "point-9a5b2e37-7289-4b47-9c1e-5c55c177e822"
+    },
+    {
+      "id": "edge-56135528-1f57-4c4c-84bb-d88041aa1d4f",
+      "from": "point-8a3ef943-d9f6-4750-888c-277b6c9fff73",
+      "to": "point-e52572ae-4bac-4973-b170-cc7e9a5aebd0"
+    },
+    {
+      "id": "edge-b1a91d55-79a6-453e-bd28-6d9267e6292f",
+      "from": "point-7b72dba8-cec0-4d76-ac10-8e339aa4b696",
+      "to": "point-cbd0e946-8560-488e-a63c-37047b62cf75"
+    },
+    {
+      "id": "edge-fdcc9826-5e55-4871-90f4-e58f45cfd29e",
+      "from": "point-07cdedc2-68a3-44f1-9e1e-9b762a262ee6",
+      "to": "point-29219c08-d623-4539-b93f-dc5b5cb1147d"
+    },
+    {
+      "id": "edge-9fe9ac73-d76f-43dc-a274-70314536225d",
+      "from": "point-53fe1e6d-701c-4382-aeea-5ea8376591fe",
+      "to": "point-59797ffc-2dd5-4eb5-a188-8fa0a1792083"
+    },
+    {
+      "id": "edge-26e901c1-d8fb-4a9e-bdba-884e7ffa0a43",
+      "from": "point-c402a366-bc33-426c-88c1-73fdd5f3e031",
+      "to": "point-7985ef2b-1544-4966-af38-3b0739debef3"
+    },
+    {
+      "id": "edge-4c04ef9b-8207-448e-ab01-d0347e98db61",
+      "from": "point-7985ef2b-1544-4966-af38-3b0739debef3",
+      "to": "point-ec1c8366-91ac-4db4-a5a7-35ac3b311f97"
+    },
+    {
+      "id": "edge-87cc8998-6833-4fd7-a7ae-89ae91ec9169",
+      "from": "point-7985ef2b-1544-4966-af38-3b0739debef3",
+      "to": "point-403d8e1f-0e44-49cc-8813-81abf0f844e4"
+    },
+    {
+      "id": "edge-ddf86ad9-b42e-45c6-b1a6-8415be2893f8",
+      "from": "point-403d8e1f-0e44-49cc-8813-81abf0f844e4",
+      "to": "point-5729c145-142b-4bfc-b6de-8a98dbae9288"
+    },
+    {
+      "id": "edge-d62b2a80-6809-4d06-9572-889ab55b17df",
+      "from": "point-c402a366-bc33-426c-88c1-73fdd5f3e031",
+      "to": "point-0f4643f7-d5e1-4440-af95-2f21d08c4796"
+    },
+    {
+      "id": "edge-a55d958d-4b44-4496-bbb9-b8627c748a01",
+      "from": "point-0f4643f7-d5e1-4440-af95-2f21d08c4796",
+      "to": "point-8a3ef943-d9f6-4750-888c-277b6c9fff73"
+    },
+    {
+      "id": "edge-9a1edb13-9f6d-4a3f-9202-cef554e6ac52",
+      "from": "point-0f4643f7-d5e1-4440-af95-2f21d08c4796",
+      "to": "point-d9b120b0-b92a-47b3-b48e-5f0cf089915a"
+    },
+    {
+      "id": "edge-8262e7c5-6350-48d9-9c77-916fe60917c8",
+      "from": "point-d9b120b0-b92a-47b3-b48e-5f0cf089915a",
+      "to": "point-7b72dba8-cec0-4d76-ac10-8e339aa4b696"
+    },
+    {
+      "id": "edge-b7f28234-2f2e-4514-9ef3-b7bdaaa712db",
+      "from": "point-d9b120b0-b92a-47b3-b48e-5f0cf089915a",
+      "to": "point-3fafcd7b-6df8-48c7-9c6a-10ae5417eb97"
+    },
+    {
+      "id": "edge-96007bbc-15f6-4a9c-bbc5-1f40ca34c04f",
+      "from": "point-3fafcd7b-6df8-48c7-9c6a-10ae5417eb97",
+      "to": "point-07cdedc2-68a3-44f1-9e1e-9b762a262ee6"
+    },
+    {
+      "id": "edge-943b9267-fa53-4a7c-8103-2209d571b430",
+      "from": "point-3fafcd7b-6df8-48c7-9c6a-10ae5417eb97",
+      "to": "point-9bbb78f2-72dc-40c3-b921-98ea9a13c07e"
+    },
+    {
+      "id": "edge-02d926f1-0529-4e44-99d0-614a51da6818",
+      "from": "point-9bbb78f2-72dc-40c3-b921-98ea9a13c07e",
+      "to": "point-53fe1e6d-701c-4382-aeea-5ea8376591fe"
+    },
+    {
+      "id": "edge-90c506cb-4ed8-4bed-9376-7f612643d8dd",
+      "from": "point-9bbb78f2-72dc-40c3-b921-98ea9a13c07e",
+      "to": "point-b2f7ac9b-ef09-4844-a846-cbba62b8a728"
+    },
+    {
+      "id": "edge-281cc2ef-9d84-41bb-9b9a-70c4a6c2fa02",
+      "from": "point-b2f7ac9b-ef09-4844-a846-cbba62b8a728",
+      "to": "point-017dc9e3-365a-4c44-9020-b10de2809fd9"
+    },
+    {
+      "id": "edge-531384f1-b13c-4e6b-97a3-c65456e065e7",
+      "from": "point-b2f7ac9b-ef09-4844-a846-cbba62b8a728",
+      "to": "point-5b817953-4c14-45f6-8029-a1ee0e5915d4"
+    }
+  ]
+}

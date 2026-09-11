@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "CoroaAfro",
+    "description": "Agência digital de marketing e empreendedorismo para microempreendedores afrodescendentes",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet", "Administração"],
+    "series": ["3°C", "3°A"],
+    "students": ["Felipe", "Daniel"],
+    "stand": 1,
+    "ods": [],
+    "location": {
+      "mapId": "bloco-a-salas",
+      "elementId": "sala-02",
+      "label": "Sala 2 Bloco A"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Valid",
+    "description": "Plataforma de autenticação de documentos com IA",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": []
+  },
+  {
+    "id": 3,
+    "name": "ShowMe",
+    "description": "Plataforma de democratização do acesso à cultura",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": []
+  }
+]
