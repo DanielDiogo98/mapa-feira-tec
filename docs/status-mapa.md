@@ -10,6 +10,8 @@ Atualizado em 12 de setembro de 2026.
 - Rotas em duas partes para o Bloco A e o segundo andar do Bloco B, além da rota em três partes até o primeiro andar do Bloco B.
 - Pátio integrado ao corredor da biblioteca, auditório, elevador, banheiros e escada de acesso ao Bloco B, usando a disposição real revisada no Figma.
 - Etiquetas do mapa reduzidas no celular para evitar sobreposição; a rota mantém visíveis somente os pontos relevantes.
+- Plantas públicas sem os textos convertidos em curvas pelo Figma, com cores consistentes para salas, corredores, portas, escadas, banheiros e entradas.
+- Etiquetas nítidas geradas pelo sistema e linha de rota animada para facilitar a leitura da direção.
 - Passagem guiada pelas escadas com os botões “Já subi a escada”, “Já desci a escada” e “Voltar ao pátio”.
 - Zoom, arraste, ajuste automático e seleção de destinos por toque.
 - Editor local com pontos, conexões, ângulos retos, teste de rota e exportação JSON.

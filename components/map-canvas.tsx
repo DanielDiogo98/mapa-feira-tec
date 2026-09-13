@@ -427,7 +427,9 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
                     ? 'Suba aqui · Bloco A'
                     : n.elementId === 'escada-acesso-bloco-b'
                       ? 'Escada · Bloco B'
-                      : n.label.replace(' Bloco A', '');
+                      : n.label
+                          .replace(' Bloco A', '')
+                          .replace(/ · Bloco B · [12]º andar$/, '');
               return (
                 <button
                   key={n.id}
@@ -474,7 +476,7 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
                     selected === n.id ||
                     connectionFrom === n.id) && (
                     <span
-                      className={`point-caption${presentation ? (n.x < mapView.width / 2 ? ' label-left' : ' label-right') : ''}`}
+                      className={`point-caption${presentation ? (n.x < mapView.width / 2 ? ' label-right' : ' label-left') : ''}`}
                     >
                       {presentation ? publicLabel : n.label}
                     </span>

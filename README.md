@@ -2,6 +2,8 @@
 
 Aplicação responsiva para visitantes encontrarem projetos e receberem uma rota visual pela escola. O projeto também contém um editor técnico, separado da experiência pública, para cadastrar pontos e conexões diretamente sobre os SVGs.
 
+As plantas públicas usam versões limpas dos SVGs: os textos antigos do Figma são removidos e substituídos por etiquetas nítidas do sistema. Salas, corredores, entradas, escadas, portas e banheiros seguem a mesma paleta em todos os andares.
+
 ## Executar o frontend
 
 ```powershell
