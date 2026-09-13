@@ -427,7 +427,7 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
                     ? 'Suba aqui · Bloco A'
                     : n.elementId === 'escada-acesso-bloco-b'
                       ? 'Escada · Bloco B'
-                  : n.label.replace(' Bloco A', '');
+                      : n.label.replace(' Bloco A', '');
               return (
                 <button
                   key={n.id}

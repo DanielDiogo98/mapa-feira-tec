@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "mapId": "bloco-b-andar-2",
+  "width": 7363,
+  "height": 14270,
+  "nodes": [
+    {
+      "id": "b2-escada-destino",
+      "label": "Escada para o pátio",
+      "kind": "stairs",
+      "x": 1100,
+      "y": 9427,
+      "elementId": "escadas-acesso-patio"
+    },
+    {
+      "id": "b2-escada-corredor",
+      "label": "Corredor da escada",
+      "kind": "corridor",
+      "x": 2500,
+      "y": 9427,
+      "elementId": "corredor-principal"
+    },
+    {
+      "id": "b2-corredor-topo",
+      "label": "Corredor superior",
+      "kind": "corridor",
+      "x": 2500,
+      "y": 1905
+    },
+    {
+      "id": "b2-corredor-direito-topo",
+      "label": "Corredor dos laboratórios",
+      "kind": "corridor",
+      "x": 5000,
+      "y": 1905
+    },
+    {
+      "id": "b2-corredor-tcc",
+      "label": "Corredor do Laboratório TCC",
+      "kind": "corridor",
+      "x": 5000,
+      "y": 6745
+    },
+    {
+      "id": "b2-corredor-lab-04",
+      "label": "Corredor do Laboratório 4",
+      "kind": "corridor",
+      "x": 5000,
+      "y": 9074
+    },
+    {
+      "id": "b2-corredor-banheiro-masculino",
+      "label": "Corredor do banheiro masculino",
+      "kind": "corridor",
+      "x": 2500,
+      "y": 11790
+    },
+    {
+      "id": "b2-corredor-banheiro-feminino",
+      "label": "Corredor do banheiro feminino",
+      "kind": "corridor",
+      "x": 2500,
+      "y": 13150
+    },
+    {
+      "id": "b2-corredor-maker-central",
+      "label": "Corredor inferior",
+      "kind": "corridor",
+      "x": 2500,
+      "y": 13790
+    },
+    {
+      "id": "b2-corredor-maker",
+      "label": "Corredor do Laboratório Maker",
+      "kind": "corridor",
+      "x": 5000,
+      "y": 13790
+    },
+    {
+      "id": "b2-quimica-01-porta",
+      "label": "Porta do Laboratório de Química 1",
+      "kind": "door",
+      "x": 2642,
+      "y": 1905
+    },
+    {
+      "id": "b2-quimica-01-destino",
+      "label": "Laboratório de Química 1 · Bloco B",
+      "kind": "destination",
+      "x": 2642,
+      "y": 900,
+      "elementId": "sala-lab-quimica-01"
+    },
+    {
+      "id": "b2-quimica-02-porta",
+      "label": "Porta do Laboratório de Química 2",
+      "kind": "door",
+      "x": 5581,
+      "y": 1905
+    },
+    {
+      "id": "b2-quimica-02-destino",
+      "label": "Laboratório de Química 2 · Bloco B",
+      "kind": "destination",
+      "x": 6400,
+      "y": 1905,
+      "elementId": "sala-lab-quimica-02"
+    },
+    {
+      "id": "b2-tcc-porta",
+      "label": "Porta do Laboratório TCC",
+      "kind": "door",
+      "x": 5583,
+      "y": 6745
+    },
+    {
+      "id": "b2-tcc-destino",
+      "label": "Laboratório TCC · Bloco B",
+      "kind": "destination",
+      "x": 6400,
+      "y": 5900,
+      "elementId": "sala-lab-tcc"
+    },
+    {
+      "id": "b2-lab-04-porta",
+      "label": "Porta do Laboratório 4",
+      "kind": "door",
+      "x": 5583,
+      "y": 9074
+    },
+    {
+      "id": "b2-lab-04-destino",
+      "label": "Laboratório 4 · Bloco B",
+      "kind": "destination",
+      "x": 6400,
+      "y": 8200,
+      "elementId": "sala-lab-04"
+    },
+    {
+      "id": "b2-maker-porta",
+      "label": "Porta do Laboratório Maker",
+      "kind": "door",
+      "x": 5570,
+      "y": 13790
+    },
+    {
+      "id": "b2-maker-destino",
+      "label": "Laboratório Maker · Bloco B",
+      "kind": "destination",
+      "x": 6400,
+      "y": 12000,
+      "elementId": "sala-lab-maker"
+    },
+    {
+      "id": "b2-banheiro-masculino-destino",
+      "label": "Banheiro masculino · Bloco B",
+      "kind": "destination",
+      "x": 900,
+      "y": 11790,
+      "elementId": "banheiro-masculino"
+    },
+    {
+      "id": "b2-banheiro-feminino-destino",
+      "label": "Banheiro feminino · Bloco B",
+      "kind": "destination",
+      "x": 900,
+      "y": 13150,
+      "elementId": "banheiro-feminino"
+    }
+  ],
+  "edges": [
+    { "id": "b2-e01", "from": "b2-escada-destino", "to": "b2-escada-corredor" },
+    { "id": "b2-e02", "from": "b2-corredor-topo", "to": "b2-escada-corredor" },
+    { "id": "b2-e03", "from": "b2-corredor-topo", "to": "b2-quimica-01-porta" },
+    {
+      "id": "b2-e04",
+      "from": "b2-quimica-01-porta",
+      "to": "b2-quimica-01-destino"
+    },
+    {
+      "id": "b2-e05",
+      "from": "b2-corredor-topo",
+      "to": "b2-corredor-direito-topo"
+    },
+    {
+      "id": "b2-e06",
+      "from": "b2-corredor-direito-topo",
+      "to": "b2-quimica-02-porta"
+    },
+    {
+      "id": "b2-e07",
+      "from": "b2-quimica-02-porta",
+      "to": "b2-quimica-02-destino"
+    },
+    {
+      "id": "b2-e08",
+      "from": "b2-corredor-direito-topo",
+      "to": "b2-corredor-tcc"
+    },
+    { "id": "b2-e09", "from": "b2-corredor-tcc", "to": "b2-tcc-porta" },
+    { "id": "b2-e10", "from": "b2-tcc-porta", "to": "b2-tcc-destino" },
+    { "id": "b2-e11", "from": "b2-corredor-tcc", "to": "b2-corredor-lab-04" },
+    { "id": "b2-e12", "from": "b2-corredor-lab-04", "to": "b2-lab-04-porta" },
+    { "id": "b2-e13", "from": "b2-lab-04-porta", "to": "b2-lab-04-destino" },
+    {
+      "id": "b2-e14",
+      "from": "b2-escada-corredor",
+      "to": "b2-corredor-banheiro-masculino"
+    },
+    {
+      "id": "b2-e15",
+      "from": "b2-corredor-banheiro-masculino",
+      "to": "b2-banheiro-masculino-destino"
+    },
+    {
+      "id": "b2-e16",
+      "from": "b2-corredor-banheiro-masculino",
+      "to": "b2-corredor-banheiro-feminino"
+    },
+    {
+      "id": "b2-e17",
+      "from": "b2-corredor-banheiro-feminino",
+      "to": "b2-banheiro-feminino-destino"
+    },
+    {
+      "id": "b2-e18",
+      "from": "b2-corredor-banheiro-feminino",
+      "to": "b2-corredor-maker-central"
+    },
+    {
+      "id": "b2-e19",
+      "from": "b2-corredor-maker-central",
+      "to": "b2-corredor-maker"
+    },
+    { "id": "b2-e20", "from": "b2-corredor-lab-04", "to": "b2-corredor-maker" },
+    { "id": "b2-e21", "from": "b2-corredor-maker", "to": "b2-maker-porta" },
+    { "id": "b2-e22", "from": "b2-maker-porta", "to": "b2-maker-destino" }
+  ]
+}

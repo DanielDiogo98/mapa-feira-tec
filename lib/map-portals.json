@@ -11,5 +11,18 @@
       "mapId": "bloco-a-salas",
       "elementId": "patio-das-salas"
     }
+  },
+  {
+    "id": "escada-patio-bloco-b-andar-2",
+    "kind": "stairs",
+    "label": "Escada do auditório para o segundo andar do Bloco B",
+    "from": {
+      "mapId": "patio-biblioteca-auditorio",
+      "elementId": "escada-acesso-bloco-b"
+    },
+    "to": {
+      "mapId": "bloco-b-andar-2",
+      "elementId": "escadas-acesso-patio"
+    }
   }
 ]

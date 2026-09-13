@@ -11,7 +11,8 @@ const maps = [
   {
     href: '/editor/patio',
     title: 'Pátio · Biblioteca · Auditório',
-    description: 'Entrada, corredor único, biblioteca, auditório e escada do Bloco B.',
+    description:
+      'Entrada, corredor único, biblioteca, auditório e escada do Bloco B.',
     status: 'Rede inicial pronta',
     icon: Trees,
   },
@@ -20,6 +21,14 @@ const maps = [
     title: 'Bloco B · 1º andar',
     description: 'SVG importado do Figma e pronto para receber pontos.',
     status: 'Aguardando pontos',
+    icon: Building2,
+  },
+  {
+    href: '/editor/bloco-b-andar-2',
+    title: 'Bloco B · 2º andar',
+    description:
+      'Laboratórios, banheiros e escada ligados por 22 pontos e 22 conexões.',
+    status: 'Rede pronta',
     icon: Building2,
   },
 ];

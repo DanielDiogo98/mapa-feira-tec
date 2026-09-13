@@ -20,6 +20,11 @@ export const BLOCO_B_ANDAR_1_MAP = {
   width: 7363,
   height: 9312,
 } as const;
+export const BLOCO_B_ANDAR_2_MAP = {
+  id: 'bloco-b-andar-2',
+  width: 7363,
+  height: 14270,
+} as const;
 export const KINDS = {
   corridor: 'Caminho',
   door: 'Porta',
@@ -83,6 +88,17 @@ export const PATIO_ELEMENTS = [
   'escada-acesso-bloco-b',
   'banheiro-masculino',
   'banheiro-feminino',
+] as const;
+export const BLOCO_B_ANDAR_2_ELEMENTS = [
+  'escadas-acesso-patio',
+  'banheiro-masculino',
+  'banheiro-feminino',
+  'sala-lab-quimica-01',
+  'sala-lab-quimica-02',
+  'sala-lab-tcc',
+  'sala-lab-04',
+  'sala-lab-maker',
+  'corredor-principal',
 ] as const;
 const idPattern = /^[a-zA-Z0-9_-]{1,80}$/;
 const pairKey = (a: string, b: string) => [a, b].sort().join('|');

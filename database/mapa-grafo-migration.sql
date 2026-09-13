@@ -47,8 +47,6 @@ CREATE TABLE IF NOT EXISTS `mapa_portais` (
 INSERT INTO `mapas` (`id_mapa`, `nome`, `largura`, `altura`) VALUES
 ('patio-biblioteca-auditorio', 'Pátio · Biblioteca · Auditório', 19062, 24297),
 ('bloco-a-salas', 'Bloco A · Salas', 12861, 42113),
-('bloco-b-andar-1', 'Bloco B · 1º andar', 7363, 9312)
+('bloco-b-andar-1', 'Bloco B · 1º andar', 7363, 9312),
+('bloco-b-andar-2', 'Bloco B · 2º andar', 7363, 14270)
 ON DUPLICATE KEY UPDATE `nome`=VALUES(`nome`), `largura`=VALUES(`largura`), `altura`=VALUES(`altura`);
-
--- Remove um mapa provisório que não faz parte da estrutura física confirmada.
-DELETE FROM `mapas` WHERE `id_mapa` = 'bloco-b-andar-2';
