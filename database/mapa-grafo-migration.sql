@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `mapa_portais` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `mapas` (`id_mapa`, `nome`, `largura`, `altura`) VALUES
-('patio-biblioteca-auditorio', 'Pátio · Biblioteca · Auditório', 19062, 24265),
+('patio-biblioteca-auditorio', 'Pátio · Biblioteca · Auditório', 19062, 24297),
 ('bloco-a-salas', 'Bloco A · Salas', 12861, 42113),
 ('bloco-b-andar-1', 'Bloco B · 1º andar', 7363, 9312)
 ON DUPLICATE KEY UPDATE `nome`=VALUES(`nome`), `largura`=VALUES(`largura`), `altura`=VALUES(`altura`);

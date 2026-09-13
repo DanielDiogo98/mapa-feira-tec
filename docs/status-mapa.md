@@ -1,6 +1,6 @@
 # Estado do mapa da Feira Tecnológica
 
-Atualizado em 11 de setembro de 2026.
+Atualizado em 12 de setembro de 2026.
 
 ## O que já funciona
 
@@ -8,7 +8,7 @@ Atualizado em 11 de setembro de 2026.
 - Busca por nome do projeto, descrição, aluno, curso, série, turno, stand e ODS.
 - Filtros de curso, série e turno; stand e ODS aparecem quando houver dados suficientes.
 - Rota em duas partes entre a entrada/pátio e as salas do Bloco A.
-- Pátio integrado ao corredor da biblioteca, auditório, elevador, banheiros e escada de acesso ao futuro Bloco B.
+- Pátio integrado ao corredor da biblioteca, auditório, elevador, banheiros e escada de acesso ao futuro Bloco B, usando a disposição real revisada no Figma.
 - Etiquetas do mapa reduzidas no celular para evitar sobreposição; a rota mantém visíveis somente os pontos relevantes.
 - Passagem guiada pela escada com os botões “Já subi a escada” e “Voltar ao pátio”.
 - Zoom, arraste, ajuste automático e seleção de destinos por toque.

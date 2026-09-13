@@ -13,7 +13,7 @@ export type MapDefinition = {
 export const PATIO_MAP = {
   id: 'patio-biblioteca-auditorio',
   width: 19062,
-  height: 24265,
+  height: 24297,
 } as const;
 export const BLOCO_B_ANDAR_1_MAP = {
   id: 'bloco-b-andar-1',
