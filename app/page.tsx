@@ -146,10 +146,16 @@ function transitionInfo(from: MapKey, to: MapKey) {
     (from === 'bloco-b-andar-1' && to === 'bloco-b-andar-2');
   const action = goingUp ? 'Já subi a escada' : 'Já desci a escada';
   const direction = goingUp ? 'Suba' : 'Desça';
+  const guidance =
+    from === 'bloco-b-andar-2' && to === 'patio-biblioteca-auditorio'
+      ? 'Você chegou ao 2º andar do Bloco B. Suba mais um lance da escada e confirme para abrir o caminho no pátio.'
+      : from === 'bloco-b-andar-2' && to === 'bloco-b-andar-1'
+        ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o caminho no 1º andar.'
+        : `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`;
   return {
     goingUp,
     action,
-    guidance: `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`,
+    guidance,
   };
 }
 const roomNumber = (label: string) => Number(label.match(/\d+/)?.[0] ?? 999);
@@ -669,20 +675,36 @@ export default function VisitorMap() {
           {showRoute &&
             routeReady &&
             activeMap === 'bloco-b-andar-2' &&
-            nextStage?.mapId === 'bloco-b-andar-1' && (
+            (nextStage?.mapId === 'bloco-b-andar-1' ||
+              nextStage?.mapId === 'patio-biblioteca-auditorio') && (
               <output className="floor-change-alert">
                 <span className="floor-change-icon">
-                  <MoveDown size={24} />
+                  {nextStage.mapId === 'bloco-b-andar-1' ? (
+                    <MoveDown size={24} />
+                  ) : (
+                    <MoveUp size={24} />
+                  )}
                 </span>
                 <div>
-                  <strong>A rota continua no 1º andar</strong>
+                  <strong>
+                    {nextStage.mapId === 'bloco-b-andar-1'
+                      ? 'A rota continua no 1º andar'
+                      : 'Suba mais um andar para chegar ao pátio'}
+                  </strong>
                   <p>
-                    Você chegou ao 2º andar. Desça mais um lance da escada para
-                    continuar o caminho.
+                    Você chegou ao 2º andar.{' '}
+                    {nextStage.mapId === 'bloco-b-andar-1' ? 'Desça' : 'Suba'}
+                    {' mais um lance da escada para continuar o caminho.'}
                   </p>
                 </div>
                 <button onClick={() => showStage(nextStage.mapId)}>
-                  <MoveDown size={17} /> Já desci mais um andar
+                  {nextStage.mapId === 'bloco-b-andar-1' ? (
+                    <MoveDown size={17} />
+                  ) : (
+                    <MoveUp size={17} />
+                  )}
+                  Já {nextStage.mapId === 'bloco-b-andar-1' ? 'desci' : 'subi'}{' '}
+                  mais um andar
                 </button>
               </output>
             )}
@@ -701,6 +723,7 @@ export default function VisitorMap() {
             selectedEdge=""
             connectionFrom=""
             routeEdges={activeStage?.edges ?? []}
+            routeNodeIds={activeStage?.nodes ?? []}
             onAdd={() => {}}
             onSelect={(id) => {
               const d = destinations.find(

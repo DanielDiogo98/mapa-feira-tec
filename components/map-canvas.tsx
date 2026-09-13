@@ -67,6 +67,7 @@ type Props = {
   selectedEdge: string;
   connectionFrom: string;
   routeEdges: string[];
+  routeNodeIds?: string[];
   presentation?: boolean;
   mapView?: MapView;
   onAdd: (point: Point) => void;
@@ -83,6 +84,7 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
     selectedEdge,
     connectionFrom,
     routeEdges,
+    routeNodeIds = [],
     presentation = false,
     mapView = DEFAULT_VIEW,
     onAdd,
@@ -318,10 +320,15 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
   const rendered = graph.nodes.map((n) => (draft?.id === n.id ? draft : n)),
     lookup = new Map(rendered.map((n) => [n.id, n]));
   const route = new Set(routeEdges);
+  const routeEdgeIndexes = new Map(
+    routeEdges.map((edgeId, index) => [edgeId, index]),
+  );
   const routeNodes = new Set(
-    graph.edges
-      .filter((edge) => route.has(edge.id))
-      .flatMap((edge) => [edge.from, edge.to]),
+    routeNodeIds.length
+      ? routeNodeIds
+      : graph.edges
+          .filter((edge) => route.has(edge.id))
+          .flatMap((edge) => [edge.from, edge.to]),
   );
   const visibleEdges = presentation
     ? graph.edges.filter((edge) => route.has(edge.id))
@@ -405,11 +412,14 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
                 const a = projected(from),
                   b = projected(to);
                 const path = orthogonalPath(a, b);
+                const routeIndex = routeEdgeIndexes.get(e.id);
+                const routeReversed =
+                  routeIndex !== undefined && routeNodeIds[routeIndex] === e.to;
                 return (
                   <g key={e.id}>
                     <path
                       d={path}
-                      className={`edge${route.has(e.id) ? ' route' : ''}${selectedEdge === e.id ? ' selected' : ''}`}
+                      className={`edge${route.has(e.id) ? ' route' : ''}${routeReversed ? ' route-reverse' : ''}${selectedEdge === e.id ? ' selected' : ''}`}
                     />
                     {!presentation && (
                       <path d={path} data-edge={e.id} className="edge-hit" />

@@ -90,3 +90,33 @@ test('plans both directions between the two Bloco B floors', () => {
     ['bloco-b-andar-1', 'bloco-b-andar-2'],
   );
 });
+
+test('keeps the patio route direction from Bloco B stairs to Bloco A stairs', () => {
+  const sala7 = graphs['bloco-a-salas'].nodes.find(
+    (node) => node.elementId === 'sala-07',
+  );
+  assert.ok(sala7);
+  const route = planMultiMapRoute(
+    graphs,
+    MAP_PORTALS,
+    {
+      mapId: 'bloco-b-andar-1',
+      nodeId: 'b1-banheiro-masculino-destino',
+    },
+    { mapId: 'bloco-a-salas', nodeId: sala7.id },
+  );
+  const patioStage = route?.find(
+    (stage) => stage.mapId === 'patio-biblioteca-auditorio',
+  );
+  assert.ok(patioStage);
+  const patioStart = graphs['patio-biblioteca-auditorio'].nodes.find(
+    (node) => node.id === patioStage.startNodeId,
+  );
+  const patioEnd = graphs['patio-biblioteca-auditorio'].nodes.find(
+    (node) => node.id === patioStage.endNodeId,
+  );
+  assert.equal(patioStart?.elementId, 'escada-acesso-bloco-b');
+  assert.equal(patioEnd?.elementId, 'escadas-bloco-a-salas');
+  assert.equal(patioStage.nodes[0], patioStage.startNodeId);
+  assert.equal(patioStage.nodes.at(-1), patioStage.endNodeId);
+});
