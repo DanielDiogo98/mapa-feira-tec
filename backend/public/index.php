@@ -34,7 +34,7 @@ try {
         respond(['data' => [
             ['id' => 'patio-biblioteca-auditorio', 'name' => 'Pátio · Biblioteca · Auditório', 'width' => 19062, 'height' => 24297, 'status' => 'ready'],
             ['id' => 'bloco-a-salas', 'name' => 'Bloco A · Salas', 'width' => 12861, 'height' => 42113, 'status' => 'ready'],
-            ['id' => 'bloco-b-andar-1', 'name' => 'Bloco B · 1º andar', 'width' => 7363, 'height' => 9312, 'status' => 'awaiting_graph'],
+            ['id' => 'bloco-b-andar-1', 'name' => 'Bloco B · 1º andar', 'width' => 7363, 'height' => 9312, 'status' => 'ready'],
             ['id' => 'bloco-b-andar-2', 'name' => 'Bloco B · 2º andar', 'width' => 7363, 'height' => 14270, 'status' => 'ready'],
         ]]);
     }

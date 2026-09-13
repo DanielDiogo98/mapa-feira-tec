@@ -12,6 +12,8 @@ import {
   PATIO_ELEMENTS,
   BLOCO_B_ANDAR_2_MAP,
   BLOCO_B_ANDAR_2_ELEMENTS,
+  BLOCO_B_ANDAR_1_MAP,
+  BLOCO_B_ANDAR_1_ELEMENTS,
 } from '../lib/graph.ts';
 import { MAP_PORTALS, resolvePortalPoint } from '../lib/map-portals.ts';
 const point = (id, x, y) => ({ id, label: id, x, y, kind: 'corridor' });
@@ -236,4 +238,61 @@ test('the auditorium stairs portal joins the patio to Bloco B second floor', () 
   assert.ok(entrance);
   assert.ok(shortestPath(patioGraph, entrance.id, patioStairs.id));
   assert.ok(shortestPath(blocoBGraph, blocoBStairs.id, 'b2-maker-destino'));
+});
+
+test('the Bloco B first floor is connected and every destination is reachable', () => {
+  const raw = JSON.parse(
+    readFileSync(
+      new URL('../lib/bloco-b-andar-1-pontos.json', import.meta.url),
+      'utf8',
+    ),
+  );
+  const graph = parseGraph(raw, BLOCO_B_ANDAR_1_MAP, BLOCO_B_ANDAR_1_ELEMENTS);
+  const stairs = graph.nodes.find(
+    (node) => node.elementId === 'escadas-acesso-andar-2',
+  );
+  const destinations = graph.nodes.filter(
+    (node) => node.kind === 'destination',
+  );
+  assert.equal(inspectGraph(graph).components, 1);
+  assert.equal(inspectGraph(graph).isolated.length, 0);
+  assert.ok(stairs);
+  assert.equal(destinations.length, 7);
+  for (const destination of destinations) {
+    assert.ok(shortestPath(graph, stairs.id, destination.id));
+  }
+});
+
+test('the Bloco B stairs join the second and first floors', () => {
+  const secondFloorRaw = JSON.parse(
+    readFileSync(
+      new URL('../lib/bloco-b-andar-2-pontos.json', import.meta.url),
+      'utf8',
+    ),
+  );
+  const firstFloorRaw = JSON.parse(
+    readFileSync(
+      new URL('../lib/bloco-b-andar-1-pontos.json', import.meta.url),
+      'utf8',
+    ),
+  );
+  const secondFloor = parseGraph(
+    secondFloorRaw,
+    BLOCO_B_ANDAR_2_MAP,
+    BLOCO_B_ANDAR_2_ELEMENTS,
+  );
+  const firstFloor = parseGraph(
+    firstFloorRaw,
+    BLOCO_B_ANDAR_1_MAP,
+    BLOCO_B_ANDAR_1_ELEMENTS,
+  );
+  const portal = MAP_PORTALS.find(
+    (item) => item.id === 'escada-bloco-b-andar-2-andar-1',
+  );
+  assert.ok(portal);
+  const upperStairs = resolvePortalPoint(secondFloor, portal.from);
+  const lowerStairs = resolvePortalPoint(firstFloor, portal.to);
+  assert.ok(upperStairs);
+  assert.ok(lowerStairs);
+  assert.ok(shortestPath(firstFloor, lowerStairs.id, 'b1-sala-01-destino'));
 });

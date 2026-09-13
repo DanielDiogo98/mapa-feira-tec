@@ -24,5 +24,18 @@
       "mapId": "bloco-b-andar-2",
       "elementId": "escadas-acesso-patio"
     }
+  },
+  {
+    "id": "escada-bloco-b-andar-2-andar-1",
+    "kind": "stairs",
+    "label": "Escada entre o segundo e o primeiro andar do Bloco B",
+    "from": {
+      "mapId": "bloco-b-andar-2",
+      "elementId": "escadas-acesso-patio"
+    },
+    "to": {
+      "mapId": "bloco-b-andar-1",
+      "elementId": "escadas-acesso-andar-2"
+    }
   }
 ]

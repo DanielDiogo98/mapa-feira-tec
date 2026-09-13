@@ -23,9 +23,12 @@ import {
   NativeSelectOption,
 } from '@/components/ui/native-select';
 import blocoAData from '@/lib/bloco-a-salas-pontos.json';
+import blocoB1Data from '@/lib/bloco-b-andar-1-pontos.json';
 import blocoB2Data from '@/lib/bloco-b-andar-2-pontos.json';
 import patioData from '@/lib/patio-biblioteca-auditorio-pontos.json';
 import {
+  BLOCO_B_ANDAR_1_ELEMENTS,
+  BLOCO_B_ANDAR_1_MAP,
   BLOCO_B_ANDAR_2_ELEMENTS,
   BLOCO_B_ANDAR_2_MAP,
   CONTENT,
@@ -46,6 +49,11 @@ import { MAP_PORTALS, resolvePortalPoint } from '@/lib/map-portals';
 
 const blocoA = parseGraph(blocoAData);
 const patio = parseGraph(patioData, PATIO_MAP, PATIO_ELEMENTS);
+const blocoB1 = parseGraph(
+  blocoB1Data,
+  BLOCO_B_ANDAR_1_MAP,
+  BLOCO_B_ANDAR_1_ELEMENTS,
+);
 const blocoB2 = parseGraph(
   blocoB2Data,
   BLOCO_B_ANDAR_2_MAP,
@@ -57,8 +65,11 @@ const blocoAStairsPortal = MAP_PORTALS.find(
 const blocoBStairsPortal = MAP_PORTALS.find(
   (portal) => portal.id === 'escada-patio-bloco-b-andar-2',
 )!;
+const blocoBFloorsPortal = MAP_PORTALS.find(
+  (portal) => portal.id === 'escada-bloco-b-andar-2-andar-1',
+)!;
 const seedProjects = projectsData as FairProject[];
-type MapKey = 'patio' | 'bloco-a-salas' | 'bloco-b-andar-2';
+type MapKey = 'patio' | 'bloco-a-salas' | 'bloco-b-andar-2' | 'bloco-b-andar-1';
 type Destination = {
   key: string;
   mapId: MapKey;
@@ -98,11 +109,26 @@ const views: Record<MapKey, MapView> = {
     alt: 'Segundo andar do Bloco B com laboratórios, banheiros e escadas',
     ariaLabel: 'Segundo andar do Bloco B',
   },
+  'bloco-b-andar-1': {
+    width: BLOCO_B_ANDAR_1_MAP.width,
+    height: BLOCO_B_ANDAR_1_MAP.height,
+    content: {
+      x: 0,
+      y: 0,
+      width: BLOCO_B_ANDAR_1_MAP.width,
+      height: BLOCO_B_ANDAR_1_MAP.height,
+    },
+    editorImage: '/mapas/bloco-b-andar-1-clean.svg',
+    publicImage: '/mapas/bloco-b-andar-1-clean.svg',
+    alt: 'Primeiro andar do Bloco B com salas, banheiros, saída e escadas',
+    ariaLabel: 'Primeiro andar do Bloco B',
+  },
 };
 const mapNames: Record<MapKey, string> = {
   patio: 'Pátio · Biblioteca · Auditório',
   'bloco-a-salas': 'Bloco A · Salas',
   'bloco-b-andar-2': 'Bloco B · 2º andar',
+  'bloco-b-andar-1': 'Bloco B · 1º andar',
 };
 const roomNumber = (label: string) => Number(label.match(/\d+/)?.[0] ?? 999);
 
@@ -113,6 +139,8 @@ export default function VisitorMap() {
   const blocoAEntrance = resolvePortalPoint(blocoA, blocoAStairsPortal.to);
   const patioAccessB = resolvePortalPoint(patio, blocoBStairsPortal.from);
   const blocoBEntrance = resolvePortalPoint(blocoB2, blocoBStairsPortal.to);
+  const blocoB2AccessB1 = resolvePortalPoint(blocoB2, blocoBFloorsPortal.from);
+  const blocoB1Entrance = resolvePortalPoint(blocoB1, blocoBFloorsPortal.to);
   const rooms = useMemo(
     () =>
       blocoA.nodes
@@ -122,6 +150,10 @@ export default function VisitorMap() {
   );
   const blocoBRooms = useMemo(
     () => blocoB2.nodes.filter((p) => p.kind === 'destination'),
+    [],
+  );
+  const blocoB1Rooms = useMemo(
+    () => blocoB1.nodes.filter((p) => p.kind === 'destination'),
     [],
   );
   const destinations = useMemo<Destination[]>(
@@ -157,8 +189,14 @@ export default function VisitorMap() {
         nodeId: p.id,
         label: p.label,
       })),
+      ...blocoB1Rooms.map((p) => ({
+        key: `bloco-b-andar-1:${p.id}`,
+        mapId: 'bloco-b-andar-1' as const,
+        nodeId: p.id,
+        label: p.label,
+      })),
     ],
-    [rooms, blocoBRooms],
+    [rooms, blocoBRooms, blocoB1Rooms],
   );
   const [destinationKey, setDestinationKey] = useState('');
   const [activeMap, setActiveMap] = useState<MapKey>('patio');
@@ -198,7 +236,8 @@ export default function VisitorMap() {
   const selectedPortalPoint =
     selectedDestination?.mapId === 'bloco-a-salas'
       ? patioAccessA
-      : selectedDestination?.mapId === 'bloco-b-andar-2'
+      : selectedDestination?.mapId === 'bloco-b-andar-2' ||
+          selectedDestination?.mapId === 'bloco-b-andar-1'
         ? patioAccessB
         : undefined;
   const patioLeg =
@@ -223,24 +262,50 @@ export default function VisitorMap() {
     blocoBEntrance
       ? shortestPath(blocoB2, blocoBEntrance.id, selectedDestination.nodeId)
       : null;
+  const blocoB2TransitLeg =
+    showRoute &&
+    selectedDestination?.mapId === 'bloco-b-andar-1' &&
+    blocoBEntrance &&
+    blocoB2AccessB1
+      ? shortestPath(blocoB2, blocoBEntrance.id, blocoB2AccessB1.id)
+      : null;
+  const blocoB1Leg =
+    showRoute &&
+    selectedDestination?.mapId === 'bloco-b-andar-1' &&
+    blocoB1Entrance
+      ? shortestPath(blocoB1, blocoB1Entrance.id, selectedDestination.nodeId)
+      : null;
   const floorLeg =
     selectedDestination?.mapId === 'bloco-a-salas'
       ? blocoALeg
       : selectedDestination?.mapId === 'bloco-b-andar-2'
         ? blocoB2Leg
-        : null;
+        : selectedDestination?.mapId === 'bloco-b-andar-1'
+          ? blocoB1Leg
+          : null;
   const routeReady =
     selectedDestination?.mapId === 'patio'
       ? !!patioLeg
-      : !!patioLeg && !!floorLeg;
-  const graphs = { patio, 'bloco-a-salas': blocoA, 'bloco-b-andar-2': blocoB2 };
+      : selectedDestination?.mapId === 'bloco-b-andar-1'
+        ? !!patioLeg && !!blocoB2TransitLeg && !!blocoB1Leg
+        : !!patioLeg && !!floorLeg;
+  const graphs = {
+    patio,
+    'bloco-a-salas': blocoA,
+    'bloco-b-andar-2': blocoB2,
+    'bloco-b-andar-1': blocoB1,
+  };
   const activeGraph = graphs[activeMap];
   const activeLeg =
     activeMap === 'patio'
       ? patioLeg
       : activeMap === 'bloco-a-salas'
         ? blocoALeg
-        : blocoB2Leg;
+        : activeMap === 'bloco-b-andar-2'
+          ? selectedDestination?.mapId === 'bloco-b-andar-1'
+            ? blocoB2TransitLeg
+            : blocoB2Leg
+          : blocoB1Leg;
   const guidedFloorRoute =
     showRoute && selectedDestination?.mapId !== 'patio' && routeReady;
 
@@ -279,9 +344,14 @@ export default function VisitorMap() {
   }
 
   function confirmFloorChange() {
-    if (selectedDestination && selectedDestination.mapId !== 'patio') {
-      setActiveMap(selectedDestination.mapId);
+    if (!selectedDestination || selectedDestination.mapId === 'patio') return;
+    if (selectedDestination.mapId === 'bloco-b-andar-1') {
+      setActiveMap(
+        activeMap === 'patio' ? 'bloco-b-andar-2' : 'bloco-b-andar-1',
+      );
+      return;
     }
+    setActiveMap(selectedDestination.mapId);
   }
 
   return (
@@ -462,7 +532,13 @@ export default function VisitorMap() {
                       ? activeMap === 'patio'
                         ? 'Passe pelo corredor da biblioteca e do auditório até a escada do Bloco B. Ao descer, confirme no botão acima do mapa.'
                         : 'Você está no 2º andar do Bloco B. Continue pela linha até o laboratório ou ambiente escolhido.'
-                      : 'Siga a linha vermelha a partir da entrada da escola.'}
+                      : selectedDestination.mapId === 'bloco-b-andar-1'
+                        ? activeMap === 'patio'
+                          ? 'Passe pelo corredor da biblioteca e do auditório até a escada do Bloco B. Ao descer, confirme no botão acima do mapa.'
+                          : activeMap === 'bloco-b-andar-2'
+                            ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o 1º andar.'
+                            : 'Você está no 1º andar do Bloco B. Continue pela linha até a sala ou ambiente escolhido.'
+                        : 'Siga a linha vermelha a partir da entrada da escola.'}
                 </p>
               </div>
             </output>
@@ -494,7 +570,11 @@ export default function VisitorMap() {
               <strong>{mapNames[activeMap]}</strong>
             </div>
             {showRoute && selectedDestination?.mapId !== 'patio' ? (
-              <span>Rota em 2 partes</span>
+              <span>
+                Rota em{' '}
+                {selectedDestination?.mapId === 'bloco-b-andar-1' ? 3 : 2}{' '}
+                partes
+              </span>
             ) : (
               <span>{destinations.length} locais disponíveis</span>
             )}
@@ -522,19 +602,47 @@ export default function VisitorMap() {
                       ? 'Já subi a escada'
                       : 'Já desci a escada'}
                   </button>
+                ) : activeMap === 'bloco-b-andar-2' &&
+                  selectedDestination?.mapId === 'bloco-b-andar-1' ? (
+                  <>
+                    <button className="active">
+                      <b>2</b> Bloco B · 2º
+                    </button>
+                    <button
+                      className="route-stage-action"
+                      onClick={confirmFloorChange}
+                    >
+                      <MoveDown size={16} /> Desci para o 1º andar
+                    </button>
+                  </>
                 ) : (
                   <>
                     <button className="active">
-                      <b>2</b>{' '}
+                      <b>
+                        {selectedDestination?.mapId === 'bloco-b-andar-1'
+                          ? 3
+                          : 2}
+                      </b>{' '}
                       {selectedDestination?.mapId === 'bloco-a-salas'
                         ? 'Bloco A'
-                        : 'Bloco B'}
+                        : selectedDestination?.mapId === 'bloco-b-andar-1'
+                          ? 'Bloco B · 1º'
+                          : 'Bloco B · 2º'}
                     </button>
                     <button
                       className="route-stage-back"
-                      onClick={() => setActiveMap('patio')}
+                      onClick={() =>
+                        setActiveMap(
+                          selectedDestination?.mapId === 'bloco-b-andar-1'
+                            ? 'bloco-b-andar-2'
+                            : 'patio',
+                        )
+                      }
                     >
-                      <ArrowLeft size={14} /> Voltar ao pátio
+                      <ArrowLeft size={14} />{' '}
+                      {selectedDestination?.mapId === 'bloco-b-andar-1'
+                        ? 'Voltar ao 2º andar'
+                        : 'Voltar ao pátio'}
                     </button>
                   </>
                 )}
@@ -554,6 +662,13 @@ export default function VisitorMap() {
                   disabled={showRoute}
                 >
                   <b>2</b> Bloco B
+                </button>
+                <button
+                  className={activeMap === 'bloco-b-andar-1' ? 'active' : ''}
+                  onClick={() => setActiveMap('bloco-b-andar-1')}
+                  disabled={showRoute}
+                >
+                  <b>3</b> Bloco B · 1º
                 </button>
               </>
             )}

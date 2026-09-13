@@ -1,4 +1,4 @@
--- Execute depois de importar os grafos do pátio, Bloco A e Bloco B / 2º andar.
+-- Execute depois de importar os grafos do pátio, Bloco A e os dois andares do Bloco B.
 -- Cada operação só cadastra o portal quando os dois pontos já existem.
 
 INSERT INTO `mapa_portais` (
@@ -15,6 +15,22 @@ JOIN `mapa_pontos` destino
  AND destino.`elemento_mapa_id` = 'patio-das-salas'
 WHERE origem.`mapa_id` = 'patio-biblioteca-auditorio'
   AND origem.`elemento_mapa_id` = 'escadas-bloco-a-salas'
+ON DUPLICATE KEY UPDATE `descricao` = VALUES(`descricao`);
+
+INSERT INTO `mapa_portais` (
+  `mapa_origem_id`, `ponto_origem_id`,
+  `mapa_destino_id`, `ponto_destino_id`, `descricao`
+)
+SELECT
+  'bloco-b-andar-2', origem.`id_ponto`,
+  'bloco-b-andar-1', destino.`id_ponto`,
+  'Escada entre o segundo e o primeiro andar do Bloco B'
+FROM `mapa_pontos` origem
+JOIN `mapa_pontos` destino
+  ON destino.`mapa_id` = 'bloco-b-andar-1'
+ AND destino.`elemento_mapa_id` = 'escadas-acesso-andar-2'
+WHERE origem.`mapa_id` = 'bloco-b-andar-2'
+  AND origem.`elemento_mapa_id` = 'escadas-acesso-patio'
 ON DUPLICATE KEY UPDATE `descricao` = VALUES(`descricao`);
 
 INSERT INTO `mapa_portais` (

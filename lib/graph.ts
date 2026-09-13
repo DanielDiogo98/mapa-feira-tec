@@ -20,6 +20,17 @@ export const BLOCO_B_ANDAR_1_MAP = {
   width: 7363,
   height: 9312,
 } as const;
+export const BLOCO_B_ANDAR_1_ELEMENTS = [
+  'escadas-acesso-andar-2',
+  'banheiro-masculino',
+  'banheiro-feminino',
+  'saida-quadra',
+  'sala-01',
+  'sala-02',
+  'sala-03',
+  'sala-04',
+  'corredor-principal',
+] as const;
 export const BLOCO_B_ANDAR_2_MAP = {
   id: 'bloco-b-andar-2',
   width: 7363,

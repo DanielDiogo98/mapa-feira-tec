@@ -1375,6 +1375,7 @@ select:focus-visible,
 }
 .map-step-switch {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   padding: 8px 14px;

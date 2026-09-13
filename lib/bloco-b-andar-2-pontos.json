@@ -85,7 +85,7 @@
     },
     {
       "id": "b2-quimica-01-destino",
-      "label": "Laboratório de Química 1 · Bloco B",
+      "label": "Laboratório de Química 1 · Bloco B · 2º andar",
       "kind": "destination",
       "x": 2642,
       "y": 900,
@@ -100,7 +100,7 @@
     },
     {
       "id": "b2-quimica-02-destino",
-      "label": "Laboratório de Química 2 · Bloco B",
+      "label": "Laboratório de Química 2 · Bloco B · 2º andar",
       "kind": "destination",
       "x": 6400,
       "y": 1905,
@@ -115,7 +115,7 @@
     },
     {
       "id": "b2-tcc-destino",
-      "label": "Laboratório TCC · Bloco B",
+      "label": "Laboratório TCC · Bloco B · 2º andar",
       "kind": "destination",
       "x": 6400,
       "y": 5900,
@@ -130,7 +130,7 @@
     },
     {
       "id": "b2-lab-04-destino",
-      "label": "Laboratório 4 · Bloco B",
+      "label": "Laboratório 4 · Bloco B · 2º andar",
       "kind": "destination",
       "x": 6400,
       "y": 8200,
@@ -145,7 +145,7 @@
     },
     {
       "id": "b2-maker-destino",
-      "label": "Laboratório Maker · Bloco B",
+      "label": "Laboratório Maker · Bloco B · 2º andar",
       "kind": "destination",
       "x": 6400,
       "y": 12000,
@@ -153,7 +153,7 @@
     },
     {
       "id": "b2-banheiro-masculino-destino",
-      "label": "Banheiro masculino · Bloco B",
+      "label": "Banheiro masculino · Bloco B · 2º andar",
       "kind": "destination",
       "x": 900,
       "y": 11790,
@@ -161,7 +161,7 @@
     },
     {
       "id": "b2-banheiro-feminino-destino",
-      "label": "Banheiro feminino · Bloco B",
+      "label": "Banheiro feminino · Bloco B · 2º andar",
       "kind": "destination",
       "x": 900,
       "y": 13150,

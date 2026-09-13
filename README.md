@@ -13,14 +13,14 @@ Abra `http://localhost:3000`. A central dos editores fica em `http://localhost:3
 
 ## Mapas atuais
 
-| Mapa                          | SVG        | Grafo                     |
-| ----------------------------- | ---------- | ------------------------- |
-| Pátio, biblioteca e auditório | pronto     | 26 pontos / 25 conexões   |
-| Bloco A · Salas               | pronto     | 25 pontos / 24 conexões   |
-| Bloco B · 1º andar            | referência | aguardando revisão manual |
-| Bloco B · 2º andar            | pronto     | 22 pontos / 22 conexões   |
+| Mapa                          | SVG    | Grafo                   |
+| ----------------------------- | ------ | ----------------------- |
+| Pátio, biblioteca e auditório | pronto | 26 pontos / 25 conexões |
+| Bloco A · Salas               | pronto | 25 pontos / 24 conexões |
+| Bloco B · 1º andar            | pronto | 20 pontos / 19 conexões |
+| Bloco B · 2º andar            | pronto | 22 pontos / 22 conexões |
 
-A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a passagem da biblioteca e do auditório, o elevador, os banheiros e a escada do Bloco B. Rotas para salas do Bloco A e para o segundo andar do Bloco B aparecem em duas partes: primeiro o pátio e depois o interior do bloco escolhido.
+A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a passagem da biblioteca e do auditório, o elevador, os banheiros e a escada do Bloco B. Rotas para salas do Bloco A e para o segundo andar do Bloco B aparecem em duas partes. O primeiro andar do Bloco B aparece em três etapas: pátio, segundo andar e primeiro andar.
 
 ## Editor
 
@@ -40,7 +40,6 @@ As instruções estão em `backend/README.md`. O backend fornece projetos, catá
 
 - Localização de `Valid` e `ShowMe`.
 - Alunos, cursos e séries ligados a esses projetos.
-- Pontos do primeiro andar do Bloco B.
 
 Esses itens aparecem como indisponíveis ou “Local a confirmar”; a aplicação não inventa rotas para eles.
 

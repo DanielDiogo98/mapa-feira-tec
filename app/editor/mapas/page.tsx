@@ -19,8 +19,9 @@ const maps = [
   {
     href: '/editor/bloco-b-andar-1',
     title: 'Bloco B · 1º andar',
-    description: 'SVG importado do Figma e pronto para receber pontos.',
-    status: 'Aguardando pontos',
+    description:
+      'Salas, banheiros, escada e saída ligados por 20 pontos e 19 conexões.',
+    status: 'Rede pronta',
     icon: Building2,
   },
   {
