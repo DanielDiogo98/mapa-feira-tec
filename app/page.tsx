@@ -20,6 +20,7 @@ import {
 } from '@/components/map-canvas';
 import {
   NativeSelect,
+  NativeSelectOptGroup,
   NativeSelectOption,
 } from '@/components/ui/native-select';
 import blocoAData from '@/lib/bloco-a-salas-pontos.json';
@@ -36,7 +37,6 @@ import {
   PATIO_ELEMENTS,
   PATIO_MAP,
   parseGraph,
-  shortestPath,
 } from '@/lib/graph';
 import projectsData from '@/lib/projects-data.json';
 import {
@@ -45,7 +45,8 @@ import {
   type FairProject,
 } from '@/lib/projects';
 import { loadProjects } from '@/lib/projects-client';
-import { MAP_PORTALS, resolvePortalPoint } from '@/lib/map-portals';
+import { MAP_PORTALS } from '@/lib/map-portals';
+import { planMultiMapRoute } from '@/lib/map-route';
 
 const blocoA = parseGraph(blocoAData);
 const patio = parseGraph(patioData, PATIO_MAP, PATIO_ELEMENTS);
@@ -59,17 +60,12 @@ const blocoB2 = parseGraph(
   BLOCO_B_ANDAR_2_MAP,
   BLOCO_B_ANDAR_2_ELEMENTS,
 );
-const blocoAStairsPortal = MAP_PORTALS.find(
-  (portal) => portal.id === 'escada-patio-bloco-a-salas',
-)!;
-const blocoBStairsPortal = MAP_PORTALS.find(
-  (portal) => portal.id === 'escada-patio-bloco-b-andar-2',
-)!;
-const blocoBFloorsPortal = MAP_PORTALS.find(
-  (portal) => portal.id === 'escada-bloco-b-andar-2-andar-1',
-)!;
 const seedProjects = projectsData as FairProject[];
-type MapKey = 'patio' | 'bloco-a-salas' | 'bloco-b-andar-2' | 'bloco-b-andar-1';
+type MapKey =
+  | 'patio-biblioteca-auditorio'
+  | 'bloco-a-salas'
+  | 'bloco-b-andar-2'
+  | 'bloco-b-andar-1';
 type Destination = {
   key: string;
   mapId: MapKey;
@@ -77,7 +73,7 @@ type Destination = {
   label: string;
 };
 const views: Record<MapKey, MapView> = {
-  patio: {
+  'patio-biblioteca-auditorio': {
     width: PATIO_MAP.width,
     height: PATIO_MAP.height,
     content: { x: 0, y: 0, width: PATIO_MAP.width, height: PATIO_MAP.height },
@@ -125,22 +121,42 @@ const views: Record<MapKey, MapView> = {
   },
 };
 const mapNames: Record<MapKey, string> = {
-  patio: 'Pátio · Biblioteca · Auditório',
+  'patio-biblioteca-auditorio': 'Pátio · Biblioteca · Auditório',
   'bloco-a-salas': 'Bloco A · Salas',
   'bloco-b-andar-2': 'Bloco B · 2º andar',
   'bloco-b-andar-1': 'Bloco B · 1º andar',
 };
+const mapShortNames: Record<MapKey, string> = {
+  'patio-biblioteca-auditorio': 'Pátio e auditório',
+  'bloco-a-salas': 'Bloco A',
+  'bloco-b-andar-2': 'Bloco B · 2º',
+  'bloco-b-andar-1': 'Bloco B · 1º',
+};
+const mapOrder: MapKey[] = [
+  'patio-biblioteca-auditorio',
+  'bloco-a-salas',
+  'bloco-b-andar-2',
+  'bloco-b-andar-1',
+];
+
+function transitionInfo(from: MapKey, to: MapKey) {
+  const goingUp =
+    (from === 'patio-biblioteca-auditorio' && to === 'bloco-a-salas') ||
+    (from === 'bloco-b-andar-2' && to === 'patio-biblioteca-auditorio') ||
+    (from === 'bloco-b-andar-1' && to === 'bloco-b-andar-2');
+  const action = goingUp ? 'Já subi a escada' : 'Já desci a escada';
+  const direction = goingUp ? 'Suba' : 'Desça';
+  return {
+    goingUp,
+    action,
+    guidance: `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`,
+  };
+}
 const roomNumber = (label: string) => Number(label.match(/\d+/)?.[0] ?? 999);
 
 export default function VisitorMap() {
   const canvas = useRef<CanvasHandle>(null);
   const entrance = patio.nodes.find((p) => p.elementId === 'entrada-principal');
-  const patioAccessA = resolvePortalPoint(patio, blocoAStairsPortal.from);
-  const blocoAEntrance = resolvePortalPoint(blocoA, blocoAStairsPortal.to);
-  const patioAccessB = resolvePortalPoint(patio, blocoBStairsPortal.from);
-  const blocoBEntrance = resolvePortalPoint(blocoB2, blocoBStairsPortal.to);
-  const blocoB2AccessB1 = resolvePortalPoint(blocoB2, blocoBFloorsPortal.from);
-  const blocoB1Entrance = resolvePortalPoint(blocoB1, blocoBFloorsPortal.to);
   const rooms = useMemo(
     () =>
       blocoA.nodes
@@ -172,8 +188,8 @@ export default function VisitorMap() {
           ].includes(p.elementId ?? ''),
         )
         .map((p) => ({
-          key: `patio:${p.id}`,
-          mapId: 'patio' as const,
+          key: `patio-biblioteca-auditorio:${p.id}`,
+          mapId: 'patio-biblioteca-auditorio' as const,
           nodeId: p.id,
           label: p.label,
         })),
@@ -198,8 +214,22 @@ export default function VisitorMap() {
     ],
     [rooms, blocoBRooms, blocoB1Rooms],
   );
+  const destinationGroups = useMemo(
+    () =>
+      mapOrder.map((mapId) => ({
+        mapId,
+        label: mapNames[mapId],
+        items: destinations.filter(
+          (destination) => destination.mapId === mapId,
+        ),
+      })),
+    [destinations],
+  );
+  const [originKey, setOriginKey] = useState('');
   const [destinationKey, setDestinationKey] = useState('');
-  const [activeMap, setActiveMap] = useState<MapKey>('patio');
+  const [activeMap, setActiveMap] = useState<MapKey>(
+    'patio-biblioteca-auditorio',
+  );
   const [showRoute, setShowRoute] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState<number | null>(
     null,
@@ -232,82 +262,62 @@ export default function VisitorMap() {
   const selectedDestination = destinations.find(
     (d) => d.key === destinationKey,
   );
+  const selectedOrigin = originKey
+    ? destinations.find((d) => d.key === originKey)
+    : entrance
+      ? {
+          key: 'entrada-padrao',
+          mapId: 'patio-biblioteca-auditorio' as const,
+          nodeId: entrance.id,
+          label: entrance.label || 'Entrada da escola',
+        }
+      : undefined;
   const selectedProject = projects.find((p) => p.id === selectedProjectId);
-  const selectedPortalPoint =
-    selectedDestination?.mapId === 'bloco-a-salas'
-      ? patioAccessA
-      : selectedDestination?.mapId === 'bloco-b-andar-2' ||
-          selectedDestination?.mapId === 'bloco-b-andar-1'
-        ? patioAccessB
-        : undefined;
-  const patioLeg =
-    showRoute && entrance && selectedDestination
-      ? shortestPath(
-          patio,
-          entrance.id,
-          selectedDestination.mapId === 'patio'
-            ? selectedDestination.nodeId
-            : (selectedPortalPoint?.id ?? ''),
-        )
-      : null;
-  const blocoALeg =
-    showRoute &&
-    selectedDestination?.mapId === 'bloco-a-salas' &&
-    blocoAEntrance
-      ? shortestPath(blocoA, blocoAEntrance.id, selectedDestination.nodeId)
-      : null;
-  const blocoB2Leg =
-    showRoute &&
-    selectedDestination?.mapId === 'bloco-b-andar-2' &&
-    blocoBEntrance
-      ? shortestPath(blocoB2, blocoBEntrance.id, selectedDestination.nodeId)
-      : null;
-  const blocoB2TransitLeg =
-    showRoute &&
-    selectedDestination?.mapId === 'bloco-b-andar-1' &&
-    blocoBEntrance &&
-    blocoB2AccessB1
-      ? shortestPath(blocoB2, blocoBEntrance.id, blocoB2AccessB1.id)
-      : null;
-  const blocoB1Leg =
-    showRoute &&
-    selectedDestination?.mapId === 'bloco-b-andar-1' &&
-    blocoB1Entrance
-      ? shortestPath(blocoB1, blocoB1Entrance.id, selectedDestination.nodeId)
-      : null;
-  const floorLeg =
-    selectedDestination?.mapId === 'bloco-a-salas'
-      ? blocoALeg
-      : selectedDestination?.mapId === 'bloco-b-andar-2'
-        ? blocoB2Leg
-        : selectedDestination?.mapId === 'bloco-b-andar-1'
-          ? blocoB1Leg
-          : null;
-  const routeReady =
-    selectedDestination?.mapId === 'patio'
-      ? !!patioLeg
-      : selectedDestination?.mapId === 'bloco-b-andar-1'
-        ? !!patioLeg && !!blocoB2TransitLeg && !!blocoB1Leg
-        : !!patioLeg && !!floorLeg;
   const graphs = {
-    patio,
+    'patio-biblioteca-auditorio': patio,
     'bloco-a-salas': blocoA,
     'bloco-b-andar-2': blocoB2,
     'bloco-b-andar-1': blocoB1,
   };
+  const routePlan =
+    showRoute && selectedOrigin && selectedDestination
+      ? planMultiMapRoute(
+          graphs,
+          MAP_PORTALS,
+          selectedOrigin,
+          selectedDestination,
+        )
+      : null;
+  const routeReady = !!routePlan;
+  const activeStageIndex =
+    routePlan?.findIndex((stage) => stage.mapId === activeMap) ?? -1;
+  const activeStage =
+    activeStageIndex >= 0 ? routePlan?.[activeStageIndex] : undefined;
+  const previousStage =
+    activeStageIndex > 0 ? routePlan?.[activeStageIndex - 1] : undefined;
+  const nextStage =
+    activeStageIndex >= 0 ? routePlan?.[activeStageIndex + 1] : undefined;
   const activeGraph = graphs[activeMap];
-  const activeLeg =
-    activeMap === 'patio'
-      ? patioLeg
-      : activeMap === 'bloco-a-salas'
-        ? blocoALeg
-        : activeMap === 'bloco-b-andar-2'
-          ? selectedDestination?.mapId === 'bloco-b-andar-1'
-            ? blocoB2TransitLeg
-            : blocoB2Leg
-          : blocoB1Leg;
-  const guidedFloorRoute =
-    showRoute && selectedDestination?.mapId !== 'patio' && routeReady;
+
+  function chooseOrigin(key: string) {
+    const origin = key
+      ? destinations.find((destination) => destination.key === key)
+      : entrance
+        ? {
+            mapId: 'patio-biblioteca-auditorio' as const,
+            nodeId: entrance.id,
+          }
+        : undefined;
+    setOriginKey(key);
+    setShowRoute(false);
+    if (origin) {
+      setActiveMap(origin.mapId);
+      const point = graphs[origin.mapId].nodes.find(
+        (node) => node.id === origin.nodeId,
+      );
+      if (point) queueMicrotask(() => canvas.current?.focusPoint(point));
+    }
+  }
 
   function chooseDestination(key: string) {
     const destination = destinations.find((d) => d.key === key);
@@ -328,30 +338,24 @@ export default function VisitorMap() {
     setSelectedProjectId(project.id);
     setDestinationKey(`bloco-a-salas:${room.id}`);
     setShowRoute(true);
-    setActiveMap('patio');
+    setActiveMap(selectedOrigin?.mapId ?? 'patio-biblioteca-auditorio');
   }
   function calculateRoute() {
-    if (selectedDestination && entrance) {
+    if (selectedDestination && selectedOrigin) {
       setShowRoute(true);
-      setActiveMap('patio');
+      setActiveMap(selectedOrigin.mapId);
     }
   }
   function resetRoute() {
+    setOriginKey('');
     setDestinationKey('');
     setShowRoute(false);
     setSelectedProjectId(null);
-    setActiveMap('patio');
+    setActiveMap('patio-biblioteca-auditorio');
   }
 
-  function confirmFloorChange() {
-    if (!selectedDestination || selectedDestination.mapId === 'patio') return;
-    if (selectedDestination.mapId === 'bloco-b-andar-1') {
-      setActiveMap(
-        activeMap === 'patio' ? 'bloco-b-andar-2' : 'bloco-b-andar-1',
-      );
-      return;
-    }
-    setActiveMap(selectedDestination.mapId);
+  function showStage(mapId: string) {
+    setActiveMap(mapId as MapKey);
   }
 
   return (
@@ -485,31 +489,80 @@ export default function VisitorMap() {
           <div className="choice-divider">
             <span>OU ESCOLHA UM LOCAL</span>
           </div>
-          <div className="origin-card">
-            <span className="origin-icon">
-              <Navigation size={18} />
-            </span>
-            <div>
-              <small>PONTO DE PARTIDA</small>
-              <strong>{entrance?.label ?? 'Entrada da escola'}</strong>
+          <div className="route-picker">
+            <div className="route-field origin-field">
+              <div className="route-field-heading">
+                <span className="route-field-icon">
+                  <Navigation size={17} />
+                </span>
+                <label htmlFor="visitor-origin">De onde você está?</label>
+                <small>OPCIONAL</small>
+              </div>
+              <NativeSelect
+                id="visitor-origin"
+                value={originKey}
+                onChange={(e) => chooseOrigin(e.target.value)}
+                aria-describedby="origin-hint"
+              >
+                <NativeSelectOption value="">
+                  Entrada da escola (padrão)
+                </NativeSelectOption>
+                {destinationGroups.map((group) => (
+                  <NativeSelectOptGroup key={group.mapId} label={group.label}>
+                    {group.items.map((destination) => (
+                      <NativeSelectOption
+                        key={destination.key}
+                        value={destination.key}
+                      >
+                        {destination.label}
+                      </NativeSelectOption>
+                    ))}
+                  </NativeSelectOptGroup>
+                ))}
+              </NativeSelect>
+              <p id="origin-hint">Se não escolher, a rota começa na entrada.</p>
+            </div>
+            <div className="route-picker-connector" aria-hidden="true">
+              <span />
+              <MoveDown size={14} />
+              <span />
+            </div>
+            <div className="route-field destination-field">
+              <div className="route-field-heading">
+                <span className="route-field-icon">
+                  <MapPin size={17} />
+                </span>
+                <label htmlFor="visitor-destination">
+                  Para onde você quer ir?
+                </label>
+                <small>DESTINO</small>
+              </div>
+              <NativeSelect
+                id="visitor-destination"
+                value={destinationKey}
+                onChange={(e) => chooseDestination(e.target.value)}
+              >
+                <NativeSelectOption value="">
+                  Selecione um local
+                </NativeSelectOption>
+                {destinationGroups.map((group) => (
+                  <NativeSelectOptGroup key={group.mapId} label={group.label}>
+                    {group.items.map((destination) => (
+                      <NativeSelectOption
+                        key={destination.key}
+                        value={destination.key}
+                      >
+                        {destination.label}
+                      </NativeSelectOption>
+                    ))}
+                  </NativeSelectOptGroup>
+                ))}
+              </NativeSelect>
             </div>
           </div>
-          <label htmlFor="visitor-destination">Para onde você quer ir?</label>
-          <NativeSelect
-            id="visitor-destination"
-            value={destinationKey}
-            onChange={(e) => chooseDestination(e.target.value)}
-          >
-            <NativeSelectOption value="">Selecione um local</NativeSelectOption>
-            {destinations.map((d) => (
-              <NativeSelectOption key={d.key} value={d.key}>
-                {d.label}
-              </NativeSelectOption>
-            ))}
-          </NativeSelect>
           <button
             className="btn primary visitor-route-button"
-            disabled={!selectedDestination || !entrance}
+            disabled={!selectedDestination || !selectedOrigin}
             onClick={calculateRoute}
           >
             <Route size={18} /> Mostrar caminho
@@ -524,21 +577,10 @@ export default function VisitorMap() {
                   Rota para {selectedProject?.name ?? selectedDestination.label}
                 </strong>
                 <p>
-                  {selectedDestination.mapId === 'bloco-a-salas'
-                    ? activeMap === 'patio'
-                      ? 'Siga a linha até a escada do Bloco A. Ao subir, confirme no botão acima do mapa.'
-                      : 'Você está nas salas do Bloco A. Continue pela linha até o destino.'
-                    : selectedDestination.mapId === 'bloco-b-andar-2'
-                      ? activeMap === 'patio'
-                        ? 'Passe pelo corredor da biblioteca e do auditório até a escada do Bloco B. Ao descer, confirme no botão acima do mapa.'
-                        : 'Você está no 2º andar do Bloco B. Continue pela linha até o laboratório ou ambiente escolhido.'
-                      : selectedDestination.mapId === 'bloco-b-andar-1'
-                        ? activeMap === 'patio'
-                          ? 'Passe pelo corredor da biblioteca e do auditório até a escada do Bloco B. Ao descer, confirme no botão acima do mapa.'
-                          : activeMap === 'bloco-b-andar-2'
-                            ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o 1º andar.'
-                            : 'Você está no 1º andar do Bloco B. Continue pela linha até a sala ou ambiente escolhido.'
-                        : 'Siga a linha vermelha a partir da entrada da escola.'}
+                  {nextStage
+                    ? transitionInfo(activeMap, nextStage.mapId as MapKey)
+                        .guidance
+                    : `Você está em ${mapNames[activeMap]}. Continue pela linha vermelha até o destino.`}
                 </p>
               </div>
             </output>
@@ -547,11 +589,11 @@ export default function VisitorMap() {
             <div className="visitor-result unavailable" role="alert">
               <div>
                 <strong>Rota indisponível</strong>
-                <p>Esse destino ainda não está conectado à entrada.</p>
+                <p>Esses dois locais ainda não possuem uma conexão completa.</p>
               </div>
             </div>
           )}
-          {(destinationKey || showRoute) && (
+          {(originKey || destinationKey || showRoute) && (
             <button className="reset-route" onClick={resetRoute}>
               <RotateCcw size={15} /> Limpar escolha
             </button>
@@ -569,110 +611,81 @@ export default function VisitorMap() {
               <span className="live-dot" />
               <strong>{mapNames[activeMap]}</strong>
             </div>
-            {showRoute && selectedDestination?.mapId !== 'patio' ? (
+            {showRoute && routePlan ? (
               <span>
-                Rota em{' '}
-                {selectedDestination?.mapId === 'bloco-b-andar-1' ? 3 : 2}{' '}
-                partes
+                Trecho {activeStageIndex + 1} de {routePlan.length}
               </span>
             ) : (
               <span>{destinations.length} locais disponíveis</span>
             )}
           </div>
           <div className="map-step-switch" aria-label="Trechos do mapa">
-            <button
-              className={activeMap === 'patio' ? 'active' : ''}
-              onClick={() => setActiveMap('patio')}
-            >
-              <b>1</b> Pátio e auditório
-            </button>
-            {guidedFloorRoute ? (
+            {showRoute && routeReady && routePlan ? (
               <>
-                {activeMap === 'patio' ? (
+                {previousStage && (
+                  <button
+                    className="route-stage-back"
+                    onClick={() => showStage(previousStage.mapId)}
+                  >
+                    <ArrowLeft size={14} /> Voltar para{' '}
+                    {mapShortNames[previousStage.mapId as MapKey]}
+                  </button>
+                )}
+                <button className="active" aria-current="step">
+                  <b>{activeStageIndex + 1}</b> {mapShortNames[activeMap]}
+                </button>
+                {nextStage && (
                   <button
                     className="route-stage-action"
-                    onClick={confirmFloorChange}
+                    onClick={() => showStage(nextStage.mapId)}
                   >
-                    {selectedDestination?.mapId === 'bloco-a-salas' ? (
+                    {transitionInfo(activeMap, nextStage.mapId as MapKey)
+                      .goingUp ? (
                       <MoveUp size={16} />
                     ) : (
                       <MoveDown size={16} />
                     )}
-                    {selectedDestination?.mapId === 'bloco-a-salas'
-                      ? 'Já subi a escada'
-                      : 'Já desci a escada'}
+                    {activeMap === 'bloco-b-andar-2' &&
+                    nextStage.mapId === 'bloco-b-andar-1'
+                      ? 'Desci mais um andar'
+                      : transitionInfo(activeMap, nextStage.mapId as MapKey)
+                          .action}
                   </button>
-                ) : activeMap === 'bloco-b-andar-2' &&
-                  selectedDestination?.mapId === 'bloco-b-andar-1' ? (
-                  <>
-                    <button className="active">
-                      <b>2</b> Bloco B · 2º
-                    </button>
-                    <button
-                      className="route-stage-action"
-                      onClick={confirmFloorChange}
-                    >
-                      <MoveDown size={16} /> Desci para o 1º andar
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <button className="active">
-                      <b>
-                        {selectedDestination?.mapId === 'bloco-b-andar-1'
-                          ? 3
-                          : 2}
-                      </b>{' '}
-                      {selectedDestination?.mapId === 'bloco-a-salas'
-                        ? 'Bloco A'
-                        : selectedDestination?.mapId === 'bloco-b-andar-1'
-                          ? 'Bloco B · 1º'
-                          : 'Bloco B · 2º'}
-                    </button>
-                    <button
-                      className="route-stage-back"
-                      onClick={() =>
-                        setActiveMap(
-                          selectedDestination?.mapId === 'bloco-b-andar-1'
-                            ? 'bloco-b-andar-2'
-                            : 'patio',
-                        )
-                      }
-                    >
-                      <ArrowLeft size={14} />{' '}
-                      {selectedDestination?.mapId === 'bloco-b-andar-1'
-                        ? 'Voltar ao 2º andar'
-                        : 'Voltar ao pátio'}
-                    </button>
-                  </>
                 )}
               </>
             ) : (
-              <>
+              mapOrder.map((mapId, index) => (
                 <button
-                  className={activeMap === 'bloco-a-salas' ? 'active' : ''}
-                  onClick={() => setActiveMap('bloco-a-salas')}
+                  key={mapId}
+                  className={activeMap === mapId ? 'active' : ''}
+                  onClick={() => setActiveMap(mapId)}
                   disabled={showRoute}
                 >
-                  <b>2</b> Bloco A
+                  <b>{index + 1}</b> {mapShortNames[mapId]}
                 </button>
-                <button
-                  className={activeMap === 'bloco-b-andar-2' ? 'active' : ''}
-                  onClick={() => setActiveMap('bloco-b-andar-2')}
-                  disabled={showRoute}
-                >
-                  <b>2</b> Bloco B
-                </button>
-                <button
-                  className={activeMap === 'bloco-b-andar-1' ? 'active' : ''}
-                  onClick={() => setActiveMap('bloco-b-andar-1')}
-                  disabled={showRoute}
-                >
-                  <b>3</b> Bloco B · 1º
-                </button>
-              </>
+              ))
             )}
           </div>
+          {showRoute &&
+            routeReady &&
+            activeMap === 'bloco-b-andar-2' &&
+            nextStage?.mapId === 'bloco-b-andar-1' && (
+              <output className="floor-change-alert">
+                <span className="floor-change-icon">
+                  <MoveDown size={24} />
+                </span>
+                <div>
+                  <strong>A rota continua no 1º andar</strong>
+                  <p>
+                    Você chegou ao 2º andar. Desça mais um lance da escada para
+                    continuar o caminho.
+                  </p>
+                </div>
+                <button onClick={() => showStage(nextStage.mapId)}>
+                  <MoveDown size={17} /> Já desci mais um andar
+                </button>
+              </output>
+            )}
           <MapCanvas
             key={activeMap}
             ref={canvas}
@@ -687,7 +700,7 @@ export default function VisitorMap() {
             }
             selectedEdge=""
             connectionFrom=""
-            routeEdges={activeLeg?.edges ?? []}
+            routeEdges={activeStage?.edges ?? []}
             onAdd={() => {}}
             onSelect={(id) => {
               const d = destinations.find(
