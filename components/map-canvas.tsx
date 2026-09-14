@@ -64,6 +64,7 @@ type Props = {
   graph: Graph;
   mode: Mode;
   selected: string;
+  origin?: string;
   selectedEdge: string;
   connectionFrom: string;
   routeEdges: string[];
@@ -81,6 +82,7 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
     graph,
     mode,
     selected,
+    origin = '',
     selectedEdge,
     connectionFrom,
     routeEdges,
@@ -430,7 +432,7 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
             </svg>
             {visibleNodes.map((n, i) => {
               const p = projected(n);
-              const publicLabel =
+              const locationLabel =
                 n.kind === 'entrance'
                   ? 'Entrada / Pátio'
                   : n.elementId === 'escadas-bloco-a-salas'
@@ -440,14 +442,21 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
                       : n.label
                           .replace(' Bloco A', '')
                           .replace(/ · Bloco B · [12]º andar$/, '');
+              const isRouteOrigin = presentation && origin === n.id;
+              const isRouteDestination = presentation && selected === n.id;
+              const publicLabel = isRouteOrigin
+                ? `Você está aqui · ${locationLabel}`
+                : isRouteDestination
+                  ? `Destino · ${locationLabel}`
+                  : locationLabel;
               return (
                 <button
                   key={n.id}
                   data-point={n.id}
-                  className={`map-point kind-${n.kind}${selected === n.id ? ' selected' : ''}${routeNodes.has(n.id) ? ' route-node' : ''}${connectionFrom === n.id ? ' linking' : ''}`}
+                  className={`map-point kind-${n.kind}${selected === n.id ? ' selected route-destination' : ''}${origin === n.id ? ' route-origin' : ''}${routeNodes.has(n.id) ? ' route-node' : ''}${connectionFrom === n.id ? ' linking' : ''}`}
                   style={{ left: p.x, top: p.y }}
-                  aria-label={`${n.label}, ponto ${i + 1}`}
-                  title={n.label}
+                  aria-label={`${presentation ? publicLabel : n.label}, ponto ${i + 1}`}
+                  title={presentation ? publicLabel : n.label}
                   onClick={(e) => {
                     if (e.detail === 0) onSelect(n.id);
                   }}

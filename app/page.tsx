@@ -72,6 +72,11 @@ type Destination = {
   nodeId: string;
   label: string;
 };
+type DestinationGroup = {
+  mapId: MapKey;
+  label: string;
+  items: Destination[];
+};
 const views: Record<MapKey, MapView> = {
   'patio-biblioteca-auditorio': {
     width: PATIO_MAP.width,
@@ -159,6 +164,31 @@ function transitionInfo(from: MapKey, to: MapKey) {
   };
 }
 const roomNumber = (label: string) => Number(label.match(/\d+/)?.[0] ?? 999);
+const normalizeLocation = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('pt-BR')
+    .trim();
+
+function filterLocationGroups(
+  groups: DestinationGroup[],
+  query: string,
+  selectedKey: string,
+) {
+  const term = normalizeLocation(query);
+  if (!term) return groups;
+  return groups
+    .map((group) => ({
+      ...group,
+      items: group.items.filter(
+        (item) =>
+          item.key === selectedKey ||
+          normalizeLocation(item.label).includes(term),
+      ),
+    }))
+    .filter((group) => group.items.length);
+}
 
 export default function VisitorMap() {
   const canvas = useRef<CanvasHandle>(null);
@@ -220,7 +250,7 @@ export default function VisitorMap() {
     ],
     [rooms, blocoBRooms, blocoB1Rooms],
   );
-  const destinationGroups = useMemo(
+  const destinationGroups = useMemo<DestinationGroup[]>(
     () =>
       mapOrder.map((mapId) => ({
         mapId,
@@ -233,6 +263,8 @@ export default function VisitorMap() {
   );
   const [originKey, setOriginKey] = useState('');
   const [destinationKey, setDestinationKey] = useState('');
+  const [originSearch, setOriginSearch] = useState('');
+  const [destinationSearch, setDestinationSearch] = useState('');
   const [activeMap, setActiveMap] = useState<MapKey>(
     'patio-biblioteca-auditorio',
   );
@@ -279,6 +311,16 @@ export default function VisitorMap() {
         }
       : undefined;
   const selectedProject = projects.find((p) => p.id === selectedProjectId);
+  const originGroups = filterLocationGroups(
+    destinationGroups,
+    originSearch,
+    originKey,
+  );
+  const visibleDestinationGroups = filterLocationGroups(
+    destinationGroups,
+    destinationSearch,
+    destinationKey,
+  );
   const graphs = {
     'patio-biblioteca-auditorio': patio,
     'bloco-a-salas': blocoA,
@@ -315,6 +357,7 @@ export default function VisitorMap() {
           }
         : undefined;
     setOriginKey(key);
+    setOriginSearch('');
     setShowRoute(false);
     if (origin) {
       setActiveMap(origin.mapId);
@@ -329,6 +372,7 @@ export default function VisitorMap() {
     const destination = destinations.find((d) => d.key === key);
     setSelectedProjectId(null);
     setDestinationKey(key);
+    setDestinationSearch('');
     setShowRoute(false);
     if (destination) {
       setActiveMap(destination.mapId);
@@ -355,6 +399,8 @@ export default function VisitorMap() {
   function resetRoute() {
     setOriginKey('');
     setDestinationKey('');
+    setOriginSearch('');
+    setDestinationSearch('');
     setShowRoute(false);
     setSelectedProjectId(null);
     setActiveMap('patio-biblioteca-auditorio');
@@ -504,6 +550,16 @@ export default function VisitorMap() {
                 <label htmlFor="visitor-origin">De onde você está?</label>
                 <small>OPCIONAL</small>
               </div>
+              <div className="location-search">
+                <Search size={15} />
+                <input
+                  type="search"
+                  value={originSearch}
+                  onChange={(event) => setOriginSearch(event.target.value)}
+                  placeholder="Buscar local de partida"
+                  aria-label="Buscar local de partida"
+                />
+              </div>
               <NativeSelect
                 id="visitor-origin"
                 value={originKey}
@@ -513,7 +569,7 @@ export default function VisitorMap() {
                 <NativeSelectOption value="">
                   Entrada da escola (padrão)
                 </NativeSelectOption>
-                {destinationGroups.map((group) => (
+                {originGroups.map((group) => (
                   <NativeSelectOptGroup key={group.mapId} label={group.label}>
                     {group.items.map((destination) => (
                       <NativeSelectOption
@@ -525,6 +581,11 @@ export default function VisitorMap() {
                     ))}
                   </NativeSelectOptGroup>
                 ))}
+                {originSearch && !originGroups.length && (
+                  <NativeSelectOption value="sem-resultado" disabled>
+                    Nenhum local encontrado
+                  </NativeSelectOption>
+                )}
               </NativeSelect>
               <p id="origin-hint">Se não escolher, a rota começa na entrada.</p>
             </div>
@@ -543,6 +604,16 @@ export default function VisitorMap() {
                 </label>
                 <small>DESTINO</small>
               </div>
+              <div className="location-search">
+                <Search size={15} />
+                <input
+                  type="search"
+                  value={destinationSearch}
+                  onChange={(event) => setDestinationSearch(event.target.value)}
+                  placeholder="Buscar destino"
+                  aria-label="Buscar destino"
+                />
+              </div>
               <NativeSelect
                 id="visitor-destination"
                 value={destinationKey}
@@ -551,7 +622,7 @@ export default function VisitorMap() {
                 <NativeSelectOption value="">
                   Selecione um local
                 </NativeSelectOption>
-                {destinationGroups.map((group) => (
+                {visibleDestinationGroups.map((group) => (
                   <NativeSelectOptGroup key={group.mapId} label={group.label}>
                     {group.items.map((destination) => (
                       <NativeSelectOption
@@ -563,6 +634,11 @@ export default function VisitorMap() {
                     ))}
                   </NativeSelectOptGroup>
                 ))}
+                {destinationSearch && !visibleDestinationGroups.length && (
+                  <NativeSelectOption value="sem-resultado" disabled>
+                    Nenhum local encontrado
+                  </NativeSelectOption>
+                )}
               </NativeSelect>
             </div>
           </div>
@@ -588,6 +664,18 @@ export default function VisitorMap() {
                         .guidance
                     : `Você está em ${mapNames[activeMap]}. Continue pela linha vermelha até o destino.`}
                 </p>
+                {routePlan && routePlan.length > 1 && (
+                  <div className="route-summary" aria-label="Resumo da rota">
+                    {routePlan.map((stage, index) => (
+                      <span
+                        key={`${stage.mapId}-${index}`}
+                        className={stage.mapId === activeMap ? 'current' : ''}
+                      >
+                        {mapShortNames[stage.mapId as MapKey]}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </output>
           )}
@@ -618,9 +706,7 @@ export default function VisitorMap() {
               <strong>{mapNames[activeMap]}</strong>
             </div>
             {showRoute && routePlan ? (
-              <span>
-                Trecho {activeStageIndex + 1} de {routePlan.length}
-              </span>
+              <span>Rota ativa</span>
             ) : (
               <span>{destinations.length} locais disponíveis</span>
             )}
@@ -715,6 +801,7 @@ export default function VisitorMap() {
             mapView={views[activeMap]}
             mode="move"
             presentation
+            origin={showRoute ? (activeStage?.startNodeId ?? '') : ''}
             selected={
               selectedDestination?.mapId === activeMap
                 ? selectedDestination.nodeId
@@ -737,7 +824,7 @@ export default function VisitorMap() {
           />
           <footer className="visitor-map-footer">
             <span>
-              <i className="legend-entry" /> Entrada
+              <i className="legend-entry" /> Partida
             </span>
             <span>
               <i className="legend-room" /> Destinos

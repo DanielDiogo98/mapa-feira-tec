@@ -120,3 +120,37 @@ test('keeps the patio route direction from Bloco B stairs to Bloco A stairs', ()
   assert.equal(patioStage.nodes[0], patioStage.startNodeId);
   assert.equal(patioStage.nodes.at(-1), patioStage.endNodeId);
 });
+
+test(
+  'every public location can route to every other public location',
+  { timeout: 20000 },
+  () => {
+    const locations = Object.values(graphs).flatMap((graph) =>
+      graph.nodes
+        .filter(
+          (node) =>
+            node.kind === 'destination' ||
+            node.kind === 'entrance' ||
+            node.elementId === 'escada-acesso-bloco-b',
+        )
+        .map((node) => ({
+          mapId: graph.mapId,
+          nodeId: node.id,
+          label: node.label,
+        })),
+    );
+    for (const origin of locations) {
+      for (const destination of locations) {
+        if (
+          origin.mapId === destination.mapId &&
+          origin.nodeId === destination.nodeId
+        )
+          continue;
+        assert.ok(
+          planMultiMapRoute(graphs, MAP_PORTALS, origin, destination),
+          `Sem rota de ${origin.label} para ${destination.label}`,
+        );
+      }
+    }
+  },
+);

@@ -1344,6 +1344,35 @@ select:focus-visible,
   font-weight: 800;
   letter-spacing: 0.55px;
 }
+.location-search {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 7px;
+  padding: 0 10px;
+  border: 1px solid #d9e5ed;
+  border-radius: 10px;
+  background: #f7fafc;
+  color: #6e8799;
+}
+.location-search:focus-within {
+  border-color: #6ba8df;
+  background: #fff;
+  box-shadow: 0 0 0 3px #2682ed1c;
+}
+.location-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #244861;
+  font-size: 12px;
+}
+.location-search input::placeholder {
+  color: #8498a7;
+}
 .destination-field .route-field-heading small {
   background: #eaf2fb;
   color: #47708f;
@@ -1428,6 +1457,42 @@ select:focus-visible,
   line-height: 1.45;
   color: #557568;
   margin: 3px 0 0;
+}
+.route-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 11px;
+  padding-top: 10px;
+  border-top: 1px solid #cee8db;
+}
+.route-summary span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #fff;
+  color: #587365;
+  font-size: 10px;
+  font-weight: 750;
+  box-shadow: inset 0 0 0 1px #cfe2d8;
+}
+.route-summary span:not(:last-child)::after {
+  content: '›';
+  margin-left: 3px;
+  color: #87a496;
+  font-size: 14px;
+  line-height: 0;
+}
+.route-summary span.current {
+  background: #178d65;
+  color: #fff;
+  box-shadow: none;
+}
+.route-summary span.current::after {
+  color: #d7f3e8;
 }
 .visitor-result.unavailable {
   border-color: #efd7a8;
@@ -1675,6 +1740,39 @@ select:focus-visible,
 .public-map .map-point.kind-stairs {
   background: linear-gradient(135deg, #ffb83e, #d97813);
 }
+.public-map .map-point.route-origin {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #24bd8c, #08785b);
+  box-shadow:
+    0 0 0 7px #18a4772e,
+    0 5px 13px #173a5655;
+  z-index: 7;
+}
+.public-map .map-point.route-destination {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #ff5877, #d9214c);
+  box-shadow:
+    0 0 0 7px #ee31582e,
+    0 5px 13px #59203455;
+  z-index: 8;
+}
+.public-map .map-point.route-origin .point-caption {
+  border-color: #72c7aa;
+  color: #086247;
+}
+.public-map .map-point.route-destination .point-caption {
+  border-color: #f29aae;
+  color: #a7173a;
+}
+.public-map .map-point.route-origin .point-caption,
+.public-map .map-point.route-destination .point-caption {
+  width: max-content;
+  max-width: 180px;
+  white-space: normal;
+  line-height: 1.25;
+}
 .public-map .point-number {
   display: none;
 }
@@ -1807,6 +1905,7 @@ select:focus-visible,
     display: none;
   }
   .public-map .map-point.kind-entrance:not(.route-node) .point-caption,
+  .public-map .map-point.route-origin .point-caption,
   .public-map .map-point.selected .point-caption,
   .public-map .map-point.kind-stairs.route-node .point-caption {
     display: block;
