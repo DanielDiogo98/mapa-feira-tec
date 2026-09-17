@@ -43,11 +43,11 @@
     <rect x="5480" y="1120" width="250" height="430" rx="24"/>
     <rect x="5480" y="2400" width="250" height="430" rx="24"/>
   </g>
-  <path d="M4863 12528H7600V11500H17300V9500" stroke="#C4DAE8" stroke-width="1050" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M4863 12528H7600V11500H17300V9500" stroke="#86A5B9" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+  <path d="M4863 12528H17300" stroke="#C4DAE8" stroke-width="1050" stroke-linecap="butt"/>
+  <path d="M4863 12528H17300" stroke="#86A5B9" stroke-width="28" stroke-linecap="butt" opacity="0.78"/>
   <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
-    <rect x="9950" y="10610" width="5100" height="570" rx="285" fill="#FFFFFF" stroke="#B8CEDC" stroke-width="20"/>
-    <text x="12500" y="10978" font-size="225" font-weight="800" fill="#36586E" letter-spacing="10">PASSAGEM COBERTA · CONEXÃO DOS BLOCOS</text>
+    <rect x="9950" y="11690" width="5100" height="570" rx="285" fill="#FFFFFF" stroke="#B8CEDC" stroke-width="20"/>
+    <text x="12500" y="12058" font-size="225" font-weight="800" fill="#36586E" letter-spacing="10">PASSAGEM COBERTA · CONEXÃO DOS BLOCOS</text>
   </g>
   <rect x="16550" y="1280" width="1600" height="8420" rx="70" fill="#DCEAF3" stroke="#9CB4C4" stroke-width="24"/>
   <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
