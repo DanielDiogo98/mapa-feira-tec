@@ -34,7 +34,7 @@ export const BLOCO_B_ANDAR_1_ELEMENTS = [
 export const BLOCO_B_ANDAR_2_MAP = {
   id: 'bloco-b-andar-2',
   width: 20498,
-  height: 26472,
+  height: 14433,
 } as const;
 export const KINDS = {
   corridor: 'Caminho',

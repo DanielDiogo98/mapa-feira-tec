@@ -1,7 +1,7 @@
-<svg width="20498" height="26472" viewBox="0 0 20498 26472" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="20498" height="26472" fill="white"/>
+<svg width="20498" height="14433" viewBox="0 0 20498 14433" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="20498" height="14433" fill="white"/>
 <g clip-path="url(#clip0_102_2)">
-<rect width="13261" height="26472" transform="translate(7237)" fill="white"/>
+<rect width="13261" height="14433" transform="translate(7237)" fill="white"/>
 <g clip-path="url(#clip1_102_2)">
 <rect width="3834" height="9686" transform="translate(16664)" fill="#D9D9D9"/>
 <rect width="2233" height="4040" transform="matrix(-1 0 0 -1 20662 6781)" fill="#FFBEBE"/>
@@ -88,7 +88,7 @@
 </g>
 <defs>
 <clipPath id="clip0_102_2">
-<rect width="13261" height="26472" fill="white" transform="translate(7237)"/>
+<rect width="13261" height="14433" fill="white" transform="translate(7237)"/>
 </clipPath>
 <clipPath id="clip1_102_2">
 <rect width="3834" height="9686" fill="white" transform="translate(16664)"/>

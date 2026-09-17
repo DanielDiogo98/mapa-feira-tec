@@ -103,7 +103,7 @@ const views: Record<MapKey, MapView> = {
       x: 0,
       y: 0,
       width: BLOCO_B_ANDAR_2_MAP.width,
-      height: 15500,
+      height: BLOCO_B_ANDAR_2_MAP.height,
     },
     editorImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2.svg',
     publicImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2-clean.svg',

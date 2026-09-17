@@ -1,47 +1,102 @@
-<svg width="20498" height="26472" viewBox="0 0 20498 26472" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="20498" height="26472" fill="#F9FCFE"/>
-
-  <!-- Bloco B, mantido na posição e rotação usadas no frame unificado do Figma. -->
-  <image href="/mapas/bloco-b-andar-2-clean.svg" width="7363" height="14270" transform="matrix(-1 0 0 -1 7363 14433)"/>
-
-  <!-- Passagem dos laboratórios do Bloco A. -->
-  <rect x="7363" y="9686" width="13135" height="3834" rx="80" fill="#EAF2F7"/>
-  <rect x="16664" y="0" width="3834" height="9686" fill="#EAF2F7"/>
-  <rect x="16664" y="0" width="3834" height="9686" stroke="#8FA8BA" stroke-width="18"/>
-
-  <g fill="#DCE9F1" stroke="#8FA8BA" stroke-width="18">
-    <rect x="14633" y="193" width="2025" height="2317" rx="34"/>
-    <rect x="14633" y="2520" width="2025" height="2317" rx="34"/>
-    <rect x="14633" y="4849" width="2025" height="2317" rx="34"/>
-    <rect x="14633" y="7145" width="2025" height="2535" rx="34"/>
-    <rect x="18283" y="6" width="2209" height="2729" rx="34"/>
-    <rect x="18283" y="6787" width="2209" height="2893" rx="34"/>
+<svg width="20498" height="14433" viewBox="0 0 20498 14433" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#183B56" flood-opacity="0.10"/>
+    </filter>
+    <pattern id="floor-dots" width="260" height="260" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="18" r="8" fill="#C9DDEA"/>
+    </pattern>
+  </defs>
+  <rect width="20498" height="14433" fill="#F8FBFD"/>
+  <rect width="20498" height="14433" fill="url(#floor-dots)" opacity="0.28"/>
+  <rect x="120" y="120" width="7123" height="14193" rx="140" fill="#F4F8FB" stroke="#D9E6EE" stroke-width="24"/>
+  <rect x="7363" y="120" width="13015" height="14193" rx="140" fill="#F7FAFC" stroke="#D9E6EE" stroke-width="24"/>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800">
+    <rect x="430" y="210" width="1750" height="420" rx="210" fill="#173D57"/>
+    <text x="1305" y="490" font-size="190" text-anchor="middle" fill="white" letter-spacing="6">BLOCO B · 2º</text>
+    <rect x="7700" y="420" width="3800" height="650" rx="325" fill="#167A70"/>
+    <text x="9600" y="835" font-size="260" text-anchor="middle" fill="white" letter-spacing="8">PASSAGEM · BLOCO A</text>
   </g>
-
-  <g fill="#FF6B6B" stroke="#8FA8BA" stroke-width="12">
-    <rect x="16424" y="348" width="240" height="379" rx="18"/>
-    <rect x="16424" y="2675" width="240" height="379" rx="18"/>
-    <rect x="16424" y="5004" width="240" height="379" rx="18"/>
-    <rect x="16424" y="7300" width="240" height="379" rx="18"/>
+  <rect x="1773" y="1280" width="3834" height="11248" rx="70" fill="#DCEAF3" stroke="#9CB4C4" stroke-width="24"/>
+  <path d="M2363 12528H4863V643H2363" stroke="#C4DAE8" stroke-width="760" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2363 12528H4863V643H2363" stroke="#86A5B9" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"/>
+  <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
+    <rect x="270" y="1280" width="1503" height="3300" rx="54" fill="#DFEAF1"/>
+    <rect x="270" y="4780" width="1503" height="2220" rx="54" fill="#DFEAF1"/>
+    <rect x="270" y="7200" width="1503" height="2220" rx="54" fill="#DFEAF1"/>
+    <rect x="270" y="9620" width="1503" height="2690" rx="54" fill="#DFEAF1"/>
+    <rect x="270" y="12310" width="5337" height="1853" rx="54" fill="#DFEAF1"/>
   </g>
-
-  <rect x="18429" y="2741" width="2233" height="4040" rx="56" fill="#FFE3A3" stroke="#D5A62A" stroke-width="22"/>
-  <path d="M18850 6050L19900 5000L18850 3950" stroke="#9B6A00" stroke-width="90" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M19900 5000H18830" stroke="#9B6A00" stroke-width="90" stroke-linecap="round"/>
-
-  <!-- Corredor alternativo que chega ao Bloco B. -->
-  <path d="M19650 11600H7550V12550H4850" stroke="#C9DBE7" stroke-width="720" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M19650 11600H7550V12550H4850" stroke="#8FA8BA" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
-  <path d="M19540 11600V19870H15950" stroke="#C9DBE7" stroke-width="540" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M19540 11600V19870H15950" stroke="#8FA8BA" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
-
-  <g font-family="Inter, Arial, sans-serif" fill="#284558" text-anchor="middle">
-    <text x="15580" y="1380" font-size="270" font-weight="700">LAB 1</text>
-    <text x="15580" y="3700" font-size="270" font-weight="700">LAB 2</text>
-    <text x="15580" y="6030" font-size="270" font-weight="700">LAB 3</text>
-    <text x="15580" y="8450" font-size="270" font-weight="700">LAB 4</text>
-    <text x="19545" y="5150" font-size="245" font-weight="800">ESCADA</text>
-    <text x="13900" y="10900" font-size="230" font-weight="800" letter-spacing="18">PASSAGEM BLOCO A</text>
-    <text x="3700" y="15150" font-size="230" font-weight="800" letter-spacing="18">BLOCO B · 2º ANDAR</text>
+  <g fill="#F06472">
+    <rect x="1643" y="2120" width="260" height="520" rx="25"/>
+    <rect x="1643" y="5560" width="260" height="520" rx="25"/>
+    <rect x="1643" y="7860" width="260" height="520" rx="25"/>
+    <rect x="1643" y="11100" width="260" height="520" rx="25"/>
+    <rect x="4380" y="12180" width="520" height="260" rx="25"/>
+  </g>
+  <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
+    <rect x="5607" y="760" width="1486" height="1040" rx="54" fill="#FADBE5"/>
+    <rect x="5607" y="2070" width="1486" height="1140" rx="54" fill="#D5E9FF"/>
+    <rect x="5607" y="4153" width="1486" height="1706" rx="54" fill="#FFE4A8" stroke="#D5A62A"/>
+  </g>
+  <g fill="#F06472">
+    <rect x="5480" y="1120" width="250" height="430" rx="24"/>
+    <rect x="5480" y="2400" width="250" height="430" rx="24"/>
+  </g>
+  <path d="M4863 12528H7600V11500H17300V9500" stroke="#C4DAE8" stroke-width="1050" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4863 12528H7600V11500H17300V9500" stroke="#86A5B9" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="9950" y="10610" width="5100" height="570" rx="285" fill="#FFFFFF" stroke="#B8CEDC" stroke-width="20"/>
+    <text x="12500" y="10978" font-size="225" font-weight="800" fill="#36586E" letter-spacing="10">PASSAGEM COBERTA · CONEXÃO DOS BLOCOS</text>
+  </g>
+  <rect x="16550" y="1280" width="1600" height="8420" rx="70" fill="#DCEAF3" stroke="#9CB4C4" stroke-width="24"/>
+  <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
+    <rect x="14200" y="1280" width="2350" height="1980" rx="54" fill="#DDF0EA"/>
+    <rect x="14200" y="3460" width="2350" height="1980" rx="54" fill="#DDF0EA"/>
+    <rect x="14200" y="5640" width="2350" height="1980" rx="54" fill="#DDF0EA"/>
+    <rect x="14200" y="7820" width="2350" height="1880" rx="54" fill="#DDF0EA"/>
+    <rect x="18150" y="1280" width="2078" height="2110" rx="54" fill="#E5EEF4"/>
+    <rect x="18150" y="6490" width="2078" height="3210" rx="54" fill="#E5EEF4"/>
+    <rect x="18150" y="3390" width="2078" height="3100" rx="54" fill="#FFE4A8" stroke="#D5A62A"/>
+  </g>
+  <g fill="#F06472">
+    <rect x="16420" y="1900" width="260" height="520" rx="25"/>
+    <rect x="16420" y="4080" width="260" height="520" rx="25"/>
+    <rect x="16420" y="6260" width="260" height="520" rx="25"/>
+    <rect x="16420" y="8370" width="260" height="520" rx="25"/>
+  </g>
+  <g stroke="#9B6A00" stroke-width="72" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5890 5400L6750 4540M6750 4540H6230M6750 4540V5060"/>
+    <path d="M18620 5900L19740 4780M19740 4780H19090M19740 4780V5430"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle" fill="#284558">
+    <g font-size="205" font-weight="800">
+      <text x="1020" y="2790">LABORATÓRIO</text><text x="1020" y="3070">MAKER</text>
+      <text x="1020" y="5920">LABORATÓRIO 4</text>
+      <text x="1020" y="8330">LABORATÓRIO TCC</text>
+      <text x="1020" y="10920">LAB. QUÍMICA 2</text>
+      <text x="2940" y="13600">LABORATÓRIO DE QUÍMICA 1</text>
+      <text x="6350" y="1370">BANHEIRO</text><text x="6350" y="1605">FEMININO</text>
+      <text x="6350" y="2600">BANHEIRO</text><text x="6350" y="2835">MASCULINO</text>
+      <text x="6350" y="5580">ESCADA</text>
+    </g>
+    <g font-size="235" font-weight="800">
+      <text x="15375" y="2180">LABORATÓRIO 1</text>
+      <text x="15375" y="4360">LABORATÓRIO 2</text>
+      <text x="15375" y="6540">LABORATÓRIO 3</text>
+      <text x="15375" y="8715">LABORATÓRIO 4</text>
+      <text x="19190" y="5900">ESCADA</text>
+    </g>
+    <g font-size="155" font-weight="700" fill="#567487" letter-spacing="7">
+      <text x="1020" y="3370">BLOCO B</text>
+      <text x="1020" y="6220">BLOCO B</text>
+      <text x="1020" y="8630">BLOCO B</text>
+      <text x="1020" y="11220">BLOCO B</text>
+      <text x="2940" y="13900">BLOCO B</text>
+      <text x="15375" y="2480">PASSAGEM BLOCO A</text>
+      <text x="15375" y="4660">PASSAGEM BLOCO A</text>
+      <text x="15375" y="6840">PASSAGEM BLOCO A</text>
+      <text x="15375" y="9015">PASSAGEM BLOCO A</text>
+    </g>
   </g>
 </svg>
