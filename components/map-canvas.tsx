@@ -435,23 +435,33 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
             </svg>
             {visibleNodes.map((n, i) => {
               const p = projected(n);
+              const isCombinedPassageMap =
+                mapView.ariaLabel ===
+                'Passagem do Bloco A e segundo andar do Bloco B';
               const locationLabel =
                 n.kind === 'entrance'
                   ? 'Entrada / Pátio'
                   : n.elementId === 'escadas-bloco-a-salas'
                     ? 'Suba aqui · Bloco A'
                     : n.elementId === 'escada-acesso-patio-bloco-a'
-                      ? 'Escada · Pátio e salas do Bloco A'
+                      ? isCombinedPassageMap
+                        ? 'Escada · Pátio'
+                        : 'Escada · Pátio e salas do Bloco A'
                       : n.elementId?.startsWith('sala-lab-bloco-a-')
-                        ? n.label.replace(
-                            ' · Bloco A · Passagem',
-                            ' · Passagem Bloco A',
-                          )
-                        : n.elementId === 'escada-acesso-bloco-b'
-                          ? 'Escada · Bloco B'
-                          : n.label
-                              .replace(' Bloco A', '')
-                              .replace(/ · Bloco B · [12]º andar$/, '');
+                        ? isCombinedPassageMap
+                          ? n.label.replace(' · Bloco A · Passagem', '')
+                          : n.label.replace(
+                              ' · Bloco A · Passagem',
+                              ' · Passagem Bloco A',
+                            )
+                        : isCombinedPassageMap &&
+                            n.elementId === 'escadas-acesso-patio'
+                          ? 'Escada · 1º andar'
+                          : n.elementId === 'escada-acesso-bloco-b'
+                            ? 'Escada · Bloco B'
+                            : n.label
+                                .replace(' Bloco A', '')
+                                .replace(/ · Bloco B · [12]º andar$/, '');
               const isRouteOrigin = presentation && origin === n.id;
               const isRouteDestination = presentation && selected === n.id;
               const publicLabel = isRouteOrigin

@@ -66,34 +66,4 @@
     <path d="M5890 5400L6750 4540M6750 4540H6230M6750 4540V5060"/>
     <path d="M18620 5900L19740 4780M19740 4780H19090M19740 4780V5430"/>
   </g>
-  <g font-family="Inter, Arial, sans-serif" text-anchor="middle" fill="#284558">
-    <g font-size="205" font-weight="800">
-      <text x="1020" y="2790">LABORATÓRIO</text><text x="1020" y="3070">MAKER</text>
-      <text x="1020" y="5920">LABORATÓRIO 4</text>
-      <text x="1020" y="8330">LABORATÓRIO TCC</text>
-      <text x="1020" y="10920">LAB. QUÍMICA 2</text>
-      <text x="2940" y="13600">LABORATÓRIO DE QUÍMICA 1</text>
-      <text x="6350" y="1370">BANHEIRO</text><text x="6350" y="1605">FEMININO</text>
-      <text x="6350" y="2600">BANHEIRO</text><text x="6350" y="2835">MASCULINO</text>
-      <text x="6350" y="5580">ESCADA</text>
-    </g>
-    <g font-size="235" font-weight="800">
-      <text x="15375" y="2180">LABORATÓRIO 1</text>
-      <text x="15375" y="4360">LABORATÓRIO 2</text>
-      <text x="15375" y="6540">LABORATÓRIO 3</text>
-      <text x="15375" y="8715">LABORATÓRIO 4</text>
-      <text x="19190" y="5900">ESCADA</text>
-    </g>
-    <g font-size="155" font-weight="700" fill="#567487" letter-spacing="7">
-      <text x="1020" y="3370">BLOCO B</text>
-      <text x="1020" y="6220">BLOCO B</text>
-      <text x="1020" y="8630">BLOCO B</text>
-      <text x="1020" y="11220">BLOCO B</text>
-      <text x="2940" y="13900">BLOCO B</text>
-      <text x="15375" y="2480">PASSAGEM BLOCO A</text>
-      <text x="15375" y="4660">PASSAGEM BLOCO A</text>
-      <text x="15375" y="6840">PASSAGEM BLOCO A</text>
-      <text x="15375" y="9015">PASSAGEM BLOCO A</text>
-    </g>
-  </g>
 </svg>

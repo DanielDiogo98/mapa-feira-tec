@@ -109,7 +109,6 @@ const views: Record<MapKey, MapView> = {
     publicImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2-clean.svg',
     alt: 'Passagem dos laboratórios do Bloco A conectada ao segundo andar do Bloco B',
     ariaLabel: 'Passagem do Bloco A e segundo andar do Bloco B',
-    compactLabels: true,
   },
   'bloco-b-andar-1': {
     width: BLOCO_B_ANDAR_1_MAP.width,
