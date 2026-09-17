@@ -18,7 +18,7 @@ const config: MapEditorConfig = {
       width: BLOCO_B_ANDAR_2_MAP.width,
       height: BLOCO_B_ANDAR_2_MAP.height,
     },
-    editorImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2.svg',
+    editorImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2-clean.svg',
     publicImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2-clean.svg',
     alt: 'Passagem dos laboratórios do Bloco A conectada ao segundo andar do Bloco B',
     ariaLabel: 'passagem do Bloco A e segundo andar do Bloco B',
