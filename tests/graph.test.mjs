@@ -87,28 +87,18 @@ test('patio graph is connected and every public destination is reachable', () =>
     (node) => node.elementId === 'entrada-principal',
   );
   const destinations = graph.nodes.filter((node) =>
-    [
-      'cantina',
-      'refeitorio',
-      'biblioteca',
-      'auditorio',
-      'elevador',
-      'escada-acesso-bloco-b',
-      'banheiro-masculino',
-      'banheiro-feminino',
-      'escadas-bloco-a-salas',
-    ].includes(node.elementId),
+    ['cantina', 'refeitorio', 'escadas-bloco-a-salas'].includes(node.elementId),
   );
   assert.equal(inspectGraph(graph).components, 1);
   assert.equal(inspectGraph(graph).isolated.length, 0);
   assert.ok(entrance);
-  assert.equal(destinations.length, 9);
+  assert.equal(destinations.length, 3);
   for (const destination of destinations) {
     assert.ok(shortestPath(graph, entrance.id, destination.id));
   }
 });
 
-test('the patio and library sector have exactly one physical connection', () => {
+test('the construction closure removes the old patio and library connection', () => {
   const raw = JSON.parse(
     readFileSync(
       new URL('../lib/patio-biblioteca-auditorio-pontos.json', import.meta.url),
@@ -116,37 +106,18 @@ test('the patio and library sector have exactly one physical connection', () => 
     ),
   );
   const graph = parseGraph(raw, PATIO_MAP, PATIO_ELEMENTS);
-  const patioIds = new Set(
-    graph.nodes
-      .filter((node) => node.id.startsWith('patio-'))
-      .map((node) => node.id),
+  assert.equal(
+    graph.nodes.some((node) => node.id === 'setor-entrada'),
+    false,
   );
-  const sectorIds = new Set(
-    graph.nodes
-      .filter((node) => !node.id.startsWith('patio-'))
-      .map((node) => node.id),
+  assert.equal(
+    graph.edges.some((edge) => edge.id === 'patio-e07'),
+    false,
   );
-  const bridges = graph.edges.filter(
-    (edge) =>
-      (patioIds.has(edge.from) && sectorIds.has(edge.to)) ||
-      (sectorIds.has(edge.from) && patioIds.has(edge.to)),
+  assert.equal(
+    graph.edges.some((edge) => edge.id === 'setor-e01'),
+    false,
   );
-  assert.deepEqual(
-    bridges.map((edge) => edge.id),
-    ['setor-e01'],
-  );
-
-  const withoutBridge = {
-    ...graph,
-    edges: graph.edges.filter((edge) => edge.id !== 'setor-e01'),
-  };
-  const entrance = graph.nodes.find((node) => node.id === 'patio-entrada');
-  const auditorium = graph.nodes.find(
-    (node) => node.id === 'auditorio-destino',
-  );
-  assert.ok(entrance);
-  assert.ok(auditorium);
-  assert.equal(shortestPath(withoutBridge, entrance.id, auditorium.id), null);
 });
 
 test('the stairs portal joins the patio route to the Bloco A route', () => {
@@ -199,13 +170,13 @@ test('the Bloco B second floor is connected and every destination is reachable',
   assert.equal(inspectGraph(graph).components, 1);
   assert.equal(inspectGraph(graph).isolated.length, 0);
   assert.ok(stairs);
-  assert.equal(destinations.length, 7);
+  assert.equal(destinations.length, 11);
   for (const destination of destinations) {
     assert.ok(shortestPath(graph, stairs.id, destination.id));
   }
 });
 
-test('the auditorium stairs portal joins the patio to Bloco B second floor', () => {
+test('the Bloco A stairs portal joins the patio to the alternative passage', () => {
   const patioRaw = JSON.parse(
     readFileSync(
       new URL('../lib/patio-biblioteca-auditorio-pontos.json', import.meta.url),
@@ -225,7 +196,7 @@ test('the auditorium stairs portal joins the patio to Bloco B second floor', () 
     BLOCO_B_ANDAR_2_ELEMENTS,
   );
   const portal = MAP_PORTALS.find(
-    (item) => item.id === 'escada-patio-bloco-b-andar-2',
+    (item) => item.id === 'escada-patio-passagem-labs-bloco-a',
   );
   assert.ok(portal);
   const patioStairs = resolvePortalPoint(patioGraph, portal.from);
@@ -237,6 +208,9 @@ test('the auditorium stairs portal joins the patio to Bloco B second floor', () 
   assert.ok(blocoBStairs);
   assert.ok(entrance);
   assert.ok(shortestPath(patioGraph, entrance.id, patioStairs.id));
+  assert.ok(
+    shortestPath(blocoBGraph, blocoBStairs.id, 'passagem-lab-01-destino'),
+  );
   assert.ok(shortestPath(blocoBGraph, blocoBStairs.id, 'b2-maker-destino'));
 });
 

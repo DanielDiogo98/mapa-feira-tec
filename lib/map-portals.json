@@ -13,16 +13,16 @@
     }
   },
   {
-    "id": "escada-patio-bloco-b-andar-2",
+    "id": "escada-patio-passagem-labs-bloco-a",
     "kind": "stairs",
-    "label": "Escada do auditório para o segundo andar do Bloco B",
+    "label": "Escada do pátio para a passagem dos laboratórios do Bloco A",
     "from": {
       "mapId": "patio-biblioteca-auditorio",
-      "elementId": "escada-acesso-bloco-b"
+      "elementId": "escadas-bloco-a-salas"
     },
     "to": {
       "mapId": "bloco-b-andar-2",
-      "elementId": "escadas-acesso-patio"
+      "elementId": "escada-acesso-patio-bloco-a"
     }
   },
   {

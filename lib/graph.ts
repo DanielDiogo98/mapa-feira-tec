@@ -33,8 +33,8 @@ export const BLOCO_B_ANDAR_1_ELEMENTS = [
 ] as const;
 export const BLOCO_B_ANDAR_2_MAP = {
   id: 'bloco-b-andar-2',
-  width: 7363,
-  height: 14270,
+  width: 20498,
+  height: 26472,
 } as const;
 export const KINDS = {
   corridor: 'Caminho',
@@ -102,8 +102,14 @@ export const PATIO_ELEMENTS = [
 ] as const;
 export const BLOCO_B_ANDAR_2_ELEMENTS = [
   'escadas-acesso-patio',
+  'escada-acesso-patio-bloco-a',
+  'corredor-passagem-bloco-a',
   'banheiro-masculino',
   'banheiro-feminino',
+  'sala-lab-bloco-a-01',
+  'sala-lab-bloco-a-02',
+  'sala-lab-bloco-a-03',
+  'sala-lab-bloco-a-04',
   'sala-lab-quimica-01',
   'sala-lab-quimica-02',
   'sala-lab-tcc',

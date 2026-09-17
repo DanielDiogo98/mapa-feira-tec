@@ -46,6 +46,7 @@ export type MapView = {
   publicImage?: string;
   alt: string;
   ariaLabel: string;
+  compactLabels?: boolean;
 };
 const DEFAULT_VIEW: MapView = {
   width: MAP.width,
@@ -344,7 +345,9 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
       )
     : rendered;
   return (
-    <div className={`canvas-shell${presentation ? ' public-map' : ''}`}>
+    <div
+      className={`canvas-shell${presentation ? ' public-map' : ''}${mapView.compactLabels ? ' compact-labels' : ''}`}
+    >
       <div
         ref={surface}
         className={`map-surface mode-${mode}${dragging ? ' dragging' : ''}`}
@@ -437,11 +440,18 @@ export const MapCanvas = forwardRef<CanvasHandle, Props>(function MapCanvas(
                   ? 'Entrada / Pátio'
                   : n.elementId === 'escadas-bloco-a-salas'
                     ? 'Suba aqui · Bloco A'
-                    : n.elementId === 'escada-acesso-bloco-b'
-                      ? 'Escada · Bloco B'
-                      : n.label
-                          .replace(' Bloco A', '')
-                          .replace(/ · Bloco B · [12]º andar$/, '');
+                    : n.elementId === 'escada-acesso-patio-bloco-a'
+                      ? 'Escada · Pátio e salas do Bloco A'
+                      : n.elementId?.startsWith('sala-lab-bloco-a-')
+                        ? n.label.replace(
+                            ' · Bloco A · Passagem',
+                            ' · Passagem Bloco A',
+                          )
+                        : n.elementId === 'escada-acesso-bloco-b'
+                          ? 'Escada · Bloco B'
+                          : n.label
+                              .replace(' Bloco A', '')
+                              .replace(/ · Bloco B · [12]º andar$/, '');
               const isRouteOrigin = presentation && origin === n.id;
               const isRouteDestination = presentation && selected === n.id;
               const publicLabel = isRouteOrigin

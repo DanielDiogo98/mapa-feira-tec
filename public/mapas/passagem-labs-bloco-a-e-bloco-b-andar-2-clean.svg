@@ -1,0 +1,47 @@
+<svg width="20498" height="26472" viewBox="0 0 20498 26472" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="20498" height="26472" fill="#F9FCFE"/>
+
+  <!-- Bloco B, mantido na posição e rotação usadas no frame unificado do Figma. -->
+  <image href="/mapas/bloco-b-andar-2-clean.svg" width="7363" height="14270" transform="matrix(-1 0 0 -1 7363 14433)"/>
+
+  <!-- Passagem dos laboratórios do Bloco A. -->
+  <rect x="7363" y="9686" width="13135" height="3834" rx="80" fill="#EAF2F7"/>
+  <rect x="16664" y="0" width="3834" height="9686" fill="#EAF2F7"/>
+  <rect x="16664" y="0" width="3834" height="9686" stroke="#8FA8BA" stroke-width="18"/>
+
+  <g fill="#DCE9F1" stroke="#8FA8BA" stroke-width="18">
+    <rect x="14633" y="193" width="2025" height="2317" rx="34"/>
+    <rect x="14633" y="2520" width="2025" height="2317" rx="34"/>
+    <rect x="14633" y="4849" width="2025" height="2317" rx="34"/>
+    <rect x="14633" y="7145" width="2025" height="2535" rx="34"/>
+    <rect x="18283" y="6" width="2209" height="2729" rx="34"/>
+    <rect x="18283" y="6787" width="2209" height="2893" rx="34"/>
+  </g>
+
+  <g fill="#FF6B6B" stroke="#8FA8BA" stroke-width="12">
+    <rect x="16424" y="348" width="240" height="379" rx="18"/>
+    <rect x="16424" y="2675" width="240" height="379" rx="18"/>
+    <rect x="16424" y="5004" width="240" height="379" rx="18"/>
+    <rect x="16424" y="7300" width="240" height="379" rx="18"/>
+  </g>
+
+  <rect x="18429" y="2741" width="2233" height="4040" rx="56" fill="#FFE3A3" stroke="#D5A62A" stroke-width="22"/>
+  <path d="M18850 6050L19900 5000L18850 3950" stroke="#9B6A00" stroke-width="90" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19900 5000H18830" stroke="#9B6A00" stroke-width="90" stroke-linecap="round"/>
+
+  <!-- Corredor alternativo que chega ao Bloco B. -->
+  <path d="M19650 11600H7550V12550H4850" stroke="#C9DBE7" stroke-width="720" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19650 11600H7550V12550H4850" stroke="#8FA8BA" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  <path d="M19540 11600V19870H15950" stroke="#C9DBE7" stroke-width="540" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19540 11600V19870H15950" stroke="#8FA8BA" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+  <g font-family="Inter, Arial, sans-serif" fill="#284558" text-anchor="middle">
+    <text x="15580" y="1380" font-size="270" font-weight="700">LAB 1</text>
+    <text x="15580" y="3700" font-size="270" font-weight="700">LAB 2</text>
+    <text x="15580" y="6030" font-size="270" font-weight="700">LAB 3</text>
+    <text x="15580" y="8450" font-size="270" font-weight="700">LAB 4</text>
+    <text x="19545" y="5150" font-size="245" font-weight="800">ESCADA</text>
+    <text x="13900" y="10900" font-size="230" font-weight="800" letter-spacing="18">PASSAGEM BLOCO A</text>
+    <text x="3700" y="15150" font-size="230" font-weight="800" letter-spacing="18">BLOCO B · 2º ANDAR</text>
+  </g>
+</svg>

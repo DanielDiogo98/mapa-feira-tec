@@ -91,7 +91,7 @@ test('plans both directions between the two Bloco B floors', () => {
   );
 });
 
-test('keeps the patio route direction from Bloco B stairs to Bloco A stairs', () => {
+test('uses the alternative passage from Bloco B to the Bloco A stairs', () => {
   const sala7 = graphs['bloco-a-salas'].nodes.find(
     (node) => node.elementId === 'sala-07',
   );
@@ -105,20 +105,20 @@ test('keeps the patio route direction from Bloco B stairs to Bloco A stairs', ()
     },
     { mapId: 'bloco-a-salas', nodeId: sala7.id },
   );
-  const patioStage = route?.find(
-    (stage) => stage.mapId === 'patio-biblioteca-auditorio',
+  const passageStage = route?.find(
+    (stage) => stage.mapId === 'bloco-b-andar-2',
   );
-  assert.ok(patioStage);
-  const patioStart = graphs['patio-biblioteca-auditorio'].nodes.find(
-    (node) => node.id === patioStage.startNodeId,
+  assert.ok(passageStage);
+  const passageStart = graphs['bloco-b-andar-2'].nodes.find(
+    (node) => node.id === passageStage.startNodeId,
   );
-  const patioEnd = graphs['patio-biblioteca-auditorio'].nodes.find(
-    (node) => node.id === patioStage.endNodeId,
+  const passageEnd = graphs['bloco-b-andar-2'].nodes.find(
+    (node) => node.id === passageStage.endNodeId,
   );
-  assert.equal(patioStart?.elementId, 'escada-acesso-bloco-b');
-  assert.equal(patioEnd?.elementId, 'escadas-bloco-a-salas');
-  assert.equal(patioStage.nodes[0], patioStage.startNodeId);
-  assert.equal(patioStage.nodes.at(-1), patioStage.endNodeId);
+  assert.equal(passageStart?.elementId, 'escadas-acesso-patio');
+  assert.equal(passageEnd?.elementId, 'escada-acesso-patio-bloco-a');
+  assert.equal(passageStage.nodes[0], passageStage.startNodeId);
+  assert.equal(passageStage.nodes.at(-1), passageStage.endNodeId);
 });
 
 test(

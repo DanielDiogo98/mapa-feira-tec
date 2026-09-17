@@ -10,10 +10,10 @@ const maps = [
   },
   {
     href: '/editor/patio',
-    title: 'Pátio · Biblioteca · Auditório',
+    title: 'Pátio · Acesso alternativo',
     description:
-      'Entrada, corredor único, biblioteca, auditório e escada do Bloco B.',
-    status: 'Rede inicial pronta',
+      'Entrada, cantina, refeitório e escada do Bloco A. A passagem antiga está interditada.',
+    status: 'Desvio ativo',
     icon: Trees,
   },
   {
@@ -26,9 +26,9 @@ const maps = [
   },
   {
     href: '/editor/bloco-b-andar-2',
-    title: 'Bloco B · 2º andar',
+    title: 'Passagem Bloco A · Bloco B · 2º andar',
     description:
-      'Laboratórios, banheiros e escada ligados por 22 pontos e 22 conexões.',
+      'Passagem alternativa e laboratórios ligados ao segundo andar do Bloco B.',
     status: 'Rede pronta',
     icon: Building2,
   },

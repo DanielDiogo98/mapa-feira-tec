@@ -84,8 +84,8 @@ const views: Record<MapKey, MapView> = {
     content: { x: 0, y: 0, width: PATIO_MAP.width, height: PATIO_MAP.height },
     editorImage: '/mapas/patio-biblioteca-auditorio-v3-clean.svg',
     publicImage: '/mapas/patio-biblioteca-auditorio-v3-clean.svg',
-    alt: 'Pátio, corredor, biblioteca, auditório e acesso ao Bloco B',
-    ariaLabel: 'Pátio, biblioteca e auditório',
+    alt: 'Pátio da escola com a passagem da biblioteca interditada por obras',
+    ariaLabel: 'Pátio e acesso alternativo',
   },
   'bloco-a-salas': {
     width: MAP.width,
@@ -103,12 +103,13 @@ const views: Record<MapKey, MapView> = {
       x: 0,
       y: 0,
       width: BLOCO_B_ANDAR_2_MAP.width,
-      height: BLOCO_B_ANDAR_2_MAP.height,
+      height: 15500,
     },
-    editorImage: '/mapas/bloco-b-andar-2-clean.svg',
-    publicImage: '/mapas/bloco-b-andar-2-clean.svg',
-    alt: 'Segundo andar do Bloco B com laboratórios, banheiros e escadas',
-    ariaLabel: 'Segundo andar do Bloco B',
+    editorImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2.svg',
+    publicImage: '/mapas/passagem-labs-bloco-a-e-bloco-b-andar-2-clean.svg',
+    alt: 'Passagem dos laboratórios do Bloco A conectada ao segundo andar do Bloco B',
+    ariaLabel: 'Passagem do Bloco A e segundo andar do Bloco B',
+    compactLabels: true,
   },
   'bloco-b-andar-1': {
     width: BLOCO_B_ANDAR_1_MAP.width,
@@ -126,15 +127,15 @@ const views: Record<MapKey, MapView> = {
   },
 };
 const mapNames: Record<MapKey, string> = {
-  'patio-biblioteca-auditorio': 'Pátio · Biblioteca · Auditório',
+  'patio-biblioteca-auditorio': 'Pátio · Acesso alternativo',
   'bloco-a-salas': 'Bloco A · Salas',
-  'bloco-b-andar-2': 'Bloco B · 2º andar',
+  'bloco-b-andar-2': 'Passagem Bloco A · Bloco B · 2º andar',
   'bloco-b-andar-1': 'Bloco B · 1º andar',
 };
 const mapShortNames: Record<MapKey, string> = {
-  'patio-biblioteca-auditorio': 'Pátio e auditório',
+  'patio-biblioteca-auditorio': 'Pátio',
   'bloco-a-salas': 'Bloco A',
-  'bloco-b-andar-2': 'Bloco B · 2º',
+  'bloco-b-andar-2': 'Passagem A · Bloco B · 2º',
   'bloco-b-andar-1': 'Bloco B · 1º',
 };
 const mapOrder: MapKey[] = [
@@ -153,10 +154,12 @@ function transitionInfo(from: MapKey, to: MapKey) {
   const direction = goingUp ? 'Suba' : 'Desça';
   const guidance =
     from === 'bloco-b-andar-2' && to === 'patio-biblioteca-auditorio'
-      ? 'Você chegou ao 2º andar do Bloco B. Suba mais um lance da escada e confirme para abrir o caminho no pátio.'
-      : from === 'bloco-b-andar-2' && to === 'bloco-b-andar-1'
-        ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o caminho no 1º andar.'
-        : `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`;
+          ? 'Suba a escada no fim da passagem e confirme para abrir o caminho no pátio.'
+          : from === 'patio-biblioteca-auditorio' && to === 'bloco-a-salas'
+            ? 'Você chegou ao pátio. Continue subindo pela mesma escada e confirme para abrir o caminho das salas do Bloco A.'
+          : from === 'bloco-b-andar-2' && to === 'bloco-b-andar-1'
+            ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o caminho no 1º andar.'
+            : `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`;
   return {
     goingUp,
     action,
@@ -211,18 +214,7 @@ export default function VisitorMap() {
   const destinations = useMemo<Destination[]>(
     () => [
       ...patio.nodes
-        .filter((p) =>
-          [
-            'cantina',
-            'refeitorio',
-            'biblioteca',
-            'auditorio',
-            'elevador',
-            'escada-acesso-bloco-b',
-            'banheiro-masculino',
-            'banheiro-feminino',
-          ].includes(p.elementId ?? ''),
-        )
+        .filter((p) => ['cantina', 'refeitorio'].includes(p.elementId ?? ''))
         .map((p) => ({
           key: `patio-biblioteca-auditorio:${p.id}`,
           mapId: 'patio-biblioteca-auditorio' as const,
@@ -762,7 +754,8 @@ export default function VisitorMap() {
             routeReady &&
             activeMap === 'bloco-b-andar-2' &&
             (nextStage?.mapId === 'bloco-b-andar-1' ||
-              nextStage?.mapId === 'patio-biblioteca-auditorio') && (
+              nextStage?.mapId === 'patio-biblioteca-auditorio' ||
+              nextStage?.mapId === 'bloco-a-salas') && (
               <output className="floor-change-alert">
                 <span className="floor-change-icon">
                   {nextStage.mapId === 'bloco-b-andar-1' ? (
@@ -775,12 +768,16 @@ export default function VisitorMap() {
                   <strong>
                     {nextStage.mapId === 'bloco-b-andar-1'
                       ? 'A rota continua no 1º andar'
-                      : 'Suba mais um andar para chegar ao pátio'}
+                      : nextStage.mapId === 'bloco-a-salas'
+                        ? 'Continue subindo para chegar às salas do Bloco A'
+                        : 'Suba a escada para chegar ao pátio'}
                   </strong>
                   <p>
-                    Você chegou ao 2º andar.{' '}
-                    {nextStage.mapId === 'bloco-b-andar-1' ? 'Desça' : 'Suba'}
-                    {' mais um lance da escada para continuar o caminho.'}
+                    {nextStage.mapId === 'bloco-b-andar-1'
+                      ? 'Atravesse a passagem até a escada do Bloco B e desça mais um lance.'
+                      : nextStage.mapId === 'bloco-a-salas'
+                        ? 'Suba até o pátio e continue subindo pela mesma escada.'
+                        : 'Suba a escada no fim da passagem para continuar no pátio.'}
                   </p>
                 </div>
                 <button onClick={() => showStage(nextStage.mapId)}>
@@ -789,8 +786,11 @@ export default function VisitorMap() {
                   ) : (
                     <MoveUp size={17} />
                   )}
-                  Já {nextStage.mapId === 'bloco-b-andar-1' ? 'desci' : 'subi'}{' '}
-                  mais um andar
+                  {nextStage.mapId === 'bloco-b-andar-1'
+                    ? 'Já desci mais um andar'
+                    : nextStage.mapId === 'bloco-a-salas'
+                      ? 'Já subi até as salas'
+                      : 'Já subi até o pátio'}
                 </button>
               </output>
             )}

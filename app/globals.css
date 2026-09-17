@@ -1811,6 +1811,17 @@ select:focus-visible,
   border-top-color: transparent;
   border-right-color: #cbdbe7;
 }
+.public-map.compact-labels .point-caption {
+  display: none;
+}
+.public-map.compact-labels .map-point.kind-entrance:not(.route-node) .point-caption,
+.public-map.compact-labels .map-point.route-origin .point-caption,
+.public-map.compact-labels .map-point.selected .point-caption,
+.public-map.compact-labels .map-point.kind-stairs.route-node .point-caption,
+.public-map.compact-labels .map-point:hover .point-caption,
+.public-map.compact-labels .map-point:focus-visible .point-caption {
+  display: block;
+}
 .public-map .canvas-note {
   display: none;
 }
@@ -1925,5 +1936,15 @@ select:focus-visible,
     border-top-color: transparent;
     border-left-color: transparent;
     border-right-color: #cbdbe7;
+  }
+  .public-map.compact-labels .point-caption.label-left {
+    left: auto;
+    right: calc(100% + 8px);
+  }
+  .public-map.compact-labels .point-caption.label-left:after {
+    left: 100%;
+    right: auto;
+    border-right-color: transparent;
+    border-left-color: #cbdbe7;
   }
 }
