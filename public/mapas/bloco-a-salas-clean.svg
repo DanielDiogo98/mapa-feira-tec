@@ -3,43 +3,43 @@
 <rect width="12861" height="42113" fill="#F9FCFE"/>
 <g id="trecho-inferior">
 <g id="bases-inferiores">
-<rect id="base-salas-inferiores-01" width="14743.2" height="14415.4" transform="matrix(0.000213879 1 -1 0.000316426 13636.4 27365)" fill="#EAF2F7"/>
-<rect id="base-salas-inferiores-02" width="14743.2" height="14415.4" transform="matrix(0.000213879 1 -1 0.000316426 13636.4 27365)" fill="#EAF2F7"/>
+<rect id="base-salas-inferiores-01" width="14743.2" height="14415.4" transform="matrix(0.000213879 1 -1 0.000316426 13636.4 27365)" fill="#EAF2F7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
+<rect id="base-salas-inferiores-02" width="14743.2" height="14415.4" transform="matrix(0.000213879 1 -1 0.000316426 13636.4 27365)" fill="#EAF2F7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 </g>
 <g id="salas-inferiores">
 <g id="sala-03">
-<rect x="-172.602" y="27914.8" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="-172.602" y="27914.8" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="-172.602" y="27914.8" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 <g id="sala-04">
-<rect x="6805.4" y="27914.8" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="6805.4" y="27914.8" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="6805.4" y="27914.8" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 <g id="sala-05">
-<rect x="-172.602" y="32574.8" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="-172.602" y="32574.8" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="-172.602" y="32574.8" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 <g id="sala-06">
-<rect x="6806.4" y="32574.8" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="6806.4" y="32574.8" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="6806.4" y="32574.8" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 <g id="sala-07">
-<rect x="-172.602" y="37234.8" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="-172.602" y="37234.8" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="-172.602" y="37234.8" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 <g id="sala-08">
-<rect x="6806.4" y="37234.8" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="6806.4" y="37234.8" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="6806.4" y="37234.8" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 </g>
 <g id="corredores-inferiores">
-<rect id="corredor-03" width="14741.7" height="1568.68" transform="matrix(0.000213879 1 -1 0.000316426 6716.26 27368.8)" fill="#C9DBE7"/>
+<rect id="corredor-03" width="14741.7" height="1568.68" transform="matrix(0.000213879 1 -1 0.000316426 6716.26 27368.8)" fill="#C9DBE7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 
 
 </g>
@@ -71,10 +71,10 @@
 </g>
 </g>
 <g id="trecho-central">
-<rect id="patio-das-salas" width="10056.9" height="5381.6" transform="matrix(0.000213879 1 -1 0.000316426 7222.59 17306)" fill="#EAF2F7"/>
-<rect id="corredor-02" width="10057.8" height="1568.41" transform="matrix(0.000213879 1 -1 0.000316426 6730.41 17311)" fill="#C9DBE7"/>
+<rect id="patio-das-salas" width="10056.9" height="5381.6" transform="matrix(0.000213879 1 -1 0.000316426 7222.59 17306)" fill="#EAF2F7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
+<rect id="corredor-02" width="10057.8" height="1568.41" transform="matrix(0.000213879 1 -1 0.000316426 6730.41 17311)" fill="#C9DBE7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <g id="escada-01">
-<rect width="2277" height="10063" transform="translate(-434 17306)" fill="#FFE3A3"/>
+<rect width="2277" height="10063" transform="translate(-434 17306)" fill="#FFE3A3" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 
 </g>
 
@@ -86,22 +86,22 @@
 </g>
 <g id="trecho-superior">
 <g id="base-superior">
-<rect id="base-salas-superiores" width="9547" height="5669.8" transform="matrix(0.000213879 1 -1 0.000316426 5187.8 7766)" fill="#EAF2F7"/>
+<rect id="base-salas-superiores" width="9547" height="5669.8" transform="matrix(0.000213879 1 -1 0.000316426 5187.8 7766)" fill="#EAF2F7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 </g>
 <g id="salas-superiores">
 <g id="sala-02">
-<rect x="-176" y="12592" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="-176" y="12592" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="-176" y="12592" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 <g id="sala-01">
-<rect x="-176" y="8244" width="5245" height="3988" fill="#DCE9F1"/>
+<rect x="-176" y="8244" width="5245" height="3988" fill="#DCE9F1" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 <rect x="-176" y="8244" width="5245" height="3988" stroke="#8FA8BA" stroke-width="12"/>
 
 </g>
 </g>
 <g id="corredores-superiores">
-<rect id="corredor-01" width="9540.66" height="1568.41" transform="matrix(0.000213879 1 -1 0.000316426 6734.41 7773)" fill="#C9DBE7"/>
+<rect id="corredor-01" width="9540.66" height="1568.41" transform="matrix(0.000213879 1 -1 0.000316426 6734.41 7773)" fill="#C9DBE7" stroke="#8FA8BA" stroke-opacity="0.88" stroke-width="20"/>
 </g>
 <g id="portas-superiores">
 <g id="porta-01">
