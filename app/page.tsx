@@ -153,12 +153,12 @@ function transitionInfo(from: MapKey, to: MapKey) {
   const direction = goingUp ? 'Suba' : 'Desça';
   const guidance =
     from === 'bloco-b-andar-2' && to === 'patio-biblioteca-auditorio'
-          ? 'Suba a escada no fim da passagem e confirme para abrir o caminho no pátio.'
-          : from === 'patio-biblioteca-auditorio' && to === 'bloco-a-salas'
-            ? 'Você chegou ao pátio. Continue subindo pela mesma escada e confirme para abrir o caminho das salas do Bloco A.'
-          : from === 'bloco-b-andar-2' && to === 'bloco-b-andar-1'
-            ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o caminho no 1º andar.'
-            : `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`;
+      ? 'Suba a escada no fim da passagem e confirme para abrir o caminho no pátio.'
+      : from === 'patio-biblioteca-auditorio' && to === 'bloco-a-salas'
+        ? 'Você chegou ao pátio. Continue subindo pela mesma escada e confirme para abrir o caminho das salas do Bloco A.'
+        : from === 'bloco-b-andar-2' && to === 'bloco-b-andar-1'
+          ? 'Você chegou ao 2º andar do Bloco B. Desça mais um lance da escada e confirme para abrir o caminho no 1º andar.'
+          : `Siga a linha até a escada. ${direction} e confirme no botão acima do mapa para continuar a rota.`;
   return {
     goingUp,
     action,
@@ -409,8 +409,8 @@ export default function VisitorMap() {
             <MapIcon size={22} />
           </span>
           <div>
-            <strong>Feira Tecnológica</strong>
-            <span>Mapa dos projetos</span>
+            <strong>Feira Tecnológica 2026</strong>
+            <span>Mapa dos projetos · ETEC MCM</span>
           </div>
         </div>
         <div className="visitor-location">
@@ -420,10 +420,11 @@ export default function VisitorMap() {
       </header>
       <div className="visitor-layout">
         <aside className="visitor-panel">
-          <span className="eyebrow">COMO CHEGAR</span>
-          <h1>Encontre um projeto</h1>
+          <span className="eyebrow">EXPLORE A FEIRA</span>
+          <h1>Encontre seu caminho</h1>
           <p className="visitor-lead">
-            Pesquise pelo projeto, aluno, curso ou série e veja como chegar.
+            Busque um projeto ou escolha um local para traçar sua rota pela
+            escola.
           </p>
           <label htmlFor="project-search">Buscar</label>
           <div className="project-search">
@@ -653,7 +654,7 @@ export default function VisitorMap() {
                   {nextStage
                     ? transitionInfo(activeMap, nextStage.mapId as MapKey)
                         .guidance
-                    : `Você está em ${mapNames[activeMap]}. Continue pela linha vermelha até o destino.`}
+                    : `Você está em ${mapNames[activeMap]}. Continue pela linha destacada até o destino.`}
                 </p>
                 {routePlan && routePlan.length > 1 && (
                   <div className="route-summary" aria-label="Resumo da rota">

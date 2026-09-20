@@ -1,62 +1,62 @@
 <svg width="20498" height="14433" viewBox="0 0 20498 14433" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
-      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#183B56" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#311041" flood-opacity="0.10"/>
     </filter>
     <pattern id="floor-dots" width="260" height="260" patternUnits="userSpaceOnUse">
-      <circle cx="18" cy="18" r="8" fill="#C9DDEA"/>
+      <circle cx="18" cy="18" r="8" fill="#D8CBDC"/>
     </pattern>
   </defs>
-  <rect width="20498" height="14433" fill="#F8FBFD"/>
+  <rect width="20498" height="14433" fill="#F8F5EF"/>
   <rect width="20498" height="14433" fill="url(#floor-dots)" opacity="0.28"/>
-  <rect x="120" y="120" width="7123" height="14193" rx="140" fill="#EAF2F7" stroke="#C9DAE5" stroke-width="24"/>
-  <rect x="7363" y="120" width="13015" height="14193" rx="140" fill="#F7FAFC" stroke="#D9E6EE" stroke-width="24"/>
+  <rect x="120" y="120" width="7123" height="14193" rx="140" fill="#EEE8E2" stroke="#D8CBDC" stroke-width="24"/>
+  <rect x="7363" y="120" width="13015" height="14193" rx="140" fill="#F8F5EF" stroke="#E2D8E5" stroke-width="24"/>
   <g font-family="Inter, Arial, sans-serif" font-weight="800">
-    <rect x="430" y="210" width="1750" height="420" rx="210" fill="#173D57"/>
+    <rect x="430" y="210" width="1750" height="420" rx="210" fill="#311041"/>
     <text x="1305" y="490" font-size="190" text-anchor="middle" fill="white" letter-spacing="6">BLOCO B · 2º</text>
     <rect x="7700" y="420" width="3800" height="650" rx="325" fill="#167A70"/>
     <text x="9600" y="835" font-size="260" text-anchor="middle" fill="white" letter-spacing="8">PASSAGEM · BLOCO A</text>
   </g>
-  <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
-    <rect x="270" y="1280" width="1503" height="3300" rx="54" fill="#DFEAF1"/>
-    <rect x="270" y="4780" width="1503" height="2220" rx="54" fill="#DFEAF1"/>
-    <rect x="270" y="7200" width="1503" height="2220" rx="54" fill="#DFEAF1"/>
-    <rect x="270" y="9620" width="1503" height="2690" rx="54" fill="#DFEAF1"/>
-    <rect x="270" y="12310" width="5337" height="1853" rx="54" fill="#DFEAF1"/>
+  <g filter="url(#shadow)" stroke="#806B89" stroke-width="24">
+    <rect x="270" y="1280" width="1503" height="3300" rx="54" fill="#E5DDE7"/>
+    <rect x="270" y="4780" width="1503" height="2220" rx="54" fill="#E5DDE7"/>
+    <rect x="270" y="7200" width="1503" height="2220" rx="54" fill="#E5DDE7"/>
+    <rect x="270" y="9620" width="1503" height="2690" rx="54" fill="#E5DDE7"/>
+    <rect x="270" y="12310" width="5337" height="1853" rx="54" fill="#E5DDE7"/>
   </g>
-  <g fill="#F06472">
+  <g fill="#7A4A96">
     <rect x="1643" y="2120" width="260" height="520" rx="25"/>
     <rect x="1643" y="5560" width="260" height="520" rx="25"/>
     <rect x="1643" y="7860" width="260" height="520" rx="25"/>
     <rect x="1643" y="11100" width="260" height="520" rx="25"/>
     <rect x="4380" y="12180" width="520" height="260" rx="25"/>
   </g>
-  <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
-    <rect x="5607" y="760" width="1486" height="1040" rx="54" fill="#FADBE5"/>
-    <rect x="5607" y="2070" width="1486" height="1140" rx="54" fill="#D5E9FF"/>
+  <g filter="url(#shadow)" stroke="#806B89" stroke-width="24">
+    <rect x="5607" y="760" width="1486" height="1040" rx="54" fill="#EBDDEA"/>
+    <rect x="5607" y="2070" width="1486" height="1140" rx="54" fill="#DED4E4"/>
     <rect x="5607" y="4153" width="1486" height="1706" rx="54" fill="#FFE4A8" stroke="#D5A62A"/>
   </g>
-  <g fill="#F06472">
+  <g fill="#7A4A96">
     <rect x="5480" y="1120" width="250" height="430" rx="24"/>
     <rect x="5480" y="2400" width="250" height="430" rx="24"/>
   </g>
-  <path d="M7363 11500H17300V9500" stroke="#C4DAE8" stroke-width="1050" stroke-linecap="butt" stroke-linejoin="round"/>
-  <path d="M7363 11500H17300V9500" stroke="#86A5B9" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round" opacity="0.78"/>
+  <path d="M7363 11500H17300V9500" stroke="#D8CBDC" stroke-width="1050" stroke-linecap="butt" stroke-linejoin="round"/>
+  <path d="M7363 11500H17300V9500" stroke="#806B89" stroke-width="28" stroke-linecap="butt" stroke-linejoin="round" opacity="0.78"/>
   <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
-    <rect x="9950" y="10610" width="5100" height="570" rx="285" fill="#FFFFFF" stroke="#B8CEDC" stroke-width="20"/>
-    <text x="12500" y="10978" font-size="225" font-weight="800" fill="#36586E" letter-spacing="10">PASSAGEM COBERTA · CONEXÃO DOS BLOCOS</text>
+    <rect x="9950" y="10610" width="5100" height="570" rx="285" fill="#FFFDF9" stroke="#CDBFD1" stroke-width="20"/>
+    <text x="12500" y="10978" font-size="225" font-weight="800" fill="#55286F" letter-spacing="10">PASSAGEM COBERTA · CONEXÃO DOS BLOCOS</text>
   </g>
-  <rect x="16550" y="1280" width="1600" height="8420" rx="70" fill="#DCEAF3" stroke="#9CB4C4" stroke-width="24"/>
-  <g filter="url(#shadow)" stroke="#8FA8BA" stroke-width="24">
-    <rect x="14200" y="1280" width="2350" height="1980" rx="54" fill="#DDF0EA"/>
-    <rect x="14200" y="3460" width="2350" height="1980" rx="54" fill="#DDF0EA"/>
-    <rect x="14200" y="5640" width="2350" height="1980" rx="54" fill="#DDF0EA"/>
-    <rect x="14200" y="7820" width="2350" height="1880" rx="54" fill="#DDF0EA"/>
-    <rect x="18150" y="1280" width="2078" height="2110" rx="54" fill="#E5EEF4"/>
-    <rect x="18150" y="6490" width="2078" height="3210" rx="54" fill="#E5EEF4"/>
+  <rect x="16550" y="1280" width="1600" height="8420" rx="70" fill="#E5DDE7" stroke="#8F7799" stroke-width="24"/>
+  <g filter="url(#shadow)" stroke="#806B89" stroke-width="24">
+    <rect x="14200" y="1280" width="2350" height="1980" rx="54" fill="#E8E2DA"/>
+    <rect x="14200" y="3460" width="2350" height="1980" rx="54" fill="#E8E2DA"/>
+    <rect x="14200" y="5640" width="2350" height="1980" rx="54" fill="#E8E2DA"/>
+    <rect x="14200" y="7820" width="2350" height="1880" rx="54" fill="#E8E2DA"/>
+    <rect x="18150" y="1280" width="2078" height="2110" rx="54" fill="#EEE8E2"/>
+    <rect x="18150" y="6490" width="2078" height="3210" rx="54" fill="#EEE8E2"/>
     <rect x="18150" y="3390" width="2078" height="3100" rx="54" fill="#FFE4A8" stroke="#D5A62A"/>
   </g>
-  <g fill="#F06472">
+  <g fill="#7A4A96">
     <rect x="16420" y="1900" width="260" height="520" rx="25"/>
     <rect x="16420" y="4080" width="260" height="520" rx="25"/>
     <rect x="16420" y="6260" width="260" height="520" rx="25"/>

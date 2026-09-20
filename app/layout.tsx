@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Mapa | Feira Tecnológica',
   description:
-    'Explore as salas e os corredores do Bloco A da Feira Tecnológica.',
+    'Encontre projetos e trace rotas pelos espaços da Feira Tecnológica 2026.',
 };
 export default function RootLayout({
   children,
