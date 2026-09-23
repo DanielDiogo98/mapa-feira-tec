@@ -38,6 +38,11 @@ A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a
 
 As instruções estão em `backend/README.md`. O backend fornece projetos, catálogo de mapas e grafos somente para leitura. As migrações ficam em `database/` e preservam as tabelas atuais.
 
+O sistema de votação e ranking desenvolvido pela Turma B será integrado como
+um serviço complementar. A compatibilidade do banco, os cuidados de segurança
+e a sequência de integração estão registrados em
+`docs/integracao-backend-turma-b.md`.
+
 ## Produção no Railway
 
 O repositório usa três serviços no mesmo projeto Railway:
