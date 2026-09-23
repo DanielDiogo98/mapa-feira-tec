@@ -11,4 +11,4 @@ COPY database/railway-init.sql /var/www/html/database/railway-init.sql
 
 EXPOSE 8080
 
-CMD ["php", "-S", "0.0.0.0:8080", "-t", "/var/www/html/backend/public", "/var/www/html/backend/public/index.php"]
+CMD ["php", "-S", "[::]:8080", "-t", "/var/www/html/backend/public", "/var/www/html/backend/public/index.php"]
