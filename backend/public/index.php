@@ -43,7 +43,12 @@ try {
         respond(['data' => json_decode(file_get_contents($file), true, flags: JSON_THROW_ON_ERROR)]);
     }
     if (preg_match('#^/maps/([a-z0-9-]+)/graph$#', $path, $match)) {
-        $allowed = ['bloco-a-salas', 'patio-biblioteca-auditorio'];
+        $allowed = [
+            'bloco-a-salas',
+            'patio-biblioteca-auditorio',
+            'bloco-b-andar-1',
+            'bloco-b-andar-2',
+        ];
         if (!in_array($match[1], $allowed, true)) respond(['error' => 'Grafo ainda não cadastrado.'], 404);
         $file = $config['graph_directory'] . DIRECTORY_SEPARATOR . $match[1] . '-pontos.json';
         if (!is_file($file)) respond(['error' => 'Grafo não encontrado.'], 404);

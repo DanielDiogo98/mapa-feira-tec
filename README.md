@@ -4,14 +4,23 @@ Aplicação responsiva para visitantes encontrarem projetos e receberem uma rota
 
 As plantas públicas usam versões limpas dos SVGs: os textos antigos do Figma são removidos e substituídos por etiquetas nítidas do sistema. Salas, corredores, entradas, escadas, portas e banheiros seguem a mesma paleta em todos os andares.
 
-## Executar o frontend
+## Executar o site completo
 
 ```powershell
 npm install
 npm run dev
 ```
 
-Abra `http://localhost:3000`.
+Abra `http://localhost:3000`. A página inicial em HTML fica em `/` e o mapa
+interativo em React fica em `/mapa`.
+
+Para usar a API local pelo mesmo endereço do site, inicie o backend PHP e
+defina `BACKEND_API_URL` antes de executar o frontend:
+
+```powershell
+$env:BACKEND_API_URL="http://127.0.0.1:8080/api"
+npm run dev
+```
 
 ## Mapas atuais
 
@@ -28,3 +37,17 @@ A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a
 ## API PHP e MariaDB
 
 As instruções estão em `backend/README.md`. O backend fornece projetos, catálogo de mapas e grafos somente para leitura. As migrações ficam em `database/` e preservam as tabelas atuais.
+
+## Produção no Railway
+
+O repositório usa três serviços no mesmo projeto Railway:
+
+- `web`: site estático e mapa React, construídos pelo `Dockerfile` da raiz;
+- `api`: backend PHP, construído por `backend/Dockerfile`;
+- `mysql`: banco privado do Railway.
+
+O navegador acessa a API por `/api`. O serviço `web` encaminha essas chamadas
+pela rede interna do Railway, portanto somente o site precisa de domínio
+público. Antes de iniciar a API, o script
+`backend/scripts/initialize_database.php` cria o esquema e importa os mapas
+quando o banco ainda está vazio.

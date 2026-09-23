@@ -14,7 +14,10 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 
 const localBindingConfig = {
   main: 'vinext/server/fetch-handler',
-  compatibility_flags: ['nodejs_compat'],
+  compatibility_flags: ['nodejs_compat', 'nodejs_compat_populate_process_env'],
+  vars: {
+    BACKEND_API_URL: process.env.BACKEND_API_URL ?? '',
+  },
   d1_databases: d1
     ? [
         {

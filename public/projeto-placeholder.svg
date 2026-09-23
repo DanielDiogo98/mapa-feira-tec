@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title description">
+  <title id="title">Projeto da Feira Tecnológica</title>
+  <desc id="description">Imagem provisória em tons de bege e roxo.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3f1eb"/>
+      <stop offset="1" stop-color="#e3e3fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="36" fill="url(#bg)"/>
+  <circle cx="650" cy="90" r="120" fill="#55286f" opacity=".1"/>
+  <circle cx="120" cy="430" r="170" fill="#311041" opacity=".08"/>
+  <g transform="translate(320 145)" fill="none" stroke="#311041" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 0 0 42v96l80 42 80-42V42Z"/>
+    <path d="M0 42l80 42 80-42M80 84v96"/>
+  </g>
+  <text x="400" y="390" text-anchor="middle" fill="#311041" font-family="Afacad,Arial,sans-serif" font-size="42" font-weight="700">Feira Tecnológica 2026</text>
+</svg>
