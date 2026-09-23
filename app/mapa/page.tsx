@@ -413,9 +413,15 @@ export default function VisitorMap() {
             <span>Mapa dos projetos · ETEC MCM</span>
           </div>
         </div>
-        <div className="visitor-location">
-          <MapPin size={16} />
-          <span>{mapNames[activeMap]}</span>
+        <div className="visitor-header-actions">
+          <a className="visitor-home-link" href="/index.html">
+            <ArrowLeft size={17} />
+            <span>Voltar ao início</span>
+          </a>
+          <div className="visitor-location">
+            <MapPin size={16} />
+            <span>{mapNames[activeMap]}</span>
+          </div>
         </div>
       </header>
       <div className="visitor-layout">

@@ -1890,6 +1890,35 @@ select:focus-visible,
   color: #311041;
   box-shadow: inset 0 0 0 1px rgba(49, 16, 65, 0.05);
 }
+.visitor-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.visitor-home-link {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #311041;
+  color: #f3f1eb;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(49, 16, 65, 0.17);
+  transition:
+    background 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+.visitor-home-link:hover {
+  background: #55286f;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(49, 16, 65, 0.22);
+}
 .visitor-layout {
   grid-template-columns: minmax(340px, 380px) minmax(0, 1fr);
   gap: 14px;
@@ -2290,6 +2319,29 @@ select:focus-visible,
   }
   .visitor-header .brand div > span {
     font-size: 10px;
+  }
+  .visitor-home-link {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    justify-content: center;
+    padding: 0;
+  }
+  .visitor-home-link span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .visitor-location {
+    max-width: min(44vw, 230px);
+  }
+  .visitor-location span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .visitor-layout {
     grid-template-rows: minmax(455px, 58dvh) auto;

@@ -11,6 +11,35 @@
 
 }
 
+.ranking-back-button {
+    width: fit-content;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 17px;
+    margin-bottom: 22px;
+    border-radius: 999px;
+    background: #311041;
+    color: #f3f1eb;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(49, 16, 65, 0.18);
+    transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.ranking-back-button:hover {
+    background-color: #55286f;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(49, 16, 65, 0.24);
+}
+
+.ranking-back-button:focus-visible {
+    outline: 3px solid rgba(153, 0, 242, 0.35);
+    outline-offset: 3px;
+}
+
 
 /* Breadcrumb */
 
