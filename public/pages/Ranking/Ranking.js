@@ -58,6 +58,15 @@ function atualizarResumo() {
   if (estatisticas[0]) estatisticas[0].textContent = String(votados);
   if (estatisticas[1]) estatisticas[1].textContent = String(votos);
 
+  const nomesPodio = document.querySelectorAll('.podio__nome');
+  // A ordem visual do HTML é 2º, 1º e 3º lugar.
+  const indicesDoPodio = [1, 0, 2];
+  nomesPodio.forEach((elemento, indice) => {
+    const projeto = ranking[indicesDoPodio[indice]];
+    elemento.textContent =
+      votos > 0 && projeto?.votes > 0 ? projeto.name : 'Aguardando votos';
+  });
+
   const votosPorOds = new Map();
   const haVotos = votos > 0;
   ranking.forEach((projeto) => {
