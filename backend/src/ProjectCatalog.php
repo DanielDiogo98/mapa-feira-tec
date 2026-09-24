@@ -44,6 +44,7 @@ final class ProjectCatalog
             ...($project['courses'] ?? []),
             ...($project['series'] ?? []),
             ...($project['students'] ?? []),
+            $project['advisor'] ?? '',
             ...$odsTerms,
         ]));
         $query = $normalize(trim((string) ($filters['q'] ?? '')));

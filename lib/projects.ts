@@ -12,6 +12,7 @@ export type FairProject = {
   courses: string[];
   series: string[];
   students: string[];
+  advisor?: string;
   stand?: number;
   ods?: Array<{ number: number; name: string }>;
   location?: ProjectLocation;
@@ -47,6 +48,7 @@ export function filterProjects(
         ...project.courses,
         ...project.series,
         ...project.students,
+        project.advisor ?? '',
         project.stand ? `stand ${project.stand}` : '',
         ...(project.ods ?? []).flatMap((item) => [
           String(item.number),

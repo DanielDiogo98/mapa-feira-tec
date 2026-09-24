@@ -31,6 +31,25 @@ test('catálogo público não contém campos privados do banco de origem', async
   );
 });
 
+test('catálogo preserva os vínculos entre alunos e seus projetos', async () => {
+  const projects = await readJson('lib/projects-data.json');
+  const coroaAfro = projects.find((project) =>
+    project.name.includes('CoroaAfro'),
+  );
+  const vitalize = projects.find((project) => project.name === 'Vitalize');
+  assert.ok(coroaAfro, 'CoroaAfro não encontrado');
+  assert.ok(vitalize, 'Vitalize não encontrado');
+  assert.ok(
+    coroaAfro.students.some((name) => name === 'Felipe José Borges de Mello'),
+    'Felipe não está associado ao CoroaAfro',
+  );
+  assert.ok(
+    vitalize.students.some((name) => name === 'Leticia Vasconcelos da Silva'),
+    'Leticia não está associada ao Vitalize',
+  );
+  assert.equal(projects.length, 134);
+});
+
 test('toda localização de projeto aponta para um destino existente', async () => {
   const projects = await readJson('lib/projects-data.json');
   const graphFiles = [

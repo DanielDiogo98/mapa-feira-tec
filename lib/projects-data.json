@@ -1,12 +1,150 @@
 [
   {
-    "id": 139,
-    "name": "Além da escolha",
-    "description": "Tendo em vista a vulnerabilidade da mulher pobre, e a facilidade de tal optar por ser profissional do sexo, buscamos retirar um pouco do tanto de preconceito que há, por intermédio da conscientização e empatia, além de mostrar outras opções de caminho a seguir, colocando tais informações num site.\nEm nosso projeto também providenciamos um jogo no estilo de visual novel, em que você é a Diana, uma mulher pobre e só, que acabou de ser demitida, e agora? O que fazer?",
+    "id": 30,
+    "name": "A História dos Videogames",
+    "description": "Um projeto dedicado a apresentar a história dos videogames, mostrando a linha do tempo dos consoles, os jogos mais famosos e a evolução dos games, também com um dos primeiros jogos interatiovos já criados",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Luis Guilherme",
+      "Miguel Rego Santana",
+      "Miguel Santos Duarte",
+      "Pietro Honorato Torato"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 91,
+    "name": "Adapta",
+    "description": "O Projeto Adapta tem como objetivo utilizar a arte como meio geração de renda para pessoas inativas no mercado de trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Stephany Calazans Santana"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 27,
+    "name": "AdaptiveMove",
+    "description": "Este trabalho apresenta o desenvolvimento da plataforma AdaptiveMove, uma solução tecnológica voltada à promoção da acessibilidade e da inclusão esportiva de pessoas com deficiência. O projeto foi desenvolvido a partir da identificação das dificuldades enfrentadas por esse público na busca por espaços acessíveis e modalidades esportivas adaptadas às suas necessidades. Dessa forma, a plataforma tem como objetivo facilitar o acesso a informações relacionadas à prática esportiva inclusiva, contribuindo para a autonomia, a qualidade de vida e a participação social dos usuários. Para o desenvolvimento do projeto, foram realizadas pesquisas sobre acessibilidade, inclusão social, esporte adaptado e tecnologia assistiva, além do levantamento das necessidades do público-alvo. Também foram elaborados protótipos da interface e utilizadas tecnologias web para a implementação da plataforma, aplicando conceitos de experiência do usuário (UX/UI) e arquitetura da informação para garantir uma navegação",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
+    "students": [
+      "Brayan Charles Moura da Mota",
+      "anna beatriz surita manuel",
+      "isabele eduarda oliveira borges"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 28,
+    "name": "AFDE - Educação Financeira",
+    "description": "A plataforma AFDE é uma agenda financeira dinâmica educacional, com objetivo de ajudar os indivíduos organizarem e controlarem suas finanças, isso através de recursos e ferramentas presentes no site.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
+    "students": [
+      "Bryan Soares de Carvalho",
+      "Iago de Almeida Coelho",
+      "João Henrique de Adrande Gimenes",
+      "João Henrique dos Santos Rabelo"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 98,
+    "name": "alem das barreiras",
+    "description": "O objetivo é realizar a conscientização da necessidade de adaptação do local de trabalho e da inclusão das pessoas PCD, apresentar soluções para esse tipo de caso.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Ana Liz de Oliveira"
+    ],
     "ods": [
       {
         "number": 8,
@@ -16,18 +154,201 @@
         "number": 10,
         "name": "Redução das Desigualdades"
       }
-    ]
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
+    "id": 41,
+    "name": "Alimenta+",
+    "description": "O projeto Alimenta+ atua diretamente em consonância com o Objetivo de Desenvolvimento Sustentável 2 (ODS 2 - Fome Zero e Agricultura Sustentável). A iniciativa consiste no desenvolvimento de uma plataforma digital que integra estabelecimentos do setor alimentício a uma rede colaborativa.\n\nO principal objetivo da ferramenta é informar e orientar pessoas em situação de vulnerabilidade alimentar sobre os pontos de distribuição de alimentos disponíveis, fornecendo-lhes acesso a um mapeamento georreferenciado e interativo por meio da tecnologia Leaflet.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "João Pedro Ronchi Gabini",
+      "Maria Eduarda Antônio Couto Silva",
+      "Rebeca Santos Silva",
+      "Victoria Américo Nunes",
+      "julia aparecida bandeira rudel"
+    ],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 139,
+    "name": "Além da escolha",
+    "description": "Tendo em vista a vulnerabilidade da mulher pobre, e a facilidade de tal optar por ser profissional do sexo, buscamos retirar um pouco do tanto de preconceito que há, por intermédio da conscientização e empatia, além de mostrar outras opções de caminho a seguir, colocando tais informações num site.\nEm nosso projeto também providenciamos um jogo no estilo de visual novel, em que você é a Diana, uma mulher pobre e só, que acabou de ser demitida, e agora? O que fazer?",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Beatriz de Paula Vaca",
+      "Isabelly Balduino Silva",
+      "Mariana de Couto Antunes Silva",
+      "Vitoria Moreira Pires",
+      "luiza gomes dos santos candido"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 40,
+    "name": "animasil",
+    "description": "O animasil é um projeto focado em conscientizar o publico, com o foco em preservação de vegetação, animais e todo o meio ambiente.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Bruno Miguel Affonso Silva",
+      "Danilo Santos Martins",
+      "Emanuel Da Silva Prospero",
+      "jefferson anghinoni rosa"
+    ],
+    "ods": [
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 62,
+    "name": "Análise Comparativa Microbiana",
+    "description": "O objetivo do projeto Análise Comparativa Microbiana é comparar mãos, água e alimentos sujos com mãos limpas, água tratada e alimentos higienizados, e explicar a importância de tratar a higienização desses tópicos. A metodologia escolhida para explicar a importância de ter uma boa higiene é o cultivo de colônias bacterianas e a observação dessas bactérias no microscópio de forma prática. O resultado esperado, de forma geral, é um público conscientizado da importância de manter a higiene, mesmo que feita de formas simples, em casa ou em ambientes de maior convivência, para manter a saúde e o bem-estar público, além de mostrar que o contato com água não tratada pode ser prejudicial, principalmente na primeira infância.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Gabriela Miki Enohi",
+      "Henry Mendes Dolcimasculo",
+      "Melissa Moraes Faria",
+      "Sophia Araújo Nascimento"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 6,
+        "name": "Água Potável e Saneamento"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
+    "id": 48,
+    "name": "Aromas de Ésteres",
+    "description": "Mostrar para o público como que os aromas são feitos, e como que eles aparecem na nossa vida",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Caroline Franco",
+      "Eloisa Funes Gonçalves",
+      "Júlia de Oliveira Borges",
+      "Raul Kenzo Alonso Sawada"
+    ],
+    "ods": [
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
+    "id": 100,
+    "name": "ASM(Sistema de Estoque)",
+    "description": "Software de gestão de estoque, visando auxiliar micro e pequenas empresas no gerenciamento e funcionamento de seus estoques. Reduzindo custos e otimizando tempo",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Matheus Rocha Souza"
+    ],
+    "ods": [
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 110,
     "name": "Atlética MCM",
     "description": "O presente projeto da Atlética MCM, foi desenvolvido co o objetivo de promover a prática esportiva, a integração social e o bem-estar dos estudantes no ambiente escolar. A proposta consiste na criação de uma atlética organizada dentro da ETEC MCM, envolvendo modalidades como futsal e vôlei, além de ações voltadas à organização, divulgação e participação em eventos esportivos.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["2ºA"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
     "students": [
       "Ana Carolina Silva Mendes",
       "Anna Julia Silva oliveira",
+      "Arthur Costa Ribeiro",
       "Eric Souza Torres",
       "Gustavo Oliveira"
     ],
@@ -45,6 +366,7 @@
         "name": "Redução das Desigualdades"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-07",
       "label": "Sala 7 · Bloco A",
@@ -56,54 +378,213 @@
     "name": "Ato de Improbidade",
     "description": "Esperamos conseguir entregar nosso trabalho com exelencia e clareza",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºR"
+    ],
+    "students": [
+      "Camile Vitoria Silva de Menezes",
+      "Julia Vitória de Oliveira Andrade",
+      "MARIA EDUARDA NASCIMENTO DE SOUZA"
+    ],
     "ods": [
       {
         "number": 8,
         "name": "Trabalho Decente e Crescimento Econômico"
       }
-    ]
+    ],
+    "advisor": "AMAURY DIAS PEREIRA"
+  },
+  {
+    "id": 57,
+    "name": "AtopiCare",
+    "description": "Nosso objetivo é desenvolver produtos 100% naturais, voltados ao cuidado da pele para pessoas com Dermatite Atópica, sendo eles uma Goma acalmante, para ajudar no estresse do dia a dia. Inclui também uma Pomada feita de produtos naturais para auxiliar na hidratação da pele ressecada e irritada.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "Giovanna Maziero Bispo",
+      "Isabela dos Santos Silva",
+      "Jady Bueno de Oliveira"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
   },
   {
     "id": 159,
     "name": "Atos de Insubordinação",
     "description": "Promover um ambiente de trabalho mais justo e respeitoso, garantindo o cumprimento das normas trabalhistas e o equilíbrio entre direitos e deveres.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºR"
+    ],
+    "students": [
+      "Ana Carolina Rocha Pacheco"
+    ],
     "ods": [
       {
         "number": 8,
         "name": "Trabalho Decente e Crescimento Econômico"
       }
-    ]
+    ],
+    "advisor": "AMAURY DIAS PEREIRA"
+  },
+  {
+    "id": 75,
+    "name": "Bem-Estar em Ação",
+    "description": "O projeto tem como principal objetivo promover o bem-estar dos trabalhadores, dentro e fora do ambiente de trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Lavinia Ester da Silva Veloso"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 142,
     "name": "Bio Brasil",
     "description": "Projeto de concientização sobre desmatamento e reflorestamento ambiental, com integração de um jogo com o objetivo de reflorecer as áreas desmatadas",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Henrique Araujo Batista",
+      "Pietro Andrade dos Santos",
+      "Pietro Rodrigues Cunha"
+    ],
     "ods": [
       {
         "number": 15,
         "name": "Vida Terrestre"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 52,
+    "name": "Biodiesel EcoFLUX",
+    "description": "Um Biodiesel feito do óleo vegetal residual, seu diferencial é que utilizamos o etanol ao invés do metanol.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "Dalila Rodrigues N Santos",
+      "Davi Mercurio de Souza",
+      "Gueuri Fernandes Rodrigues",
+      "Igor Rodrigues Requi"
+    ],
+    "ods": [
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 34,
+    "name": "Biologia Mental dos Jogos.",
+    "description": "O objetivo do nosso projeto é basicamente mostrar sobre jogos, mas, não os jogos em sí, e sim sobre o que os jogos afetam na mente humana e quais são os benefícios & malefícios dos jogos em ação na nossa mente.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "José Eduardo de Souza Silva",
+      "Marco Antonio Barbosa Cardoso",
+      "Matheus Ferreira Falcão",
+      "Pedro Lucas Dias de Camargo",
+      "Pedro Lucca Santicioli"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 138,
     "name": "BioNano",
     "description": "O projeto conta com um site informativo e interativo com o intuito de conscientizar sobre os reais perigos dos microplásticos presentes no mundo todo.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Brayan Mendes Barros",
+      "Gustavo Fontes Mazza SIlva",
+      "Rafael Costa de Lima",
+      "Rafael Ramos Araujo",
+      "Vinicius Sakae Vicentini"
+    ],
     "ods": [
       {
         "number": 3,
@@ -117,16 +598,62 @@
         "number": 15,
         "name": "Vida Terrestre"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Biopele",
+    "description": "Nosso projeto conciste no desenvolvimento de um creme multifuncional para o tratamento de espinhas com ação secativa, calmante e redutora de manchas, utilizando propriedades dos ingredientes naturais e agentes dermocosméticos. O objetivo do produto é trazer a autoestima dos jovens, que sofrem com esse tipo de problema, mas sem agredir a pele como a maioria dos cosmédicos.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Allicia da Silva Oliveira",
+      "Eli Duscilino de Lima Filho",
+      "Eloisa Barbosa de Souza",
+      "Eloise Silva Luz",
+      "Isabela De Almeida"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
   },
   {
     "id": 126,
     "name": "Blue Sky- Agencia de Viagens",
     "description": "Uma agencia de viagens que visa proporcionar uma experiencia voltada para pessoas de classe baixa e media, com plano estratégico e financeiro, que possibilita a oportunidade de viajar sem se individar. Auxiliando a organizar suas finanças etc.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Ana Julia Mendes dos Santos",
+      "Ana Luiza Souza da Cruz",
+      "Beatriz Vitoria Fernanades Felix",
+      "Isabelly Beatriz de Oliveira Bina",
+      "MATHEUS GOMES SILVA"
+    ],
     "ods": [
       {
         "number": 8,
@@ -140,22 +667,101 @@
         "number": 12,
         "name": "Consumo e Produção Responsáveis"
       }
-    ]
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 95,
+    "name": "C.I.A Da Conexão",
+    "description": "O projeto visa expor a importância de salas sensoriais para melhor inclusão de pesoas no mercado de trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Manuela Souza De Assis"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Camaleão Químico",
+    "description": "O camaleão químico é um experimento de oxirredução em que uma solução muda de roxo para azul, verde, amarelo e laranja devido às transformações do manganês em diferentes estados de oxidação.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Alice Alves Marques",
+      "Amanda Borges Novais",
+      "Gabriela Gargel Ribeiro",
+      "Gabrielly Rodrigues Vieira",
+      "Isabella fernandes mancilla",
+      "Julia Rodrigues de Souza"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
   },
   {
     "id": 148,
     "name": "Casa Verde- Energia Limpa",
     "description": "A escolha desse problema se justifica pela importância de reduzir o consumo desnecessário de energia e buscar alternativas mais sustentáveis para o cotidiano da população. O desperdício de eletricidade, além de aumentar os gastos, contribui para uma utilização maior dos recursos necessários para a geração de energia. Por esse motivo, é importante desenvolver soluções que permitam utilizar a eletricidade de maneira mais eficiente.\nA proposta desenvolvida pelo nosso grupo pode trazer benefícios para a comunidade ao apresentar formas simples de economizar energia por meio da tecnologia. A utilização de sensores de proximidade pode evitar que lâmpadas permaneçam ligadas quando não há ninguém no ambiente, enquanto as placas solares e os cataventos representam alternativas para a geração de energia a partir de recursos naturais. Dessa maneira, o projeto busca demonstrar que pequenas mudanças podem contribuir para um consumo mais consciente e para a preservação do meio ambiente.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Nicolas Eikoo Suzukayama"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Nicolas Eikoo Suzukayama"
+    ],
     "ods": [
       {
         "number": 7,
         "name": "Energia Limpa e Acessível"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -167,9 +773,15 @@
     "name": "CIDADE SUSTENTÁVEL",
     "description": "O projeto da Cidade Sustentável tem a proposta de apresentar um modelo de cidade totalmente sustentável, com sistemas implementados de água potável e saneamento básico, energia limpa e acessível, indústrias com infraestrutura e inovações, consumo e produção responsáveis, além de ação contra as mudanças climáticas.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "João Gabriel Diaas Meira"
+    ],
     "ods": [
       {
         "number": 6,
@@ -195,46 +807,199 @@
         "number": 13,
         "name": "Ação Contra a Mudança Global do Clima"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Cidades Inteligentes",
+    "description": "Cidades Inteligentes e Sustentáveis\n\nCidades inteligentes e sustentáveis utilizam tecnologia soluções inovadoras para melhorar a qualidade de vida e preservar o meio mabhiente. O projeto mostra como energia renovável, transporte sustentável e o uso consciente dos recursos podem tornar as cidades mais eficientes, organizadas e preparadas para o futuro.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Arthur Alves Januario",
+      "Breno",
+      "Davi Yuri Spacacheri Gonsalez de Faria",
+      "Edison Soares Damasceno Laino",
+      "cristiano simões de andrade junior"
+    ],
+    "ods": [
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 141,
     "name": "Climate 13",
     "description": "Projeto voltado para a consientização sobre questões ambientais, como desmatamento e o aquecimento global, com Cards, sistema de monitoramento do clima global, jogo sobre a agenda 2030 e muito mais.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Arthur Pereira de Almeida Campos",
+      "Davi Luís Fernandes Dos Santos",
+      "Giovanni Henrique Evangelista Estevam",
+      "Pedro Henrique Duarte Siqueira",
+      "Pedro Henrique Soares Silva"
+    ],
     "ods": [
       {
         "number": 13,
         "name": "Ação Contra a Mudança Global do Clima"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 135,
     "name": "Conectando idéias- ODS9",
     "description": "Fizemos esse projeto buscando uma solução prática de problemas, usando como frerramentas principais infraestruturas melhores e mais modernas.\nNo nosso projeto, fizemos uma cidade com modelamento 3d, nessa cidade tinhamos fonte de energia sustentável, vegetação para reduzir a temperatura geral da cidade, uma ponte com boa estrutura entre outras coisas.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "Aquiles de Moraes Carlos"
+    ],
     "ods": [
       {
         "number": 9,
         "name": "Indústria, Inovação e Infraestrutura"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
-    "id": 130,
-    "name": "CoroaAfro (T.I.)",
+    "id": 43,
+    "name": "Contra Apostas",
+    "description": "É um site expositivo com o objetivo principal de concientizar as pessoas sobre os problemas que o vicio em apostar promove à sua saúde, resaltando as ODS 3 e 4 e baseando-se nelas.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Kaique Carmo Silva",
+      "Lucas Martins Pires",
+      "Marcos Paulo Henrique Balbino",
+      "Matheus Henrique Molon",
+      "Pietro Carvalho Bueno"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 42,
+    "name": "Conviver é proteger",
+    "description": "Projeto com objetivo de orientar e ensinar como os moradores de Ribeirão Pires podem lidar com animais silvestres",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Kauã Freire",
+      "Lucas Bellato de Freitas",
+      "Pedro Sachetto De Moraes",
+      "Rafael Teixeira de Moura Junior",
+      "Raphael Ferreira Dos Santos"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 14,
+        "name": "Vida na Água"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 103,
+    "name": "Coroa Afro: Fortalecendo Laços",
     "description": "Visa desenvolver uma agência de marketing digital voltada para microempreendedores afrodescendentes que tiveram pouco ou nenhum acesso a capacitações específicas, com objetivo de reduzir desigualdades, crescimento e competitividade no mercado digital, a agência não atua apenas como prestadora de serviços, mas como uma plataforma de capacitação estratégica, inclusão digital e desenvolvimento sustentável de negócios, considerando que o empreendedorismo negro, muitas vezes, atua como motor de identidade cultural e resistência contra o racismo.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºC"],
-    "students": ["Allyson Rocha dos Santos", "Daniel Diogo de Souza"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Beatriz de Moraes Bertoldo"
+    ],
     "ods": [
       {
         "number": 8,
@@ -245,6 +1010,41 @@
         "name": "Redução das Desigualdades"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 130,
+    "name": "CoroaAfro (T.I.)",
+    "description": "Visa desenvolver uma agência de marketing digital voltada para microempreendedores afrodescendentes que tiveram pouco ou nenhum acesso a capacitações específicas, com objetivo de reduzir desigualdades, crescimento e competitividade no mercado digital, a agência não atua apenas como prestadora de serviços, mas como uma plataforma de capacitação estratégica, inclusão digital e desenvolvimento sustentável de negócios, considerando que o empreendedorismo negro, muitas vezes, atua como motor de identidade cultural e resistência contra o racismo.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "Allyson Rocha dos Santos",
+      "Daniel Diogo de Souza",
+      "Felipe José Borges de Mello",
+      "Ízan Rios"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
     "location": {
       "elementId": "sala-08",
       "label": "Sala 8 · Bloco A",
@@ -252,19 +1052,57 @@
     }
   },
   {
+    "id": 31,
+    "name": "Corpo em Jogo",
+    "description": "O objetivo do projeto é mostrar como o esporte pode contribuir para a prevenção do uso de drogas entre os jovens.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Lorena Da Silva Santos",
+      "Micaelly Oliveira Ferreira dos Santos",
+      "RAFAELA MOURA ABREU",
+      "Wemelly Layane Soares da Silva Ferreira",
+      "rafael fontes barroso"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
     "id": 154,
     "name": "Desigualdades sociais no ABC",
     "description": "A criação de hortas comunitárias para a ajuda de pessoas em situação de vulnerabilidade, onde tanto o trabalhador quanto aquele que recebe são beneficiados e recebem auxílios governamentais. As hortas são automatizadas por sistemas inteligentes.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Rodrigo Ramos Paz"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Rodrigo Ramos Paz"
+    ],
     "ods": [
       {
         "number": 2,
         "name": "Fome Zero e Agricultura Sustentável"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -272,13 +1110,76 @@
     }
   },
   {
+    "id": 106,
+    "name": "Diamond: Lapidando o futuro",
+    "description": "A Diamond é um Centro Poliesportivo de Formação Integral de Atletas, voltado para o desenvolvimento técnico, tático e humano de jovens talentos em diversas modalidades, como voleibol, basquete e, principalmente, futebol, e que funciona como uma ponte entre esses atletas e os clubes profissionais. Tem-se como objetivo oferecer oportunidade real de profissionalização para crianças e jovens em regiões periféricas de baixo acesso a organizações esportivas de excelência.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Amanda Menezes Honório da Silva"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 80,
+    "name": "DIGNA",
+    "description": "O projeto é sobre a prevenção ao assédio contra as mulheres no ambiente de trabalho.\nNosso objetivo é prevenir e diminuir o índice de assédio às mulheres e ajudar as mulheres com um site de denuncias anônimas para as mulheres se sentirem mais seguras em denunciar o assediador.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Amanda Hikari Ricciardi"
+    ],
+    "ods": [
+      {
+        "number": 5,
+        "name": "Igualdade de Gênero"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
     "id": 131,
     "name": "Discordia",
     "description": "O Discordia é uma plataforma global d3e comunicação digital projetada para criar comunidades, conectar pessoas e aproximar grupos de amigos através de canais de voz, textos de videos de alta qualidade.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Bernardo Antunes de queiroz",
+      "Laura Oliveira Reis",
+      "Otávio Sanches Carvalho",
+      "Pablo de Souza Gomes",
+      "Samir Simon Abdallah Abdul Nour"
+    ],
     "ods": [
       {
         "number": 4,
@@ -288,16 +1189,62 @@
         "number": 16,
         "name": "Paz, Justiça e Instituições Eficazes"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 89,
+    "name": "Do ventre ao coração",
+    "description": "O objetivo do projeto é a inserção de mães solo no mercado de trabalho, auxiliando com cursos profissionalizante gratuitos, informação sobre creches e guia para entrevista de emprego.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Giovanna Cristina Moraes Andrade"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 119,
     "name": "dream university",
     "description": "O objetivo da dream university é ajudar jovens que sonham em fazer faculdade fora do pais, jovens que sentem a vontade mas tem medo do começo. A dream university incentiva esses jovens com sonhos de ter um estudo no exterior, ter um diploma internacional e melhores oportunidades no mercado de trabalho.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "JOHNNY BERNARDO DOS ANJOS RAIMUNDO",
+      "LORENA LIVIERO AMORIM",
+      "POLLIANA PAULINO DO  CARMO",
+      "ruan santos castilho"
+    ],
     "ods": [
       {
         "number": 4,
@@ -307,82 +1254,352 @@
         "number": 8,
         "name": "Trabalho Decente e Crescimento Econômico"
       }
-    ]
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 145,
     "name": "Eco City",
     "description": "Objetivos\n\nCriar uma cidade mais limpa e sustentável utilizando Inteligência Artificial e sensores para melhorar a coleta de lixo. O projeto busca reduzir desperdícios, economizar combustível e incentivar a reciclagem e o descarte correto dos resíduos.\n\nMetodologia\n\nA maquete será desenvolvida no **Tinkercad**, representando ruas, casas, prédios, árvores, lixeiras inteligentes e um caminhão de coleta. Os sensores das lixeiras enviarão informações para um sistema de IA, que identificará quais lixeiras estão cheias e indicará os locais que precisam de coleta primeiro.\n\nResultados esperados\n\nEspera-se demonstrar como a tecnologia pode tornar a coleta de lixo mais rápida e eficiente, diminuir trajetos desnecessários dos caminhões, reduzir o desperdício de combustível e contribuir para uma cidade mais limpa e sustentável.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "Raphael Da Costa Maciel"
+    ],
     "ods": [
       {
         "number": 11,
         "name": "Cidades e Comunidades Sustentáveis"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 123,
     "name": "EcoDomus",
     "description": "Tem como principal objetivo ajudar as pessoas a conquistarem o sonho da casa própria de forma planejada, sustentavel e financeiramente responsavel",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Amanda Morales da Costa Cerqueira",
+      "Ana Carolina da Costa Ferreira",
+      "Ana Clara Padovani Ramos",
+      "Ana Luiza Estevo Masague",
+      "Manuella Gonçalves De Araujo"
+    ],
     "ods": [
       {
         "number": 11,
         "name": "Cidades e Comunidades Sustentáveis"
       }
-    ]
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 64,
+    "name": "Ecofruit",
+    "description": "O projeto ecofruit desenvolve uma pelicula protetora biodegradavel para frutas, à base de amido de milho, que ajuda na conservação e proteção dos alimentos, contribuindo para a redução do disperdicio.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Julia Negreiros",
+      "Kallyane Beatriz Mota da Silva",
+      "MAYSA DA SILVA ALMEIDA",
+      "Maria Eduarda Viana da Silva",
+      "Victor Henrique Pereira De Paula"
+    ],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "Juliana Souza Da Cruz"
   },
   {
     "id": 143,
     "name": "Ecofuturo",
     "description": "O objetivo do nosso projeto é criar uma cidade completamente sustentável, com a intenção de usar energia completamente sustentável, com impacto mínimo na natureza, respeitando o meio ambiente, a fauna e a flora.Para isso nós vamos usar várias ferramentas,como painéis solares,armazenamento de energia e até o uso de IA para gerenciamento.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "Emanuel Lopes Moreira"
+    ],
     "ods": [
       {
         "number": 11,
         "name": "Cidades e Comunidades Sustentáveis"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Ecorotas",
+    "description": "O projeto consiste em um sistema de localização de rotas de coletas para reciclagem de forma prática e facil, facilitando para pessoas com dificuldade em achar esses locais.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Cauâ Ishiki De Jesus Bernardo",
+      "Flávio Gustavo Noim de Santana",
+      "Guilherme de Moraes Silva",
+      "Jhean Santana de Miranda"
+    ],
+    "ods": [
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 61,
+    "name": "EcoSolver",
+    "description": "Um solvente para tintas que tem como objetivo ser menos agressivo ao meio ambiente em comparação a outros solventes como o Thinner e, também, menos prejudicial aos usuários, possuindo um cheiro suave.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "Laís de Lima Silva",
+      "Mariany Sullivan da Silva",
+      "Milena dos Santos Sa",
+      "Sophia Rocha Furlan",
+      "Stella Sertão Cordeiro"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 54,
+    "name": "Ecotorque",
+    "description": "Um projeto com o objetivo de verificar a viabilidade de um lubrificante automotivo a base de óleo de rícino para cárteres de motores 4 tempos ou para motores 2 tempos.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "LUCAS SATURNINO",
+      "MATHEUS ALEXANDRE RAMOS DA SILVA",
+      "Matheus Almeida Santos",
+      "Matheus Leite de Menezes"
+    ],
+    "ods": [
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
   },
   {
     "id": 129,
     "name": "Educaí",
     "description": "Uma plataforma de estudos gratuita com acessibilidade para pessoas com deficiência, como daltonismo, surdez, cegos, etc",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Apolo moreno de souza",
+      "Isabella Teixeira da Silva",
+      "Ketilyn Santos da Costa",
+      "Livia Maria de Araujo Alves",
+      "Maria Eduarda do Santos de Souza"
+    ],
     "ods": [
       {
         "number": 4,
         "name": "Educação de Qualidade"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Elas em rede",
+    "description": "Um projeto de aplicativo com o objetivo de ajudar a promover pessoas (com foco nas mulheres) a começar sua carreira no mercado de trabalho. O site com funcionalidades inspiradas em redes com foco nesse mercado (como o Linkedin) ajuda a pessoa a ter uma visibilidade que não teria normalmente. como o foco é nas mulheres, ele contém partes que falam sobre a história de mulheres importantes, acesso a livros sobre empreendedorismo etc... em geral, o site é como uma rede social que ajuda no descobrimento de mulheres que estão começando a carreira",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Ana Luiza Oliveira",
+      "Juliana Correia Barbosa",
+      "Leonardo Ajala Correia",
+      "Mariana Aya",
+      "Matheus Gomes Rodrigues"
+    ],
+    "ods": [
+      {
+        "number": 5,
+        "name": "Igualdade de Gênero"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 88,
+    "name": "ELEV",
+    "description": "O projeto tem como objetivo ajudar jovens estudantes sem experiencia no mercado de trabalho a conseguirem o primeiro emprego como jovem aprendiz, auxiliando na montagem de currículos e dando dicas práticas para a primeira entrevista de emprego.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Maria Fernanda Rodriguez Silva"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 151,
     "name": "energia limpa e acessivel",
     "description": "iremos falar sobre as energias limpas, como elas são beneficas, como facilitar o acesso dela para todos, tipos de energias limpas e projetos sustentaveis, como: tomadas inteligentes e fiações sustentaveis que tem como foco diminuir gastos desnecessarios e prejuizos",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["joão victor aureliano do nascimento"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "joão victor aureliano do nascimento"
+    ],
     "ods": [
       {
         "number": 7,
         "name": "Energia Limpa e Acessível"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -394,15 +1611,22 @@
     "name": "ENERGIZ.AI",
     "description": "Nosso projeto e sobre um piso que gera energia conforme alguem ou algo pase por cima gerando energia introduzindo uma ia que monitora o gasto e os horarios de pico tambem temos a ideia de colocar ia em tecnologias ja existentes como biodigestores, paineis solares, turbinas eolicas e sensores de movimento onde e usado nos postes",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Leonardo Tomé Balbino"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Leonardo Tomé Balbino"
+    ],
     "ods": [
       {
         "number": 7,
         "name": "Energia Limpa e Acessível"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -414,10 +1638,15 @@
     "name": "Entre linhas",
     "description": "O projeto propõe a criação de um clube literario escolar para incentivar a leitura, a dramaturgia brasileira e a cultura. Por meio de encontros e debates, os alunos poderão compartilhar ideias, desenvolver o senso critico, a argumentação e a interpretação de obras. Além disso, o clube busca a valorização da literatura nascional, ampliar o repertorio cultural e promover a socialização entre os estudantes.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["2ºA"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
     "students": [
       "Clarisse França Nery",
+      "Davi Abreu Garcia",
       "Davi Alves Moraes",
       "Giovanna Kaoru Taga da Cruz",
       "Helloisa Soares Tomaz"
@@ -428,6 +1657,7 @@
         "name": "Educação de Qualidade"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-07",
       "label": "Sala 7 · Bloco A",
@@ -439,11 +1669,16 @@
     "name": "Entre Luzes e Sentimentos",
     "description": "O projeto Entre Luzes e Sentimentos se trata de um projeto que busca conectar as pessoas atraves do teatro e busca melhorar a saùde mental dos participantes.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["2ºA"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
     "students": [
       "Alyne Mendes Silva",
       "Ana Luiza Santos Colombari",
+      "Arthur de Jesus Machado",
       "DaviGuilherme Breyer Mota"
     ],
     "ods": [
@@ -452,6 +1687,7 @@
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-07",
       "label": "Sala 7 · Bloco A",
@@ -459,19 +1695,177 @@
     }
   },
   {
+    "id": 93,
+    "name": "Escola Culinaria NOP",
+    "description": "Escola de gastronomia com objetivo de ensinar pessoas em situação de vulnerabilidade a gerar sua propria renda, com auxilio do Bom Prato por meio de parceria.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Heythor Dias Narciso"
+    ],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 59,
+    "name": "Fertilizante Hidroponico",
+    "description": "Um fertilizante feito de forma sustentavel para plantação",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "João Pedro Leme Rodrigues",
+      "João Pedro Melo Costa",
+      "Juan Dias da Rocha Santos",
+      "JÚLIA ANTUNES MARTINS",
+      "Pedro Henrique Souza da Cruz",
+      "maria eduarda santana soares"
+    ],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      },
+      {
+        "number": 6,
+        "name": "Água Potável e Saneamento"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      },
+      {
+        "number": 14,
+        "name": "Vida na Água"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 26,
+    "name": "FitSync",
+    "description": "FitSync é um site com foco na saúde e no bem estar dos usuários, auxiliando de diversas maneiras e utilizando de funções como: \nCalculadora de macro nutrientes;\nRegistro de treinos, ingestão de líquidos e alimentos;\nChat para conversar com outros usuários e profissionais da área;\nAlém de um feed, possibilitando os usuários de se expressarem e interagirem entre si.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
+    "students": [
+      "Kevin Gabriel de Souza",
+      "Marcos Gabriel da Silva Basso",
+      "Ramon Alves Silva",
+      "Ryan de Oliveira Oszter",
+      "Victor de oliveira Pacheco"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 85,
+    "name": "Florescer",
+    "description": "O projeto tem como objetivo falar sobre a saúde mental da mulher no mercado de trabalho, considerando suas dificuldades dentro e fora do trabalho. Conforme dados encontrados, falaremos sobre a discriminação, casos de assédios recorrentes e as desigualdades de gênero presentes no Brasil atual, buscando conscientizar e incentivar as mulheres que já estão ou vão entrar no mercado de trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Maria Thereza Santos Rocha"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 5,
+        "name": "Igualdade de Gênero"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
     "id": 147,
     "name": "FLUXO+",
     "description": "A solução da mobilidade urbana.\n\nO Fluxo+ é uma solução desenvolvida a partir da ODS 9 para melhorar a mobilidade urbana das cidades. Utilizamos uma tecnologia com câmeras, sensores e IA em semáforos que indentifiquem o fluxo entre pedrestres e veículos. O sistema adapta os tempos de sinalização de acordo com a demanda do fluxo.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Lucas Moitinho Prado"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Lucas Moitinho Prado"
+    ],
     "ods": [
       {
         "number": 9,
         "name": "Indústria, Inovação e Infraestrutura"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -479,43 +1873,178 @@
     }
   },
   {
+    "id": 29,
+    "name": "ForTEA",
+    "description": "Projeto focado em apoiar familiares de pessoas com TEA, oferecendo informações, orientações e recursos que contribuam para o acolhimento, inclusão e qualidade de vida.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
+    "students": [
+      "Ana Beatriz Gilarde Portela",
+      "Ana Caroliny Fortes",
+      "Heloísa Lima Rodrigues",
+      "Isadora Ribeiro Jans"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
     "id": 125,
     "name": "Gestão de Tempo Enem",
     "description": "O objetivo do nosso projeto, é orientar e ajudar as pessoas que vão prestar vestibulares, ou exames. Criamos um site que ajudam os a criar um cronograma de estudos eficaz para gerenciarem melhor sua rotina de estudos.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Alice martins dos Santos",
+      "Amanda Cruz Clemente",
+      "Ayla de Jesus Costa",
+      "Geovana Zanette Ramos dos Santos",
+      "Lívia Santana Silva"
+    ],
     "ods": [
       {
         "number": 4,
         "name": "Educação de Qualidade"
       }
-    ]
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 66,
+    "name": "GHIA Beauty",
+    "description": "Acidificante capilar, com o objetivo de auxiliar no cuidado dos cabelos, especialmente na manutenção de uma condição adequada dos fios após processos que podem ter alteradado seu equilíbrio de alguma forma. Utilizamos mel, óleo de abacate, óleo de amendôas, ácido cítrico e arginina.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Awdrey Guimarães Furst Camargo",
+      "Beatriz Galvão dos Santos Maziero",
+      "Giovanna Vitória de Souza",
+      "Heloísa Toledo da Silva",
+      "iASMIN DOS SANTOS SOUZA"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "Juliana Souza Da Cruz"
+  },
+  {
+    "id": 69,
+    "name": "GIBA Redolence",
+    "description": "Um aromatizador de ambiente focado no meio automotivo, que foca em resolver a poluição do ar interno de veículos e o uso contínuo de aromatizantes sintéticos industriais impactam a saúde respiratória. Nosso objetivo é desenvolver esse aromatizante caseiro, de baixo custo e com ingredientes naturais, avaliando sua eficiência na eliminação de odores e no tempo de fixação do aroma. A criação de uma  alternativa artesanal e ecológica busca oferecer uma opção mais acessível e saudável para o consumidor, reduzindo a exposição a compostos químicos sintéticos e incentivando o reaproveitamento de materiais recicláveis para o recipiente",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Arthuro Martins Pereira",
+      "Breno Garcia",
+      "Gustavo Macedo Tavares",
+      "Isabelly Ferreira Lins"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "Juliana Souza Da Cruz"
   },
   {
     "id": 133,
     "name": "guardiões da terra",
     "description": "o projeto guardiões da terra é um projeto q visa criar uma area de proteção ambiental, que será monitorada e com a ajuda de IA, preservar a fauna e flora que estão em ameaça de extinção, preservando florestas e animais nativos.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "nicolas nascimento vieira rocha"
+    ],
     "ods": [
       {
         "number": 15,
         "name": "Vida Terrestre"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 144,
     "name": "IA na Gestão Urbana",
     "description": "Nosso projeto (IA na Gestão Urbana: Inteligência Artificial, Energia Limpa e Inclusão Social) pretende trazer a ideia de uma cidade auto-sustentavel, vizando a utilização de areas com paineis solares, areas verdes pela cidade vizando o meio-ambiente e utilização de transportes sustentaveis, reduzindo a emissão de gases prejudicias a saúde.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "matheus lemos da silva"
+    ],
     "ods": [
       {
         "number": 1,
@@ -533,31 +2062,57 @@
         "number": 11,
         "name": "Cidades e Comunidades Sustentáveis"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 121,
     "name": "InSync",
     "description": "basicamente nosso projeto busca um boa gestão e organização durante a realização de trabalhos em equipe e buscando o melhor desempenho do grupo em conjunto, e para isso criamos um aplicativo que implementa uma grade de organizção de rotina para que possa se dividir as funções,horarios etc. Esperamos que com a implementação desse sistema/projeto uma melhora significativa no rendimento dos grupos e um melhor desempenho.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Daniel Isaac Cavalcante do Nascimento",
+      "João VIctor Dos Santos Reis",
+      "victor evangelista da silva"
+    ],
     "ods": [
       {
         "number": 4,
         "name": "Educação de Qualidade"
       }
-    ]
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 118,
     "name": "InterWay",
     "description": "Uma plataforma de intercambio acessível para diversas informações.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "Sophia Gonçalves Morais"
+    ],
     "ods": [
       {
         "number": 4,
@@ -571,30 +2126,86 @@
         "number": 17,
         "name": "Parcerias e Meios de Implementação"
       }
-    ]
+    ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 140,
     "name": "INTI",
     "description": "desenvolver uma solução acessível e automática para aumentar a produção de alimentos, reduzindo desperdício e falhas no manejo do solo utilizando um dispositivo com sensores para monitoramento contínuo do estado e saúde do solo, ajudando na prevenção e cuidando",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "Arthur Franco dos Santos",
+      "Arthur Hamilton Moreira Gomes",
+      "Bruno Ferreira dos Santos",
+      "Vitor Galluci Batista"
+    ],
     "ods": [
       {
         "number": 2,
         "name": "Fome Zero e Agricultura Sustentável"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 99,
+    "name": "Jornal Estudantil",
+    "description": "O Jornal Estudantil tem como objetivo melhorar a comunicação interna da escola, fornecendo informações referente a eventos escolares, visitas técnicas, palestras, provas, oportunidades e muito mais. Além de promover a facilidade de acesso a todos através do uso das redes sociais como principal ferramenta de divulgação entre os alunos e funcionários da Etec MCM.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Juan Mesquita silva"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 23,
     "name": "LipAI",
     "description": "A deficiência auditiva pode gerar dificuldades no desenvolvimento da comunicação, especialmente entre crianças surdas, que utilizam a fala e a leitura labial. Apesar das tecnologias assistivas existentes, muitas são voltadas à Libras, deixando uma lacuna para esse público. Nesse contexto, o projeto LipAI propõe uma plataforma educacional baseada em Inteligência Artificial para auxiliar no aprimoramento da fala e da leitura labial de crianças com deficiência auditiva. A metodologia combina pesquisas bibliográfica, exploratória, aplicada e experimental, com conteúdos organizados por fonemas e níveis de dificuldade. A plataforma integra React, Vite, C#, .NET, SQL Server, Python, Flask e modelos de IA, oferecendo atividades interativas, exercícios de pronúncia, vídeos demonstrativos e acompanhamento do progresso. Espera-se promover uma aprendizagem acessível, interativa e personalizada, contribuindo para a autonomia comunicativa e a inclusão educacional.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºF"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
     "students": [
       "Angelo Ivon Domingues Tenorio de Almeida",
       "Arthur Gael Araújo Pinho de Almeida",
@@ -608,6 +2219,7 @@
         "name": "Educação de Qualidade"
       }
     ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco A",
@@ -619,9 +2231,15 @@
     "name": "Luminagrid: Luzes Inteligentes",
     "description": "O Luminagrid é um sistema inteligente de iluminação pública adaptativa. Utilizando sensores de movimento e Inteligência Artificial por Visão Computacional, os postes ajustam a intensidade da luz em tempo real:\nRua Vazia: Iluminação reduzida (modo de espera/economia).\nPresença de Pedestres ou Veículos: Iluminação aumenta para 100% de capacidade instantaneamente.\nAs cidades gastam milhões de reais anualmente mantendo postes de iluminação acesos com 100% de capacidade durante toda a noite — mesmo em ruas vazias. Isso gera um alto custo para as Câmaras Municipais e Prefeituras, desperdício de energia e locais mal geridos que aumentam a sensação de insegurança dos cidadãos.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "Thiago de Jesus Aquino"
+    ],
     "ods": [
       {
         "number": 7,
@@ -631,16 +2249,67 @@
         "number": 11,
         "name": "Cidades e Comunidades Sustentáveis"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 81,
+    "name": "Lúmen",
+    "description": "Combater a desigualdade com pessoas neurodivergentes, promover a inclusão e orientar os neurodivergentes ao mundo de trebalho",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Julia de Alcantara Camara"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 132,
     "name": "Math+",
     "description": "O projeto tem o objetivo de ajudar e orientar desde crianças até adultos com defazagem em matemática. Disponibilizamos os conteúdos básicos de matemática com explicação teórica e prática por meio de quizzes para o usuário testar e aprimorar seus conhecimentos. O site é gamificado, com sistema de XP e níveis conforme o usuário avança nos conteúdos. Queremos mostrar que o aprendizado de matemática pode ser mais fácil e divertido para todos.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºC"
+    ],
+    "students": [
+      "João Pedro Miranda Santos",
+      "Matheus Fabri",
+      "Matheus Torres Betega",
+      "Robson Cardoso Corrêa de Souza",
+      "Yasmin Carvalho Braga"
+    ],
     "ods": [
       {
         "number": 4,
@@ -650,25 +2319,76 @@
         "number": 9,
         "name": "Indústria, Inovação e Infraestrutura"
       }
-    ]
+    ],
+    "advisor": "ROGÉRIO CARNEIRO LEAL",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 122,
     "name": "Mente Ativa",
     "description": "Nosso projeto visa ajudar pessoas a administrarem sua rotina do dia dia, evitando passar por estresse ou fadiga mental, algo muito comum nos dias de hoje, usando métodos eficientes para imporem em sua vidas.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["1ºA"],
-    "students": ["Beatriz Helena da Silva Furlan", "Nayara Salviano Costa"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Amanda Ferreira Fialho",
+      "Andreza Cristina Ferreira da Silva",
+      "Beatriz Helena da Silva Furlan",
+      "Nayara Salviano Costa",
+      "Nayme Vitória De Jesus Garcia"
+    ],
     "ods": [
       {
         "number": 3,
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-04",
       "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 37,
+    "name": "miauseun",
+    "description": "O nosso projeto tem como objetivo ajudar na visibilidade de artistas pequenos, e criar um espaço exclusivo para trabalhos de iniciantes. \nEsperamos que ele se torne um espaço acolhedor onde pequenos artistas compartilham sua arte sem julgamento.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Ariana Sena Joris",
+      "Arthur Auxiliador Da Silva Mota",
+      "Arthur Soares Ghioti da Silva",
+      "eduarda santos motta basilio"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
       "mapId": "bloco-b-andar-1"
     }
   },
@@ -677,9 +2397,14 @@
     "name": "Movipay",
     "description": "O presente trabalho propõe o desenvolvimento do MoviPay, uma plataforma local de serviços comunitários fundamentada nos princípios do distributivismo, do cooperativismo de plataforma e do cosmolocalismo. O MoviPay se diferencia das soluções existentes ao operar exclusivamente no âmbito do bairro, adotar um modelo financeiro justo (cobrança apenas após a conclusão do serviço), incorporar um sistema de confiança comunitária baseado em avaliação bilateral. Os resultados esperados incluem a validação da demanda por uma solução de interface simplificada, a comprovação do incômodo dos profissionais com o modelo de cobrança por leads, e o fortalecimento da economia local por meio de uma alternativa concreta ao capitalismo de plataforma. Dessa forma, o MoviPay promove um ecossistema colaborativo que fortalece a economia de bairro, impulsiona o desenvolvimento comunitário e amplia o impacto social das relações de trabalho baseadas na reciprocidade e na confiança incorporada.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºF"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
     "students": [
+      "Julio Cesar Pereira da silva Junior",
       "Leonardo Zaia Sva",
       "Nycolle Alves dos Santos",
       "Pedro Henrique de Andrade Gimenes",
@@ -699,9 +2424,198 @@
         "name": "Redução das Desigualdades"
       }
     ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 108,
+    "name": "MOVITEC",
+    "description": "O MOVITEC é um projeto de ginástica laboral que leva exercícios e alongamentos rápidos para o ambiente de trabalho por meio do nosso site. Nosso objetivo é tornar a rotina dos funcionários mais saudável de uma maneira rápida e acessível e mostrar que cuidar das pessoas também é investir no sucesso da empresa.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
+    "students": [
+      "Isadora Negraes do Nascimento Vieira",
+      "João Pedro Dias de camargo",
+      "Julia da costa Borba",
+      "Marcelo Fontana CopolaSampaio",
+      "Pedro Henrique de Sá"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 84,
+    "name": "mpifs",
+    "description": "o objetivo é criar um banco baseado em valores feministas e socialistas, promovendo igualdade, equidade e inclusão, além de ampliar o conhecimento sobre o que realmente é o socialismo e a importância da educação e da liberdade.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Hellena karolynne santana dos santos"
+    ],
+    "ods": [
+      {
+        "number": 1,
+        "name": "Erradicação da Pobreza"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 5,
+        "name": "Igualdade de Gênero"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
+    "id": 32,
+    "name": "Máquinas VS Humanos",
+    "description": "O objetivo do nosso projeto é fazer as pessoas pensarem como seria o futuro com as ia e tecnologia emergente. Em como a ia poderia ajudar as pessoas, em trabalho e estudo.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Lorena Lourenço",
+      "Maria Clara de Andrade Araújo",
+      "Maria Heloisa dos santos galindo silva",
+      "Marina de Souza Santos",
+      "yasmin dos santos marcolino"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 67,
+    "name": "NATURU",
+    "description": "O projeto consiste na produção de um creme hidratante de urucum, utilizando óleo de rosa mosqueta com sementes de urucum. O produto busca hidratar e nutrir a pele, além de fornecer antioxidantes naturais presentes no urucum, valorizando conhecimentos tradicionais e ingredientes brasileiros.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Luiza Ridel",
+      "Renato Garcia dos Santos",
+      "Stefany Landim Francisco Batista",
+      "livia luiz fernandes"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "Juliana Souza Da Cruz"
+  },
+  {
+    "id": 90,
+    "name": "Neuroarquitetura e o RH",
+    "description": "O objetivo do estudo de caso é analisar e compreender a forma como o ambiente fisico corporativo impacta a vida dos funcionarios de forma positiva ou negativa e entender qual o papel do setor de RH na melhoria do ambiente.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Maria Eduarda Bispo da Silva"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
       "mapId": "bloco-a-salas"
     }
   },
@@ -710,39 +2624,191 @@
     "name": "Nova Gota S.R",
     "description": "O objetivo deste projeto é contribui rpara a reutilização de materiais recicláveis,como plástico, restos de comidas, que podem prejudicar omeio ambiente.Esses materiais serão reaproveitados para criar bancos,e produzir bioplástico, que se decompõe mais rápido que o plástico comum. Além disso, a água da chuva será tratada e purificada para abastecer a população, transformando materiais descartados em novas formas de consumo consciente e sustentável.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºE"
+    ],
+    "students": [
+      "Isabelly Isidoro Priore da Silva"
+    ],
     "ods": [
       {
         "number": 11,
         "name": "Cidades e Comunidades Sustentáveis"
       }
-    ]
+    ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 101,
+    "name": "Nutrevo",
+    "description": "O projeto tem como objetivo desenvolver uma cozinha delivery personalizada que integre alimentação, acompanhamento nutricional e orientação de treino, promovendo saúde e qualidade de vida. \nO trabalho se justifica pelo aumento da busca por hábitos saudáveis, emagrecimento e ganho de massa muscular.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Matheus dos Santos Oliveira"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 55,
+    "name": "oléos essênciais",
+    "description": "Os óleos essenciais são substâncias naturais extraídas de plantas aromáticas, como flores, folhas, frutos, sementes, cascas e raízes. Eles possuem aromas característicos e são utilizados há muito tempo em diferentes culturas.\n\nO trabalho com óleos essenciais está relacionado principalmente à aromaterapia, à indústria de cosméticos, à produção de perfumes e à fabricação de alguns produtos de higiene. Na aromaterapia, os óleos são utilizados por meio de aromas e massagens, buscando promover sensação de relaxamento e bem-estar.\n\nEntre os óleos essenciais mais conhecidos estão o de  o de hortelã que esta no nosso trabalho, fizemos o de aniz estrelado que poucos conhecem e o de capim santo.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Eduardo Oda Garcia",
+      "Enzo Gabriel da Silva Santos",
+      "Paulo borges Gonçalves",
+      "YAN BORGES GONÇALVES"
+    ],
+    "ods": [
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
+    "id": 97,
+    "name": "ONG Raizes do futuro",
+    "description": "Projeto voltado a instalação de hortas sustentaveis em escolas, locais publicos, universidades etc. Tendo como serviços aulas, estruturaçao de hortas etc.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Gregory Antony Haroutiounian"
+    ],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      },
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 128,
     "name": "ORION",
     "description": "Plataforma de ensino musical que combina uma luva interativa com um sistema de reconhecimento de gestos por visão computacional baseado no método manossolfa, tornando o aprendizado musical mais acessível, lúdico e inclusivo - especialmente para quem não tem acesso a instrumentos ou aulas tradicionais.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "Kaio de Lima",
+      "Nicole Modesto Moura",
+      "Vitor Gonçalves Barros"
+    ],
     "ods": [
       {
         "number": 4,
         "name": "Educação de Qualidade"
       }
-    ]
+    ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 68,
+    "name": "Papel Germinável",
+    "description": "O nosso projeto visa a germinação do papel em decomposição, gerando um plantio de sua preferência trazendo saúde e bem-estar.  Trabalhando na aréa socioemocional e motivacional, trazendo a essência da plantação e cuidado com a natureza",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Lorenzo Oliveira Negrini",
+      "MANUELA FLORES SOBRAL VARGAS VIEIRA",
+      "Pietro de Barros Pavarini Melo",
+      "Raquel Olímpio Cacheado",
+      "laura beatriz filomeno souza"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "Juliana Souza Da Cruz"
   },
   {
     "id": 112,
     "name": "Pelo Tempo Que Durar",
     "description": "O final do Ensino Médio marca o encerramento de uma etapa importante, repleta de aprendizados, experiências e momentos compartilhados. Ao longo dos anos, a escola se torna mais do que um espaço de estudo, sendo também um lugar onde são construídas amizades, histórias e memórias\n\nVivências\n\nCom o objetivo de preservar essas lembranças, surge o projeto “Pelo tempo que durar”, que busca registrar a trajetória dos alunos da ETEC por meio da fotografia, valorizando momentos que fazem parte de sua história escolar e pessoal.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["2ºA"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
     "students": [
+      "Amanda Del Giudici Silva",
       "Ana Julia Crepaldi Avila",
       "Eduarda Francini de Oliveira",
       "Eloá Barros Prado",
@@ -754,9 +2820,37 @@
         "name": "Educação de Qualidade"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-07",
       "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 102,
+    "name": "Pense Leve",
+    "description": "Pense Leve é um trabalho de conclusão de curso voltado principalmente ao atendimento do público adolescente, com o objetivo de auxiliar no gerenciamento das emoções e promover a saúde e bem-estar. A clínica oferece pacotes de Psicoterapia especializada nas abordagens de TCC, ABA e THS, além de serviços complementares de Nutrição e Massoterapia. A proposta é proporcionar um ambiente seguro, acolhedor, humanizado e personalizado, contribuindo para o autoconhecimento, equilíbrio emocional e qualidade de vida aos pacientes.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Alina Aiko Okubo"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
       "mapId": "bloco-a-salas"
     }
   },
@@ -765,8 +2859,12 @@
     "name": "PerceptAI",
     "description": "PerceptAI — Gestão e Monitoramento Hospitalar com IA\nO PerceptAI centraliza a gestão hospitalar (leitos, profissionais, plantões, prontuários e visitas) para combater a fragmentação de dados.\nDiferencial: Utiliza Visão Computacional e Redes Neurais (CNN - MobileNetV2) para identificar expressões faciais de dor, medo, enjoo e sono, além de detectar o estado de consciência e convulsões em tempo real. Uma solução para um atendimento ágil e humanizado.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºF"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
     "students": [
       "Laura romano",
       "Leonardo Teixeira da Silva",
@@ -780,6 +2878,7 @@
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco A",
@@ -787,28 +2886,19 @@
     }
   },
   {
-    "id": 162,
-    "name": "Quis assedio sexual",
-    "description": "Quis e informações sobre assedio sexual no ambiente corporativo, suas extenções e quando se aplica, explicações sobre o tema e sobre a ODS escolhida.",
+    "id": 79,
+    "name": "Peças do Trabalho",
+    "description": "Buscamos, através de uma revisão de literatura, evidenciar os benefícios do jogo de xadrez, como desenvolvimento de relações interpessoais e exercício das soft skills, quando inserido no ambiente laboral das organizações.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
-    "ods": [
-      {
-        "number": 8,
-        "name": "Trabalho Decente e Crescimento Econômico"
-      }
-    ]
-  },
-  {
-    "id": 160,
-    "name": "RH Decide",
-    "description": "O objetivo deste projeto consiste em entender uma situação de hípotese de justa causa sobre efeito de álcool. Esperamos que através desse projeto, as pessoas venha entender que um caso de embriaguez no ambiente organizacional nem sempre fácil com parece.",
-    "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Fernando Visconde Martins"
+    ],
     "ods": [
       {
         "number": 3,
@@ -818,46 +2908,441 @@
         "number": 8,
         "name": "Trabalho Decente e Crescimento Econômico"
       }
-    ]
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Portal Fake",
+    "description": "O site aborda o tema das **fake news e da desinformação na internet**. Seu objetivo é orientar os usuários a identificar informações falsas, verificar fontes e compartilhar conteúdos de forma responsável. O site explica como as fake news são criadas e espalhadas, apresenta dicas para reconhecer notícias duvidosas e mostra os impactos que a desinformação pode causar na sociedade. Também oferece jogos e atividades para testar o conhecimento dos visitantes sobre o assunto. Além disso, relaciona o combate à desinformação aos **ODS 16 (Paz, Justiça e Instituições Eficazes)** e **ODS 17 (Parcerias e Meios de Implementação)**, incentivando o acesso a informações confiáveis e o compartilhamento consciente.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Agata de Melo Lobato",
+      "Beatriz Cardoso Felipe",
+      "Clara Fernandes dos Santos",
+      "Emanuelle de Castro Verçosa Albuquerque",
+      "Giovanna Cristina da Silva"
+    ],
+    "ods": [
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      },
+      {
+        "number": 17,
+        "name": "Parcerias e Meios de Implementação"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 105,
+    "name": "Projeto Cinema - Etec em Cena",
+    "description": "O objetivo do projeto é trazer a arte e a cultura cinematográfica para dentro do nosso ambiente escolar atraves de curtas produzidos pelos alunos que se voluntariaram para o projeto e os membros do mesmo.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
+    "students": [
+      "Isabelli Pacheco Santos Oliveira",
+      "Maria Any Rocha Pereira",
+      "Maria Eduarda Lopes Cardoso",
+      "Renan Rodrigues Oliveira",
+      "Yasmin Ramos Souza Fagundes"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 60,
+    "name": "Projeto GEAH",
+    "description": "O objetivo do nosso projeto é desenvolver um bioplástico biodegradável à base de amidos naturais para a produção de bandejas de alimentos, buscando uma alternativa mais sustentável ao uso de bandejas de isopor (EPS). A proposta utiliza materiais de origem natural e busca obter um material com boa resistência, rigidez e menos impacto ambiental.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "Ariane Guerra Garcia",
+      "Giovanna Litieri",
+      "evandro Rípoli Pereira"
+    ],
+    "ods": [
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 14,
+        "name": "Vida na Água"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 82,
+    "name": "Projeto Helianthus",
+    "description": "Um projeto que busca trazer inclusão de pessoas neurodivergentes no mercado de trabalho, dando dicas claras e diretas e trazendo propostas para maior adaptabilidade, tanto para pessoas neurotipicas, quanto para pessoas neurodivergentes",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "André Rengies dos Santos"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
+    "id": 92,
+    "name": "Projeto ReViva",
+    "description": "O projeto ReViva tem como principal objetivo identificar os principais fatores que impactam negativamente a saúde mental dos trabalhadores no ambiente de trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Ana Clara Andrade Ferrareti"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 76,
+    "name": "Projeto Sonar",
+    "description": "O projeto Sonar buscar promover a inclusão e visibilidade da comunidade surda no mercado de trabalho",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Fernanda Lara Boaro de Sousa"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 74,
+    "name": "Projeto Stonewall",
+    "description": "O projeto Stonewall tem como objetivo prevenir a homofobia no ambiente profissional. Conscientizando as pessoas sobre a importância de manter o respeito e empatia no trabalho e na vida cotidiana.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Ana Clara Martins Palmeira Oliveira"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
+    "id": 77,
+    "name": "Projeto Tâmaras",
+    "description": "O projeto Tâmaras busca incentivar a leitura no ambiente corporativo, através de um site que funciona como uma rede social para leitores colocarem suas avaliações e resenhas dos livros que leram.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "Yasmim da Silva Malena"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 162,
+    "name": "Quis assedio sexual",
+    "description": "Quis e informações sobre assedio sexual no ambiente corporativo, suas extenções e quando se aplica, explicações sobre o tema e sobre a ODS escolhida.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºR"
+    ],
+    "students": [
+      "Larissa vasconcelos da silva"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "AMAURY DIAS PEREIRA"
+  },
+  {
+    "id": 50,
+    "name": "Renovador de Pneus Caseiro",
+    "description": "O nosso projeto \"Renovador de Pneus Caseiro\" visa ensinar e colocar em prática como fazer um \"pretinho\" em casa com máteriais de fácil acesso e compra. O projeto pode diminuir embalagens por ser caseiro e incentiva pessoas a fazerem o próprio que rende mais, o que ajuda na diminução de gastos.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Gustavo Mariano da Silva",
+      "Miguel Dias Lopes",
+      "Miguel Nascimento Mota",
+      "Nicolas Feijó Biajante",
+      "Pedro da Silva Souza"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 78,
+    "name": "Restaurar e Curar",
+    "description": "O projeto Restaurar e Curar tem como objetivo conscientizar as pessoas  sobre a dependência química e trabalhar na inclusão dessas pessoas no mercado de trabalho. \nRealizamos um site para orientar, dar dicas, ajudar e apoiar!",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "3ºB"
+    ],
+    "students": [
+      "sofia thauane ribeiro fernandes"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 160,
+    "name": "RH Decide",
+    "description": "O objetivo deste projeto consiste em entender uma situação de hípotese de justa causa sobre efeito de álcool. Esperamos que através desse projeto, as pessoas venha entender que um caso de embriaguez no ambiente organizacional nem sempre fácil com parece.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºR"
+    ],
+    "students": [
+      "Gustavo Pereira Mieza",
+      "Raquel Andrade Benites"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "AMAURY DIAS PEREIRA"
   },
   {
     "id": 161,
     "name": "RH Decide",
     "description": "O projeto tem como objetivo apresentar uma introdução e aprofundamento sobre os conceitos fundamenetais relacionados á justa causa no âmbito das relações de trabalho. Conceito de justa causa, seus presupostos, caracteristicas e fundamnetos legais.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºR"
+    ],
+    "students": [
+      "Ana Clara Marques Dos Santos",
+      "Karolina monteiro novaes",
+      "Mayara Oliveira de Paula"
+    ],
     "ods": [
       {
         "number": 8,
         "name": "Trabalho Decente e Crescimento Econômico"
       }
-    ]
+    ],
+    "advisor": "AMAURY DIAS PEREIRA"
   },
   {
     "id": 158,
     "name": "RH Decide: Tribunal da Agress",
     "description": "Nosso projeto aborda a questão da ofensa fisica no ambiente de trabalho que é uma das alineas previstas no art 482 da CLT. Pensando nisso a gente propos um tribunal da agressão em que vamos trazer algumas situações do ambiente de trabalho e colocar o público no papel de quem precisa analisar esses casos.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºR"
+    ],
+    "students": [
+      "Manuella Culpo Gomes",
+      "Miguel Pereira Da Silveira",
+      "Rihanna Barbosa Leão"
+    ],
     "ods": [
       {
         "number": 8,
         "name": "Trabalho Decente e Crescimento Econômico"
       }
-    ]
+    ],
+    "advisor": "AMAURY DIAS PEREIRA"
   },
   {
     "id": 150,
     "name": "RIo LImpo, Oceano Vivo",
     "description": "Cidade tecnológica que preserva a vida na água, de maneira sustentável, promovendo maior qualidade de vida ao animas marinhos.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Eric Souza SIlva"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Eric Souza SIlva"
+    ],
     "ods": [
       {
         "number": 6,
@@ -872,6 +3357,7 @@
         "name": "Vida na Água"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -879,23 +3365,184 @@
     }
   },
   {
+    "id": 87,
+    "name": "RS.AI",
+    "description": "Nosso objetivo é: Auxiliar gestores de recursos Humanos na análise e avaliação de currículos, tornando o processo de seleção mais ágil e eficiente. Uma das relações do nosso projeto com a ODS 8 é; Facilitar a contratação, A IA pode ajudar os gestores a analisar currículos de forma mais rápida e organizada. Problemática: Gestores de Recursos Humanos sofrem de Burnout, Cansaço, nossa ia vem para acabar com isso, facilitando o trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Lucas Gabriel Dias De Luna"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+  },
+  {
     "id": 149,
     "name": "S.I.M.G.A",
     "description": "Projeto de desenvolvimento de um Sistema Inteligente de Gestão e Monitoramento de água. Sua função é reduzir o desperdício de água enquanto permite o acesso e monitoramento do sistema hidraulico de uma residência ou industria, através do uso de Inteligência Artíficial para detectar vazamentos, uso irregular ou danos em encanamentos. Por meio de um aplicativo ou site seria possível monitorar o uso de água mensal, capacidade total dos encanamentos e caixa d'água e a diferença de conta de água ao longo dos messes.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Raphael da Silva Rocha"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Raphael da Silva Rocha"
+    ],
     "ods": [
       {
         "number": 6,
         "name": "Água Potável e Saneamento"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
       "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Sangue do Diabo",
+    "description": "No nosso experimento 'sangue do diabo' faremos uma solução com alcool, agua, fenoftaleina, e hidroxido de amonia (essa solução não é prejudicial.) que, ao entrar em contato com qualquer tipo de roupa ou material, forma uma mancha de tom rosa ou mais escuro, por esse motivo usaremos nossos jalecos como demonstração, pois são brancos e a mancha rosa ficará claramente mais visivel, mas é ai que o experimento real começa, a amonia, o principal componente que da a coloração rosa a mancha, evapora ao entrar em contato com o oxigenio, fazendo com que a mancha originalmente rosa, se pareça com apenas uma marca de aguá derramada, em questão de alguns minutos/segundos.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Vitor Matheus Martins",
+      "Yago victorio barreto da costa",
+      "Yohanna Ramos Nogueira",
+      "isabeli queiroz de lima"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 70,
+    "name": "Serene",
+    "description": "O projeto Serene tem como objetivo desenvolver uma linha de cremes hidratantes calmantes 100 por cento livres de sintéticos agressivos, diante da produção dos cosméticos convencionais que utilizam químicos sintéticos que provocam alergias e irritações em peles sensíveis, além de gerarem alto impacto ambiental em sua produção. A criação do Serene responde à necessidade de uma cosmética limpa. Unimos a tecnologia da extração botânica à sustentabilidade para oferecer um cuidado hipoalergênico, seguro e biocompatível.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Karine de Oliveira Tomochigue",
+      "Matheus Tondatto Batista",
+      "Victorya Vieira Esteves Duclos",
+      "laryssa caroline gustavo costa",
+      "mirella macedo"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
+    "id": 44,
+    "name": "Serra do Mar - Turismo",
+    "description": "Nosso principal objetivo é ajudar as pessoas que estão interessadas em visitar Ribeirão Pires, mostrando eventos, noticias e principais pontos turisticos.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Alexsandro Correa Miranda",
+      "Davy de Araújo Silva",
+      "Gustavo Vieira Lima",
+      "Henrique Zaratine Pereira"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Seu Futuro",
+    "description": "Nosso projeto visa dar apoio e visão de futuro para jovens no ensino médio e que vão iniciar suas carreiras no mercado de trabalho. Com diversas ferramentas de organização e disponibilização de informações para todos que acessarem o site. \nEntretanto, a pressão acadêmica e no trabalho podem trazer distúrbios à saúde mental. Nossa seção \"Saúde Mental\" trata desses pontos e incentiva a procura de atendimento profissional.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "2ºF"
+    ],
+    "students": [
+      "Alana Fiorelini",
+      "Beatriz Vitoria de Oliveira Alencar",
+      "Cindy Castro De Paula",
+      "Eloísa Mendes Nunes",
+      "Emilly Jaquelini Campos de Oliveira"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "EDILMA BINDÁ HUNGRIA MELO",
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco A",
+      "mapId": "bloco-a-salas"
     }
   },
   {
@@ -903,9 +3550,16 @@
     "name": "ShowMe",
     "description": "Sistema de Democratização do Acesso à Eventos Culturais, feito com PHP, HTML, CSS e MySQL.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºC"],
-    "students": ["Lorena da Silva Rodrigues"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "João Vinícius Costa",
+      "Lorena da Silva Rodrigues"
+    ],
     "ods": [
       {
         "number": 3,
@@ -920,6 +3574,7 @@
         "name": "Redução das Desigualdades"
       }
     ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
     "location": {
       "elementId": "sala-08",
       "label": "Sala 8 · Bloco A",
@@ -931,15 +3586,22 @@
     "name": "Sistema de saúde e bem-estar",
     "description": "A proposta é monitorar áreas de risco de epidemias utilizando drones com implementação de drones, sistemas integrados a IA e a construção de satélites de monitoramento que mandam dados e informações para postos observatórios  com o objetivo de analisar os dados coletados para confirmar se a área é de risco e, caso for, identificar exatamente a doença e mapear as regiões que tem o maior risco de serem afetadas. Uma vez que o processo seja feito, emitimos alertas por meio dos satélites para as cidades e os dispositivos movéis, isolando a área e enviados profissionais da área da saúde até o local, para ajudar na expurgação da doença e garantir estabiliade para determinado local.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["1ºC"],
-    "students": ["Guilherme Assis Dias"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºC"
+    ],
+    "students": [
+      "Guilherme Assis Dias"
+    ],
     "ods": [
       {
         "number": 3,
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "SUELY DOS SANTOS SOUSA",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco B · 1º andar",
@@ -947,19 +3609,189 @@
     }
   },
   {
-    "id": 120,
-    "name": "Tempo Certo",
-    "description": "Nosso projeto, tem como objetivo auxiliar o usuário por meio de um site/aplicativo à administrar seu tempo de uso de tela e planejar sua rotina para a melhor divisão do tempo usando metódos como \"eat the frog\" e do \"pomodoro\"",
+    "id": 96,
+    "name": "Smart Invest",
+    "description": "O projeto apresenta a criação da Smart Invest Consultoria Financeira Ltda., empresa que desenvolverá um aplicativo voltado à organização e educação financeira. O objetivo é ajudar pessoas com dificuldades para controlar gastos e organizar a renda, oferecendo ferramentas simples para controle de despesas, metas e planejamento. A metodologia envolveu pesquisas de mercado, análise de concorrentes, definição de personas, análise SWOT e elaboração do plano de negócio pelo PNBOX. Como resultado, espera-se desenvolver uma solução acessível e intuitiva, capaz de contribuir para melhores hábitos financeiros e, ao mesmo tempo, garantir a sustentabilidade e crescimento da empresa.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["1ºA"],
-    "students": ["Davi Azevedo Graminha"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Sofia Gonçalves Barros"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 107,
+    "name": "Sociedade Esportiva Acadêmica",
+    "description": "O SEA visa fazer a operacionalidade de eventos como o jogos de inverno e os jogos de verão, fazendo arrecadações de materiais, busca por equipamentos esportivos, dentre outras coisas. O objetivo do projeto, além de tirar o peso desses eventos das costas da coordenação pedagógica e do Grêmio Estudantil, tem como interesse, trazer inovações para esses eventos, tais como premiações simbólicas.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
+    "students": [
+      "Kauã Lins Nunes Laurentino",
+      "Miguel Araújo dos Santos",
+      "Rafael Pacheco Kelles",
+      "Ryan dos Anjos Santos",
+      "Vinícius Rodrigues Soares"
+    ],
     "ods": [
       {
         "number": 3,
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Soluções para o amanhã",
+    "description": "É um site informativo, e bem objetivo sobre as energias renovaveis, neste site temos o objetivo de mostrar o a quantidade e a possibilidades de energias que podemos usar, que não degrada o meio ambiente, como a energia eólica que é uma energia movida pelo vento, energia hidrelétrica que é uma energia movida á agua. Resumindo, nosso site é informativo sobre as energias renovaveis, e mostrando a diversidade de energias que temos.",
+    "shift": "Manhã",
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "1ºF"
+    ],
+    "students": [
+      "Arthur Arlindo Alves dos Santos",
+      "Gabriel Batista de Souza",
+      "Gabriel Prado Vilela",
+      "Guilherme Monteiro",
+      "Jonas Nunes Silva de Araujo"
+    ],
+    "ods": [
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ],
+    "advisor": "BRUNO ZOLOTAREFF DOS SANTOS",
+    "location": {
+      "elementId": "sala-01",
+      "label": "Sala 1 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 104,
+    "name": "Soundsystem",
+    "description": "O objetivo geral da empresa é oferecer cursos de formação musical e serviços de assistencia técnica com qualidade, flexibilidade e acessibilidade. A metodologia adotada caracteriza-se como pesquisa qualitativa, exploratoria e de campo, além disso, o projeto utiliza metodologias ativas de ensino. Espera-se conquistar espaço no mercado musical e na formação idependente de musicistas e criadores de obras fonograficas.",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "3ºA"
+    ],
+    "students": [
+      "Maisa de Oliveira Souza"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-02",
+      "label": "Sala 2 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 94,
+    "name": "Tecnoold",
+    "description": "O Tecnoold tem objetivo de auxiliar os idosos na inclusão no meio digital, ajudando eles a identificar golpes e fraudes online por meio de intervenções que ensinam o idoso a mexer na internet (redes sociais e etc) com aulas práticas fazendo eles refletirem sobre o uso do celular, e também ajuda eles a ter menos insegurança na hora de pedir ajuda a algum familiar ou semelhante.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Heloisa Mariano Da Silva"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ],
+    "advisor": "SIMONE APARECIDA TORRES DE SOUZA CUNEGUNDES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 120,
+    "name": "Tempo Certo",
+    "description": "Nosso projeto, tem como objetivo auxiliar o usuário por meio de um site/aplicativo à administrar seu tempo de uso de tela e planejar sua rotina para a melhor divisão do tempo usando metódos como \"eat the frog\" e do \"pomodoro\"",
+    "shift": "Manhã",
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Daniel Leite Alves Feitosa",
+      "Davi Azevedo Graminha",
+      "Ellyzabeth Fernanda Cocchi Novaes",
+      "Marco Antônio Ramos Dos Santos Silva",
+      "Victor Reis de Oliveira"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-04",
       "label": "Sala 4 · Bloco B · 1º andar",
@@ -971,9 +3803,15 @@
     "name": "Thermautomata",
     "description": "Um site e jogo que buscam entreter e ensinar sobre política, automação industrial e logística através da gamificação",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºC"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
     "students": [
+      "Arthur Ribeiro Luz",
+      "Caio Oliveira Barreto",
       "Guilherme da Silva Gimenes",
       "João Arthur Rípoli Pereira Nunes"
     ],
@@ -991,6 +3829,7 @@
         "name": "Consumo e Produção Responsáveis"
       }
     ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
     "location": {
       "elementId": "sala-08",
       "label": "Sala 8 · Bloco A",
@@ -1002,8 +3841,12 @@
     "name": "Trainly",
     "description": "Uma rede social de treinos, onde cada usuário tem um perfil, registra suas atividades físicas e compartilha publicações com a sua rede de amigos.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºF"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºF"
+    ],
     "students": [
       "Miguel Bizerra Silva",
       "Pedro SIlva Miranda",
@@ -1017,6 +3860,7 @@
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "MARCIO ALBERTO DE BARROS",
     "location": {
       "elementId": "sala-03",
       "label": "Sala 3 · Bloco A",
@@ -1024,28 +3868,136 @@
     }
   },
   {
+    "id": 53,
+    "name": "Tratamento de água",
+    "description": "Nosso objetivo é mostrar que tratar a água é indispensável e simples ao mesmo tempo.\nFizemos um filtro com um balde transparente com materiais que ajudam a filtrar a água suja.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Alanys Cordeiro de Mari Cardoso",
+      "Asafe Andre Prado",
+      "Caio Camara de Andrade",
+      "Lethicia Oliveira Esteves"
+    ],
+    "ods": [
+      {
+        "number": 6,
+        "name": "Água Potável e Saneamento"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
+    "id": 58,
+    "name": "Trilinea",
+    "description": "Consiste em um diluente para tinta a óleo e limpante que se caracterize como um produto voltado para a redução de riscos à saúde e segurança, possuindo um odor fraco, que não cause irritação nos olhos, náusea e tonturas.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "Maria Izabela Martins Ahmed",
+      "Pablyne Lohane Reis de Souza",
+      "Yasmin Inacio Prado"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 49,
+    "name": "Tsunami Cáustico",
+    "description": "Nosso projeto 'Tsunami Cáustico' é uma demonstração química em que um líquido muda de cor ao ser agitado e fica incolor quando fica em repouso.\n\nReagentes utilizados:\nNaOH (Soda Cáustica);\nGlicose;\nAzul de metileno;\nÁgua deionizada.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "1ºI"
+    ],
+    "students": [
+      "Daniela Marques de Lacerda",
+      "Kamilli Fantinati Souza",
+      "Mariana Clara Romanha Alves da Silva",
+      "Rafaela Feijó Ribeiro",
+      "Sarah Diniz Da Silva",
+      "Stefany Ferraz Batista"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 14,
+        "name": "Vida na Água"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
     "id": 116,
     "name": "Valid",
     "description": "Plataforma para a verificação e autenticação de documentos suspeitos utilizando Inteligência Artificial (IA) e análise a nível de pixels.",
     "shift": "Manhã",
-    "courses": [],
-    "series": [],
-    "students": [],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "Ana Clara Bronzeri Rivas",
+      "Byanca Lourenço Souza",
+      "Gabriely Santos Pereira"
+    ],
     "ods": [
       {
         "number": 16,
         "name": "Paz, Justiça e Instituições Eficazes"
       }
-    ]
+    ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   },
   {
     "id": 117,
     "name": "Viridis",
     "description": "Plataforma para incentivar o cultivo de hortas nas escolas, com gamificação e gerenciador de atividades",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºC"],
-    "students": ["Estevão Locks"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "Ana Beatriz Ribeiro Soares",
+      "Estevão Locks",
+      "Geovana de Brito Souza",
+      "Guilherme Moretti Ribeiro",
+      "João Gabriel Tavares de Lira"
+    ],
     "ods": [
       {
         "number": 2,
@@ -1072,6 +4024,7 @@
         "name": "Vida Terrestre"
       }
     ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
     "location": {
       "elementId": "sala-08",
       "label": "Sala 8 · Bloco A",
@@ -1083,15 +4036,26 @@
     "name": "VITALIS",
     "description": "nosso projeto aborda a parte de qualidade de vida e gestão de tempo, utilizando um site criado por nós para administrar a rotina e as atividades cotidianas. Em nosso site encontra-se metodos de gestão de tempo para os estudos, como o método Pomodoro e o Eat the frog. Também temos varias outras abas, dentre elas uma agenda, uma parte para treinos, financeiro,tarefas,cronometro e insights.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["1ºA"],
-    "students": ["Guilherme Roncon Santana", "Marianna Carvalho Batista"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "1ºA"
+    ],
+    "students": [
+      "Guilherme Roncon Santana",
+      "Isabella Costa Rodrigues",
+      "Lívia Torres Pereira",
+      "Marianna Carvalho Batista",
+      "YAGO DO NASCIMENTO TORRES"
+    ],
     "ods": [
       {
         "number": 3,
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-04",
       "label": "Sala 4 · Bloco B · 1º andar",
@@ -1103,18 +4067,61 @@
     "name": "Vitalize",
     "description": "O vitalize é uma plataforma digital de apoio a pacientes oncológicos e seus familiares. O projeto reune informaçãoes confiaveis, grupos de apoio, relatos, onganização de rotinas e rescursos de inteligência artificial. O projeto busca promover acolhimento,informação, bem-estar e quailidade de vida, relacionado ao ODS 3 - saúde e bem-estar.",
     "shift": "Manhã",
-    "courses": ["Informática para Internet"],
-    "series": ["3ºC"],
-    "students": ["Mayara de Oliveira Sant’Anna"],
+    "courses": [
+      "Informática para Internet"
+    ],
+    "series": [
+      "3ºC"
+    ],
+    "students": [
+      "Leticia Vasconcelos da Silva",
+      "Mayara de Oliveira Sant’Anna"
+    ],
     "ods": [
       {
         "number": 3,
         "name": "Saúde e Bem-Estar"
       }
     ],
+    "advisor": "CINTIA MARIA DE ARAUJO PINHO",
     "location": {
       "elementId": "sala-08",
       "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 86,
+    "name": "Vozes Femininas",
+    "description": "O Vozes Femininas tem como objetivo, a instruir o funcionário de RH a como auxiliar funcionárias que sofrem de violência doméstica, ensinando e mostrando os direitos das mulheres não apenas no ambiente organizacional. O projeto também auxilia as mulheres dando dicas e falando sobre seus direitos no mercado de trabalho.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "2ºB"
+    ],
+    "students": [
+      "Sarah Beatriz de Almeida Fonseca"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 5,
+        "name": "Igualdade de Gênero"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "advisor": "DANIEL DIAS PERES",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco A",
       "mapId": "bloco-a-salas"
     }
   },
@@ -1123,19 +4130,116 @@
     "name": "vozes originárias",
     "description": "Este trabalho tme como objetivo apreentar parte da cultura dos povos originários do Brasil aos alunos e funcionários da Etec Professora Maria Cristina de Medeiro, assim mostrar e divagar parte da ccultura dos ancestrais. Foi se observado que grande parte da comunidade escolar não possui muitos conhecimentos acerca da etnia e sociedade indigena. Conforma a realização destre trabalho, os envolvidos irão se instruir acerca da linguagem, culinário, tradições e arte indigena brasileira com o axuilio dos participantes do projeto.",
     "shift": "Manhã",
-    "courses": ["Administração"],
-    "series": ["2ºA"],
-    "students": ["isabeline freire de souza"],
+    "courses": [
+      "Administração"
+    ],
+    "series": [
+      "2ºA"
+    ],
+    "students": [
+      "fernando crisostomo marques",
+      "isabeline freire de souza"
+    ],
     "ods": [
       {
         "number": 16,
         "name": "Paz, Justiça e Instituições Eficazes"
       }
     ],
+    "advisor": "DANIEL DIAS PERES",
     "location": {
       "elementId": "sala-07",
       "label": "Sala 7 · Bloco A",
       "mapId": "bloco-a-salas"
     }
+  },
+  {
+    "id": 63,
+    "name": "Webcare",
+    "description": "gel relaxante muscular, com base de babosa e goma xantana",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "2ºI"
+    ],
+    "students": [
+      "Anna Carolina de Souza Vieira",
+      "Heloisa Izidoro de Brito",
+      "JULIA IESKI CONCEIÇAO",
+      "Júlia Marcos Sena",
+      "ana luiza santos de paula"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "advisor": "MARTA APARECIDA SANT ANNA"
+  },
+  {
+    "id": 56,
+    "name": "ZEROECO",
+    "description": "Uma placa de absorção acústica feita de materiais totalmente reciclados e biodegradaveis, em sua composição tem a fibra de coco que é um otimo retentor de som e uma cola feita a proprio punho a base de uma proteina do leite, a caseína.",
+    "shift": "Manhã",
+    "courses": [
+      "Química"
+    ],
+    "series": [
+      "3ºI"
+    ],
+    "students": [
+      "Beatriz Ferreira de Jesus Silva",
+      "FERNANDO LETIERI SANTOS",
+      "Gabriel dos Santos Purcino",
+      "eduardo coutinho abbade"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "advisor": "PAULO CESAR DE SOUZA CANDIDO"
+  },
+  {
+    "id": 83,
+    "name": "ÓRBITA",
+    "description": "Promover a conscientização sobre a importância da igualdade de gênero no ambiente empresarial ,destacando a necessidade de oportunidades justas para todos.",
+    "shift": "Manhã",
+    "courses": [
+      "Recursos Humanos"
+    ],
+    "series": [
+      "1ºB"
+    ],
+    "students": [
+      "Ana Carolina"
+    ],
+    "ods": [
+      {
+        "number": 5,
+        "name": "Igualdade de Gênero"
+      }
+    ],
+    "advisor": "INGRID DE MAGALHÃES DA SILVA"
   }
 ]

@@ -20,7 +20,8 @@ COPY lib/*.json /var/www/html/lib/
 COPY database/railway-init.sql /var/www/html/database/railway-init.sql
 COPY backend/nginx.conf /etc/nginx/nginx.conf
 COPY backend/supervisord.conf /etc/supervisor/conf.d/feira.conf
+RUN chmod +x /var/www/html/backend/start.sh
 
 EXPOSE 8080
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/feira.conf"]
+CMD ["/var/www/html/backend/start.sh"]

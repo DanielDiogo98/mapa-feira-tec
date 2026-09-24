@@ -37,7 +37,7 @@ DESATIVAR_VOTO = """
 SELECT_PROJETO_BY_ID = """
     SELECT id_projeto, turno, nome_projeto, descricao
     FROM projetos
-    WHERE id_projeto = %s
+    WHERE id_projeto = %s AND catalogo_publico = 1
     LIMIT 1
 """
 
@@ -46,6 +46,7 @@ SELECT_RANKING_ATIVO = """
            COUNT(c.id_curtida) AS quantidade_curtidas
     FROM projetos p
     LEFT JOIN curtidas c ON c.id_projeto = p.id_projeto AND c.ativa = 1
+    WHERE p.catalogo_publico = 1
     GROUP BY p.id_projeto, p.nome_projeto, p.turno, p.descricao
     ORDER BY quantidade_curtidas DESC, p.id_projeto ASC
 """

@@ -1,15 +1,17 @@
 function criarCard(projeto) {
+  const escapar = (valor) =>
+    String(valor ?? '')
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
 
-    const escapar = valor => String(valor ?? '')
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#039;');
+  const link = String(projeto.link || '').startsWith('/')
+    ? escapar(projeto.link)
+    : '#';
 
-    const link = projeto.link === '/mapa' ? '/mapa' : '#';
-
-    return `
+  return `
         <article class="card-projeto">
 
             <div class="card-imagem-container">
@@ -44,7 +46,7 @@ function criarCard(projeto) {
                 <div class="card-local">
 
                     <span>
-                        Sala: ${escapar(projeto.sala)}
+                        Local: ${escapar(projeto.sala)}
                     </span>
 
                     <span>

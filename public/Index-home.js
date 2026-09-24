@@ -3,7 +3,6 @@
 // =========================================================
 
 document.addEventListener('DOMContentLoaded', function () {
-
   /* =======================================================
      1. CONTAGEM REGRESSIVA + ANIMAÇÕES DE MARCOS
      ======================================================= */
@@ -30,7 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Remove todas as classes de marco antes de aplicar a atual
   function clearMilestoneClasses() {
-    countdownGrid.classList.remove('anim-week', 'anim-day', 'anim-minute', 'anim-ten');
+    countdownGrid.classList.remove(
+      'anim-week',
+      'anim-day',
+      'anim-minute',
+      'anim-ten',
+    );
   }
 
   function applyMilestone(distance) {
@@ -125,16 +129,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const revealCards = document.querySelectorAll('.reveal');
 
   if ('IntersectionObserver' in window && revealCards.length > 0) {
-    const revealObserver = new IntersectionObserver(function (entries, observer) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.2
-    });
+    const revealObserver = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
 
     revealCards.forEach(function (card) {
       revealObserver.observe(card);
@@ -146,4 +153,128 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* =======================================================
+     4. PROJETOS, CATEGORIAS E ESTATÍSTICAS REAIS
+     ======================================================= */
+
+  const normalizar = (valor) =>
+    String(valor ?? '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLocaleLowerCase('pt-BR');
+
+  function preencherDestaque(card, projeto, votos) {
+    if (!card || !projeto) return;
+    const odsContainer = card.querySelector('.project-thumb');
+    odsContainer.innerHTML = projeto.ods.length
+      ? projeto.ods
+          .slice(0, 3)
+          .map(
+            (ods) =>
+              `<span class="ods-badge ods-red">ODS ${Number(ods.number)}</span>`,
+          )
+          .join('')
+      : '<span class="ods-badge ods-red">ODS a confirmar</span>';
+    card.querySelector('.project-title').textContent = projeto.name;
+    card.querySelector('.project-subtitle').textContent =
+      projeto.description || 'Projeto da Feira Tecnológica';
+    card.querySelector('.project-meta').textContent = [
+      projeto.courses.join(', ') || 'Curso a confirmar',
+      projeto.series.join(', ') || 'Turma a confirmar',
+      projeto.location?.label || 'Local a confirmar',
+    ].join(' · ');
+    card.querySelector('.project-rating').textContent =
+      votos > 0
+        ? `${votos} voto${votos === 1 ? '' : 's'}`
+        : 'Conheça este projeto';
+    const botao = card.querySelector('button');
+    botao.onclick = () => {
+      location.href = `/pages/Votacao/Votacao.html?projectId=${Number(projeto.id)}`;
+    };
+  }
+
+  function atualizarCategorias(projetos) {
+    document.querySelectorAll('.category-card').forEach((card) => {
+      const ods = Number(card.dataset.categoryOds);
+      const termos = normalizar(card.dataset.categoryTerm)
+        .split(/\s+/)
+        .filter(Boolean);
+      const quantidade = projetos.filter((projeto) => {
+        if (ods) return projeto.ods.some((item) => Number(item.number) === ods);
+        const texto = normalizar(
+          [
+            projeto.name,
+            projeto.description,
+            ...projeto.courses,
+            ...projeto.ods.map((item) => item.name),
+          ].join(' '),
+        );
+        return termos.some((termo) => texto.includes(termo));
+      }).length;
+      const contador = card.querySelector('.category-count');
+      if (contador)
+        contador.textContent = `${quantidade} projeto${quantidade === 1 ? '' : 's'}`;
+    });
+  }
+
+  async function carregarDadosDaFeira() {
+    try {
+      const [catalogoResposta, rankingResposta] = await Promise.all([
+        fetch('/api/projects', { cache: 'no-store' }),
+        fetch('/api/ranking', {
+          cache: 'no-store',
+          credentials: 'include',
+        }).catch(() => null),
+      ]);
+      if (!catalogoResposta.ok) throw new Error('Catálogo indisponível');
+      const catalogo = await catalogoResposta.json();
+      const projetos = Array.isArray(catalogo.data) ? catalogo.data : [];
+      let ranking = [];
+      if (rankingResposta?.ok) {
+        const corpoRanking = await rankingResposta.json();
+        ranking = Array.isArray(corpoRanking.ranking)
+          ? corpoRanking.ranking
+          : [];
+      }
+      const votos = new Map(
+        ranking.map((item) => [
+          Number(item.id_projeto),
+          Number(item.quantidade_curtidas || 0),
+        ]),
+      );
+      const destaques = [...projetos]
+        .filter((projeto) => projeto.location)
+        .sort(
+          (a, b) =>
+            (votos.get(Number(b.id)) || 0) - (votos.get(Number(a.id)) || 0) ||
+            a.name.localeCompare(b.name, 'pt-BR'),
+        )
+        .slice(0, 3);
+      document
+        .querySelectorAll('[data-featured-project]')
+        .forEach((card, indice) =>
+          preencherDestaque(
+            card,
+            destaques[indice],
+            votos.get(Number(destaques[indice]?.id)) || 0,
+          ),
+        );
+      document.getElementById('project-count').textContent = String(
+        projetos.length,
+      );
+      document.getElementById('student-count').textContent = String(
+        new Set(
+          projetos
+            .flatMap((projeto) => projeto.students)
+            .map(normalizar)
+            .filter(Boolean),
+        ).size,
+      );
+      atualizarCategorias(projetos);
+    } catch (erro) {
+      console.error('Não foi possível carregar os dados da feira.', erro);
+    }
+  }
+
+  void carregarDadosDaFeira();
 });

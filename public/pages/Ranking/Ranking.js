@@ -1,78 +1,117 @@
-import { CardRanking } from "../../components/CardRanking/CardRanking.js";
+import { CardRanking } from '../../components/CardRanking/CardRanking.js';
+import { criarGraficoODS } from '../../components/GraficoODS/GraficoODS.js';
 
-const productsContainer = document.querySelector("#products");
+const productsContainer = document.querySelector('#products');
+const containerBusca = document.getElementById('barra-busca');
+containerBusca.innerHTML = criarSearchBar();
+const campoBusca = document.getElementById('busca-projetos');
+let ranking = [];
 
-const projetos = [
-    {
-        colocacao: 1,
-        nome: "Horta Inteligente",
-        ods: [2, 4, 12],
-        sala: 3,
-        bloco: "A",
-        curtidas: 128
-    },
+const normalizar = (valor) =>
+  String(valor ?? '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase('pt-BR');
 
-    {
-        colocacao: 2,
-        nome: "Energia Solar Sustentável",
-        ods: [7, 11, 13],
-        sala: 5,
-        bloco: "B",
-        curtidas: 104
-    },
+function renderizar(lista) {
+  productsContainer.innerHTML = '';
+  lista.forEach((projeto, indice) => {
+    productsContainer.appendChild(
+      CardRanking({
+        colocacao: indice + 1,
+        nome: projeto.name,
+        ods: projeto.ods.map((item) => item.number),
+        local: projeto.location?.label || 'Local a confirmar',
+        curtidas: projeto.votes,
+        projectId: projeto.id,
+      }),
+    );
+  });
+  if (!lista.length) {
+    productsContainer.innerHTML = '<p>Nenhum projeto encontrado.</p>';
+  }
+}
 
-    {
-        colocacao: 3,
-        nome: "Robô Reciclador",
-        ods: [9, 12, 13],
-        sala: 2,
-        bloco: "A",
-        curtidas: 87
+function filtrar() {
+  const busca = normalizar(campoBusca.value.trim());
+  renderizar(
+    ranking.filter((projeto) =>
+      normalizar(
+        [
+          projeto.name,
+          projeto.description,
+          ...projeto.students,
+          ...projeto.courses,
+          ...projeto.series,
+        ].join(' '),
+      ).includes(busca),
+    ),
+  );
+}
+
+function atualizarResumo() {
+  const estatisticas = document.querySelectorAll(
+    '.ranking-header__estatistica strong',
+  );
+  const votados = ranking.filter((projeto) => projeto.votes > 0).length;
+  const votos = ranking.reduce((total, projeto) => total + projeto.votes, 0);
+  if (estatisticas[0]) estatisticas[0].textContent = String(votados);
+  if (estatisticas[1]) estatisticas[1].textContent = String(votos);
+
+  const votosPorOds = new Map();
+  const haVotos = votos > 0;
+  ranking.forEach((projeto) => {
+    projeto.ods.forEach((ods) => {
+      votosPorOds.set(
+        ods.number,
+        (votosPorOds.get(ods.number) || 0) + (haVotos ? projeto.votes : 1),
+      );
+    });
+  });
+  criarGraficoODS(
+    document.querySelector('#graficoODS'),
+    [...votosPorOds.entries()]
+      .map(([ods, valor]) => ({ ods, valor }))
+      .sort((a, b) => a.ods - b.ods),
+  );
+}
+
+async function carregar() {
+  productsContainer.innerHTML = '<p>Carregando ranking…</p>';
+  try {
+    const [rankingResponse, projectsResponse] = await Promise.all([
+      fetch('/api/ranking', { credentials: 'include', cache: 'no-store' }),
+      fetch('/api/projects', { cache: 'no-store' }),
+    ]);
+    if (!rankingResponse.ok || !projectsResponse.ok) {
+      throw new Error('API indisponível');
     }
-];
+    const rankingBody = await rankingResponse.json();
+    const projectsBody = await projectsResponse.json();
+    const projects = new Map(
+      (projectsBody.data || []).map((project) => [Number(project.id), project]),
+    );
+    ranking = (rankingBody.ranking || [])
+      .map((item) => {
+        const project = projects.get(Number(item.id_projeto));
+        if (!project) return null;
+        return {
+          ...project,
+          votes: Number(item.quantidade_curtidas || 0),
+        };
+      })
+      .filter(Boolean)
+      .sort(
+        (a, b) => b.votes - a.votes || a.name.localeCompare(b.name, 'pt-BR'),
+      );
+    atualizarResumo();
+    renderizar(ranking);
+  } catch (erro) {
+    console.error(erro);
+    productsContainer.innerHTML =
+      '<p>Não foi possível carregar o ranking agora.</p>';
+  }
+}
 
-projetos.forEach(projeto => {
-    const card = CardRanking(projeto);
-
-    productsContainer.appendChild(card);
-});
-
-import { criarGraficoODS } from "../../components/GraficoODS/GraficoODS.js";
-
-const dadosODS = [
-    { ods: 11, valor: 11 },
-    { ods: 10, valor: 10 },
-    { ods: 11, valor: 11 },
-    { ods: 4, valor: 7 },
-    { ods: 6, valor: 7 },
-    { ods: 8, valor: 7 },
-    { ods: 13, valor: 7 },
-    { ods: 7, valor: 4 },
-    { ods: 3, valor: 4 },
-    { ods: 7, valor: 4 },
-    { ods: 9, valor: 4 },
-    { ods: 14, valor: 4 },
-    { ods: 16, valor: 4 },
-    { ods: 18, valor: 4 },
-    { ods: 1, valor: 0 },
-    { ods: 5, valor: 0 },
-    { ods: 17, valor: 0 }
-];
-
-const elementoGrafico = document.querySelector("#graficoODS");
-
-criarGraficoODS(elementoGrafico, dadosODS);
-
-const container =
-    document.getElementById("lista-projetos");
-
-const containerBusca =
-    document.getElementById("barra-busca");
-
-
-containerBusca.innerHTML =
-    criarSearchBar();
-
-
-const campoBusca =
-    document.getElementById("busca-projetos");
+campoBusca.addEventListener('input', filtrar);
+void carregar();

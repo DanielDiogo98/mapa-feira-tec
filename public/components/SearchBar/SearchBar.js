@@ -1,6 +1,5 @@
 function criarSearchBar() {
-
-    return `
+  return `
         <div class="barra-busca">
 
             <span class="icone-busca">
@@ -10,10 +9,9 @@ function criarSearchBar() {
             <input
                 type="text"
                 id="busca-projetos"
-                placeholder="Buscar projetos, cursos ou salas..."
+                placeholder="Buscar projeto, aluno, curso ou local..."
             >
 
         </div>
     `;
-
 }

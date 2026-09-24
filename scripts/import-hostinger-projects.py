@@ -84,15 +84,36 @@ def parse_tuples(text: str):
 
 def extract_table(sql: str, table: str):
     pattern = re.compile(
-        rf"INSERT INTO `{re.escape(table)}`\s*\((.*?)\)\s*VALUES\s*(.*?);",
+        rf"INSERT INTO `{re.escape(table)}`\s*\((.*?)\)\s*VALUES\s*",
         re.S,
     )
     records = []
-    for match in pattern.finditer(sql):
+    position = 0
+    while match := pattern.search(sql, position):
         columns = [column.strip().strip("`") for column in match.group(1).split(",")]
-        for row in parse_tuples(match.group(2)):
+        index = match.end()
+        in_string = escaped = False
+        while index < len(sql):
+            character = sql[index]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif character == "\\":
+                    escaped = True
+                elif character == "'":
+                    if index + 1 < len(sql) and sql[index + 1] == "'":
+                        index += 1
+                    else:
+                        in_string = False
+            elif character == "'":
+                in_string = True
+            elif character == ";":
+                break
+            index += 1
+        for row in parse_tuples(sql[match.end() : index]):
             if len(row) == len(columns):
                 records.append(dict(zip(columns, row)))
+        position = index + 1
     return records
 
 
@@ -139,9 +160,11 @@ def main():
     students = extract_table(sql, "aluno")
     projects = extract_table(sql, "projeto")
     links = extract_table(sql, "aluno_projeto")
+    teachers = extract_table(sql, "professor")
     locations = json.loads(args.locations.read_text(encoding="utf-8"))
 
     students_by_id = {int(student["id"]): student for student in students}
+    teachers_by_id = {int(teacher["id"]): teacher for teacher in teachers}
     members_by_project = defaultdict(list)
     for link in links:
         student = students_by_id.get(int(link["id_aluno"]))
@@ -170,6 +193,9 @@ def main():
             "students": sorted({str(member.get("nome") or "").strip() for member in members if member.get("nome")}),
             "ods": ods_items(project.get("ods")),
         }
+        teacher = teachers_by_id.get(int(project["orientador_id"])) if project.get("orientador_id") else None
+        if teacher and teacher.get("nome"):
+            item["advisor"] = str(teacher["nome"]).strip()
         mapped = {json.dumps(locations[turma], sort_keys=True) for turma in turmas if turma in locations}
         if len(mapped) == 1:
             item["location"] = json.loads(mapped.pop())
