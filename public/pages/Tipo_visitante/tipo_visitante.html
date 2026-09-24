@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@
                 <h2>Aluno</h2>
                 <p>Alunos com projetos</p>
 
-                <button class="btn-entrar">Entrar</button>
+                <a class="btn-entrar" href="/entrar/aluno">Entrar como aluno</a>
             </div>
 
             <!--Professor-->
@@ -48,11 +48,21 @@
                 <h2>Professor</h2>
                 <p>Professores avaliadores</p>
 
-                <button class="btn-entrar">Entrar</button>
+                <a class="btn-entrar" href="/entrar/professor">Entrar como professor</a>
             </div>
 
         </section>
+
+        <p class="aviso-redirecionamento" id="aviso-redirecionamento" role="alert" hidden>
+            O acesso ainda não foi configurado. Tente novamente mais tarde.
+        </p>
     </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('erro') === 'acesso-nao-configurado') {
+            document.getElementById('aviso-redirecionamento').hidden = false;
+        }
+    </script>
 </body>
 
 </html>

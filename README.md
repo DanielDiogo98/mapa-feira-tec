@@ -71,6 +71,14 @@ O repositório usa três serviços no mesmo projeto Railway:
   `backend/Dockerfile`;
 - `mysql`: banco privado do Railway.
 
+No serviço `web`, os acessos externos são configurados por duas variáveis:
+
+- `STUDENT_PORTAL_URL`: endereço completo da tela de acesso dos alunos;
+- `TEACHER_PORTAL_URL`: endereço completo da tela de acesso dos professores.
+
+Os botões usam `/entrar/aluno` e `/entrar/professor`, por isso os endereços
+podem ser trocados no Railway sem editar ou publicar novamente o HTML.
+
 O navegador acessa a API por `/api`. O serviço `web` encaminha essas chamadas
 pela rede interna do Railway, portanto somente o site precisa de domínio
 público. Antes de iniciar a API, o script
