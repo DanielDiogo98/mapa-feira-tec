@@ -49,9 +49,14 @@ function criarCard(projeto) {
                         Local: ${escapar(projeto.sala)}
                     </span>
 
-                    <span>
-                        Bloco: ${escapar(projeto.bloco)}
-                    </span>
+                    ${
+                      projeto.bloco &&
+                      !String(projeto.sala)
+                        .toLocaleLowerCase('pt-BR')
+                        .includes('bloco')
+                        ? `<span>Bloco: ${escapar(projeto.bloco)}</span>`
+                        : ''
+                    }
 
                 </div>
 
