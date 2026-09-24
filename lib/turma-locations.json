@@ -1,0 +1,102 @@
+{
+  "3B": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-01",
+    "label": "Sala 1 · Bloco A"
+  },
+  "3A": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-02",
+    "label": "Sala 2 · Bloco A"
+  },
+  "3F": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-03",
+    "label": "Sala 3 · Bloco A"
+  },
+  "2F": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-04",
+    "label": "Sala 4 · Bloco A"
+  },
+  "2C": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-05",
+    "label": "Sala 5 · Bloco A"
+  },
+  "2B": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-06",
+    "label": "Sala 6 · Bloco A"
+  },
+  "2A": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-07",
+    "label": "Sala 7 · Bloco A"
+  },
+  "3C": {
+    "mapId": "bloco-a-salas",
+    "elementId": "sala-08",
+    "label": "Sala 8 · Bloco A"
+  },
+  "1F": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-01",
+    "label": "Sala 1 · Bloco B · 1º andar"
+  },
+  "1E": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-02",
+    "label": "Sala 2 · Bloco B · 1º andar"
+  },
+  "1C": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-03",
+    "label": "Sala 3 · Bloco B · 1º andar"
+  },
+  "1A": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-04",
+    "label": "Sala 4 · Bloco B · 1º andar"
+  },
+  "1H": {
+    "mapId": "bloco-b-andar-2",
+    "elementId": "sala-lab-mbiol",
+    "label": "Laboratório MIBOL · Bloco A"
+  },
+  "2H": {
+    "mapId": "bloco-b-andar-2",
+    "elementId": "sala-lab-instrumental",
+    "label": "Laboratório Instrumental · Bloco A"
+  },
+  "3H": {
+    "mapId": "bloco-b-andar-2",
+    "elementId": "sala-lab-instrumental",
+    "label": "Laboratório Instrumental · Bloco A"
+  },
+  "2K": {
+    "mapId": "patio-biblioteca-auditorio",
+    "elementId": "area-patio",
+    "label": "Pátio"
+  },
+  "1Q": {
+    "mapId": "patio-biblioteca-auditorio",
+    "elementId": "area-patio",
+    "label": "Pátio"
+  },
+  "1D": {
+    "mapId": "patio-biblioteca-auditorio",
+    "elementId": "biblioteca",
+    "label": "Biblioteca"
+  },
+  "2D": {
+    "mapId": "patio-biblioteca-auditorio",
+    "elementId": "biblioteca",
+    "label": "Biblioteca"
+  },
+  "3D": {
+    "mapId": "patio-biblioteca-auditorio",
+    "elementId": "biblioteca",
+    "label": "Biblioteca"
+  }
+}

@@ -33,6 +33,24 @@ npm run dev
 
 A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a passagem da biblioteca e do auditório, o elevador, os banheiros e a escada do Bloco B. Rotas para salas do Bloco A e para o segundo andar do Bloco B aparecem em duas partes. O primeiro andar do Bloco B aparece em três etapas: pátio, segundo andar e primeiro andar.
 
+## Atualizar os projetos da feira
+
+O catálogo público é gerado a partir do dump do banco de cadastro sem copiar o
+arquivo original para o repositório. Senhas, chaves de acesso, RMs, e-mails e
+fotos não são exportados. Para atualizar o catálogo quando chegar um novo dump:
+
+```powershell
+npm run projects:import -- "C:\caminho\para\o-banco.sql"
+```
+
+O comando atualiza `lib/projects-data.json` de forma repetível. Projetos com
+turma cadastrada recebem automaticamente a sala definida em
+`lib/turma-locations.json`; projetos incompletos continuam pesquisáveis e
+aparecem como `Local a confirmar`. A API serve esse mesmo catálogo, garantindo
+que o filtro e o mapa exibam os mesmos dados.
+
+As turmas 1ºB, 1ºR/2ºR/3ºR e 1ºI/2ºI/3ºI ainda precisam de um destino técnico
+confirmado no grafo antes de receberem rota automática.
 
 ## API PHP e MariaDB
 

@@ -108,43 +108,43 @@
     },
     {
       "id": "point-cbd0e946-8560-488e-a63c-37047b62cf75",
-      "label": "Sala 4 Bloco A",
+      "label": "Sala 8 Bloco A",
       "kind": "destination",
       "x": 9663.63,
       "y": 29960.06,
-      "elementId": "sala-04"
+      "elementId": "sala-08"
     },
     {
       "id": "point-29219c08-d623-4539-b93f-dc5b5cb1147d",
-      "label": "Sala 5 Bloco A",
+      "label": "Sala 4 Bloco A",
       "kind": "destination",
       "x": 2518.52,
       "y": 34602.74,
-      "elementId": "sala-05"
+      "elementId": "sala-04"
     },
     {
       "id": "point-59797ffc-2dd5-4eb5-a188-8fa0a1792083",
-      "label": "Sala 6 Bloco A",
+      "label": "Sala 7 Bloco A",
       "kind": "destination",
       "x": 9466.07,
       "y": 34701.52,
-      "elementId": "sala-06"
-    },
-    {
-      "id": "point-9a5b2e37-7289-4b47-9c1e-5c55c177e822",
-      "label": "Sala 7 Bloco A",
-      "kind": "destination",
-      "x": 2386.81,
-      "y": 39311.27,
       "elementId": "sala-07"
     },
     {
+      "id": "point-9a5b2e37-7289-4b47-9c1e-5c55c177e822",
+      "label": "Sala 5 Bloco A",
+      "kind": "destination",
+      "x": 2386.81,
+      "y": 39311.27,
+      "elementId": "sala-05"
+    },
+    {
       "id": "point-0e8ad8b5-cf50-4cf7-a50d-e41f9781540b",
-      "label": "Sala 8 Bloco A",
+      "label": "Sala 6 Bloco A",
       "kind": "destination",
       "x": 9531.93,
       "y": 39245.42,
-      "elementId": "sala-08"
+      "elementId": "sala-06"
     },
     {
       "id": "point-0f4643f7-d5e1-4440-af95-2f21d08c4796",

@@ -5,6 +5,7 @@ $configFile = dirname(__DIR__) . '/config.php';
 $config = require file_exists($configFile) ? $configFile : dirname(__DIR__) . '/config.example.php';
 require dirname(__DIR__) . '/src/Database.php';
 require dirname(__DIR__) . '/src/ProjectRepository.php';
+require dirname(__DIR__) . '/src/ProjectCatalog.php';
 
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if ($origin && in_array($origin, $config['allowed_origins'], true)) {
@@ -27,6 +28,10 @@ try {
     $path = preg_replace('#^/api#', '', $path) ?: '/';
     if ($path === '/health') respond(['status' => 'ok', 'time' => gmdate(DATE_ATOM)]);
     if ($path === '/projects') {
+        $catalogFile = dirname(__DIR__, 2) . '/lib/projects-data.json';
+        if (is_file($catalogFile)) {
+            respond(['data' => ProjectCatalog::fromJson($catalogFile)->search($_GET)]);
+        }
         $pdo = Database::connect($config['database']);
         respond(['data' => (new ProjectRepository($pdo))->search($_GET)]);
     }

@@ -1,36 +1,1141 @@
 [
   {
-    "id": 1,
-    "name": "CoroaAfro",
-    "description": "Agência digital de marketing e empreendedorismo para microempreendedores afrodescendentes",
+    "id": 139,
+    "name": "Além da escolha",
+    "description": "Tendo em vista a vulnerabilidade da mulher pobre, e a facilidade de tal optar por ser profissional do sexo, buscamos retirar um pouco do tanto de preconceito que há, por intermédio da conscientização e empatia, além de mostrar outras opções de caminho a seguir, colocando tais informações num site.\nEm nosso projeto também providenciamos um jogo no estilo de visual novel, em que você é a Diana, uma mulher pobre e só, que acabou de ser demitida, e agora? O que fazer?",
     "shift": "Manhã",
-    "courses": ["Informática para Internet", "Administração"],
-    "series": ["3°C", "3°A"],
-    "students": ["Felipe", "Daniel"],
-    "stand": 1,
-    "ods": [],
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Atlética MCM",
+    "description": "O presente projeto da Atlética MCM, foi desenvolvido co o objetivo de promover a prática esportiva, a integração social e o bem-estar dos estudantes no ambiente escolar. A proposta consiste na criação de uma atlética organizada dentro da ETEC MCM, envolvendo modalidades como futsal e vôlei, além de ações voltadas à organização, divulgação e participação em eventos esportivos.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["2ºA"],
+    "students": [
+      "Ana Carolina Silva Mendes",
+      "Anna Julia Silva oliveira",
+      "Eric Souza Torres",
+      "Gustavo Oliveira"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
     "location": {
-      "mapId": "bloco-a-salas",
-      "elementId": "sala-02",
-      "label": "Sala 2 Bloco A"
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
     }
   },
   {
-    "id": 2,
-    "name": "Valid",
-    "description": "Plataforma de autenticação de documentos com IA",
+    "id": 157,
+    "name": "Ato de Improbidade",
+    "description": "Esperamos conseguir entregar nosso trabalho com exelencia e clareza",
     "shift": "Manhã",
     "courses": [],
     "series": [],
-    "students": []
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
   },
   {
-    "id": 3,
-    "name": "ShowMe",
-    "description": "Plataforma de democratização do acesso à cultura",
+    "id": 159,
+    "name": "Atos de Insubordinação",
+    "description": "Promover um ambiente de trabalho mais justo e respeitoso, garantindo o cumprimento das normas trabalhistas e o equilíbrio entre direitos e deveres.",
     "shift": "Manhã",
     "courses": [],
     "series": [],
-    "students": []
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Bio Brasil",
+    "description": "Projeto de concientização sobre desmatamento e reflorestamento ambiental, com integração de um jogo com o objetivo de reflorecer as áreas desmatadas",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "BioNano",
+    "description": "O projeto conta com um site informativo e interativo com o intuito de conscientizar sobre os reais perigos dos microplásticos presentes no mundo todo.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 14,
+        "name": "Vida na Água"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Blue Sky- Agencia de Viagens",
+    "description": "Uma agencia de viagens que visa proporcionar uma experiencia voltada para pessoas de classe baixa e media, com plano estratégico e financeiro, que possibilita a oportunidade de viajar sem se individar. Auxiliando a organizar suas finanças etc.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Casa Verde- Energia Limpa",
+    "description": "A escolha desse problema se justifica pela importância de reduzir o consumo desnecessário de energia e buscar alternativas mais sustentáveis para o cotidiano da população. O desperdício de eletricidade, além de aumentar os gastos, contribui para uma utilização maior dos recursos necessários para a geração de energia. Por esse motivo, é importante desenvolver soluções que permitam utilizar a eletricidade de maneira mais eficiente.\nA proposta desenvolvida pelo nosso grupo pode trazer benefícios para a comunidade ao apresentar formas simples de economizar energia por meio da tecnologia. A utilização de sensores de proximidade pode evitar que lâmpadas permaneçam ligadas quando não há ninguém no ambiente, enquanto as placas solares e os cataventos representam alternativas para a geração de energia a partir de recursos naturais. Dessa maneira, o projeto busca demonstrar que pequenas mudanças podem contribuir para um consumo mais consciente e para a preservação do meio ambiente.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Nicolas Eikoo Suzukayama"],
+    "ods": [
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 137,
+    "name": "CIDADE SUSTENTÁVEL",
+    "description": "O projeto da Cidade Sustentável tem a proposta de apresentar um modelo de cidade totalmente sustentável, com sistemas implementados de água potável e saneamento básico, energia limpa e acessível, indústrias com infraestrutura e inovações, consumo e produção responsáveis, além de ação contra as mudanças climáticas.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 6,
+        "name": "Água Potável e Saneamento"
+      },
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Climate 13",
+    "description": "Projeto voltado para a consientização sobre questões ambientais, como desmatamento e o aquecimento global, com Cards, sistema de monitoramento do clima global, jogo sobre a agenda 2030 e muito mais.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Conectando idéias- ODS9",
+    "description": "Fizemos esse projeto buscando uma solução prática de problemas, usando como frerramentas principais infraestruturas melhores e mais modernas.\nNo nosso projeto, fizemos uma cidade com modelamento 3d, nessa cidade tinhamos fonte de energia sustentável, vegetação para reduzir a temperatura geral da cidade, uma ponte com boa estrutura entre outras coisas.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "CoroaAfro (T.I.)",
+    "description": "Visa desenvolver uma agência de marketing digital voltada para microempreendedores afrodescendentes que tiveram pouco ou nenhum acesso a capacitações específicas, com objetivo de reduzir desigualdades, crescimento e competitividade no mercado digital, a agência não atua apenas como prestadora de serviços, mas como uma plataforma de capacitação estratégica, inclusão digital e desenvolvimento sustentável de negócios, considerando que o empreendedorismo negro, muitas vezes, atua como motor de identidade cultural e resistência contra o racismo.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºC"],
+    "students": ["Allyson Rocha dos Santos", "Daniel Diogo de Souza"],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 154,
+    "name": "Desigualdades sociais no ABC",
+    "description": "A criação de hortas comunitárias para a ajuda de pessoas em situação de vulnerabilidade, onde tanto o trabalhador quanto aquele que recebe são beneficiados e recebem auxílios governamentais. As hortas são automatizadas por sistemas inteligentes.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Rodrigo Ramos Paz"],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 131,
+    "name": "Discordia",
+    "description": "O Discordia é uma plataforma global d3e comunicação digital projetada para criar comunidades, conectar pessoas e aproximar grupos de amigos através de canais de voz, textos de videos de alta qualidade.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "dream university",
+    "description": "O objetivo da dream university é ajudar jovens que sonham em fazer faculdade fora do pais, jovens que sentem a vontade mas tem medo do começo. A dream university incentiva esses jovens com sonhos de ter um estudo no exterior, ter um diploma internacional e melhores oportunidades no mercado de trabalho.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Eco City",
+    "description": "Objetivos\n\nCriar uma cidade mais limpa e sustentável utilizando Inteligência Artificial e sensores para melhorar a coleta de lixo. O projeto busca reduzir desperdícios, economizar combustível e incentivar a reciclagem e o descarte correto dos resíduos.\n\nMetodologia\n\nA maquete será desenvolvida no **Tinkercad**, representando ruas, casas, prédios, árvores, lixeiras inteligentes e um caminhão de coleta. Os sensores das lixeiras enviarão informações para um sistema de IA, que identificará quais lixeiras estão cheias e indicará os locais que precisam de coleta primeiro.\n\nResultados esperados\n\nEspera-se demonstrar como a tecnologia pode tornar a coleta de lixo mais rápida e eficiente, diminuir trajetos desnecessários dos caminhões, reduzir o desperdício de combustível e contribuir para uma cidade mais limpa e sustentável.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "EcoDomus",
+    "description": "Tem como principal objetivo ajudar as pessoas a conquistarem o sonho da casa própria de forma planejada, sustentavel e financeiramente responsavel",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Ecofuturo",
+    "description": "O objetivo do nosso projeto é criar uma cidade completamente sustentável, com a intenção de usar energia completamente sustentável, com impacto mínimo na natureza, respeitando o meio ambiente, a fauna e a flora.Para isso nós vamos usar várias ferramentas,como painéis solares,armazenamento de energia e até o uso de IA para gerenciamento.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Educaí",
+    "description": "Uma plataforma de estudos gratuita com acessibilidade para pessoas com deficiência, como daltonismo, surdez, cegos, etc",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "name": "energia limpa e acessivel",
+    "description": "iremos falar sobre as energias limpas, como elas são beneficas, como facilitar o acesso dela para todos, tipos de energias limpas e projetos sustentaveis, como: tomadas inteligentes e fiações sustentaveis que tem como foco diminuir gastos desnecessarios e prejuizos",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["joão victor aureliano do nascimento"],
+    "ods": [
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 152,
+    "name": "ENERGIZ.AI",
+    "description": "Nosso projeto e sobre um piso que gera energia conforme alguem ou algo pase por cima gerando energia introduzindo uma ia que monitora o gasto e os horarios de pico tambem temos a ideia de colocar ia em tecnologias ja existentes como biodigestores, paineis solares, turbinas eolicas e sensores de movimento onde e usado nos postes",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Leonardo Tomé Balbino"],
+    "ods": [
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 113,
+    "name": "Entre linhas",
+    "description": "O projeto propõe a criação de um clube literario escolar para incentivar a leitura, a dramaturgia brasileira e a cultura. Por meio de encontros e debates, os alunos poderão compartilhar ideias, desenvolver o senso critico, a argumentação e a interpretação de obras. Além disso, o clube busca a valorização da literatura nascional, ampliar o repertorio cultural e promover a socialização entre os estudantes.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["2ºA"],
+    "students": [
+      "Clarisse França Nery",
+      "Davi Alves Moraes",
+      "Giovanna Kaoru Taga da Cruz",
+      "Helloisa Soares Tomaz"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 111,
+    "name": "Entre Luzes e Sentimentos",
+    "description": "O projeto Entre Luzes e Sentimentos se trata de um projeto que busca conectar as pessoas atraves do teatro e busca melhorar a saùde mental dos participantes.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["2ºA"],
+    "students": [
+      "Alyne Mendes Silva",
+      "Ana Luiza Santos Colombari",
+      "DaviGuilherme Breyer Mota"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 147,
+    "name": "FLUXO+",
+    "description": "A solução da mobilidade urbana.\n\nO Fluxo+ é uma solução desenvolvida a partir da ODS 9 para melhorar a mobilidade urbana das cidades. Utilizamos uma tecnologia com câmeras, sensores e IA em semáforos que indentifiquem o fluxo entre pedrestres e veículos. O sistema adapta os tempos de sinalização de acordo com a demanda do fluxo.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Lucas Moitinho Prado"],
+    "ods": [
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 125,
+    "name": "Gestão de Tempo Enem",
+    "description": "O objetivo do nosso projeto, é orientar e ajudar as pessoas que vão prestar vestibulares, ou exames. Criamos um site que ajudam os a criar um cronograma de estudos eficaz para gerenciarem melhor sua rotina de estudos.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "guardiões da terra",
+    "description": "o projeto guardiões da terra é um projeto q visa criar uma area de proteção ambiental, que será monitorada e com a ajuda de IA, preservar a fauna e flora que estão em ameaça de extinção, preservando florestas e animais nativos.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "IA na Gestão Urbana",
+    "description": "Nosso projeto (IA na Gestão Urbana: Inteligência Artificial, Energia Limpa e Inclusão Social) pretende trazer a ideia de uma cidade auto-sustentavel, vizando a utilização de areas com paineis solares, areas verdes pela cidade vizando o meio-ambiente e utilização de transportes sustentaveis, reduzindo a emissão de gases prejudicias a saúde.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 1,
+        "name": "Erradicação da Pobreza"
+      },
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "InSync",
+    "description": "basicamente nosso projeto busca um boa gestão e organização durante a realização de trabalhos em equipe e buscando o melhor desempenho do grupo em conjunto, e para isso criamos um aplicativo que implementa uma grade de organizção de rotina para que possa se dividir as funções,horarios etc. Esperamos que com a implementação desse sistema/projeto uma melhora significativa no rendimento dos grupos e um melhor desempenho.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "InterWay",
+    "description": "Uma plataforma de intercambio acessível para diversas informações.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      },
+      {
+        "number": 17,
+        "name": "Parcerias e Meios de Implementação"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "INTI",
+    "description": "desenvolver uma solução acessível e automática para aumentar a produção de alimentos, reduzindo desperdício e falhas no manejo do solo utilizando um dispositivo com sensores para monitoramento contínuo do estado e saúde do solo, ajudando na prevenção e cuidando",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "LipAI",
+    "description": "A deficiência auditiva pode gerar dificuldades no desenvolvimento da comunicação, especialmente entre crianças surdas, que utilizam a fala e a leitura labial. Apesar das tecnologias assistivas existentes, muitas são voltadas à Libras, deixando uma lacuna para esse público. Nesse contexto, o projeto LipAI propõe uma plataforma educacional baseada em Inteligência Artificial para auxiliar no aprimoramento da fala e da leitura labial de crianças com deficiência auditiva. A metodologia combina pesquisas bibliográfica, exploratória, aplicada e experimental, com conteúdos organizados por fonemas e níveis de dificuldade. A plataforma integra React, Vite, C#, .NET, SQL Server, Python, Flask e modelos de IA, oferecendo atividades interativas, exercícios de pronúncia, vídeos demonstrativos e acompanhamento do progresso. Espera-se promover uma aprendizagem acessível, interativa e personalizada, contribuindo para a autonomia comunicativa e a inclusão educacional.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºF"],
+    "students": [
+      "Angelo Ivon Domingues Tenorio de Almeida",
+      "Arthur Gael Araújo Pinho de Almeida",
+      "Evellyn dos Santos Furtado",
+      "Gabriela Romano",
+      "João Paulo Souza Azevedo"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 136,
+    "name": "Luminagrid: Luzes Inteligentes",
+    "description": "O Luminagrid é um sistema inteligente de iluminação pública adaptativa. Utilizando sensores de movimento e Inteligência Artificial por Visão Computacional, os postes ajustam a intensidade da luz em tempo real:\nRua Vazia: Iluminação reduzida (modo de espera/economia).\nPresença de Pedestres ou Veículos: Iluminação aumenta para 100% de capacidade instantaneamente.\nAs cidades gastam milhões de reais anualmente mantendo postes de iluminação acesos com 100% de capacidade durante toda a noite — mesmo em ruas vazias. Isso gera um alto custo para as Câmaras Municipais e Prefeituras, desperdício de energia e locais mal geridos que aumentam a sensação de insegurança dos cidadãos.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 7,
+        "name": "Energia Limpa e Acessível"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Math+",
+    "description": "O projeto tem o objetivo de ajudar e orientar desde crianças até adultos com defazagem em matemática. Disponibilizamos os conteúdos básicos de matemática com explicação teórica e prática por meio de quizzes para o usuário testar e aprimorar seus conhecimentos. O site é gamificado, com sistema de XP e níveis conforme o usuário avança nos conteúdos. Queremos mostrar que o aprendizado de matemática pode ser mais fácil e divertido para todos.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Mente Ativa",
+    "description": "Nosso projeto visa ajudar pessoas a administrarem sua rotina do dia dia, evitando passar por estresse ou fadiga mental, algo muito comum nos dias de hoje, usando métodos eficientes para imporem em sua vidas.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["1ºA"],
+    "students": ["Beatriz Helena da Silva Furlan", "Nayara Salviano Costa"],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Movipay",
+    "description": "O presente trabalho propõe o desenvolvimento do MoviPay, uma plataforma local de serviços comunitários fundamentada nos princípios do distributivismo, do cooperativismo de plataforma e do cosmolocalismo. O MoviPay se diferencia das soluções existentes ao operar exclusivamente no âmbito do bairro, adotar um modelo financeiro justo (cobrança apenas após a conclusão do serviço), incorporar um sistema de confiança comunitária baseado em avaliação bilateral. Os resultados esperados incluem a validação da demanda por uma solução de interface simplificada, a comprovação do incômodo dos profissionais com o modelo de cobrança por leads, e o fortalecimento da economia local por meio de uma alternativa concreta ao capitalismo de plataforma. Dessa forma, o MoviPay promove um ecossistema colaborativo que fortalece a economia de bairro, impulsiona o desenvolvimento comunitário e amplia o impacto social das relações de trabalho baseadas na reciprocidade e na confiança incorporada.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºF"],
+    "students": [
+      "Leonardo Zaia Sva",
+      "Nycolle Alves dos Santos",
+      "Pedro Henrique de Andrade Gimenes",
+      "Rafael Vasconcelos Monteiro"
+    ],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      },
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 134,
+    "name": "Nova Gota S.R",
+    "description": "O objetivo deste projeto é contribui rpara a reutilização de materiais recicláveis,como plástico, restos de comidas, que podem prejudicar omeio ambiente.Esses materiais serão reaproveitados para criar bancos,e produzir bioplástico, que se decompõe mais rápido que o plástico comum. Além disso, a água da chuva será tratada e purificada para abastecer a população, transformando materiais descartados em novas formas de consumo consciente e sustentável.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "ORION",
+    "description": "Plataforma de ensino musical que combina uma luva interativa com um sistema de reconhecimento de gestos por visão computacional baseado no método manossolfa, tornando o aprendizado musical mais acessível, lúdico e inclusivo - especialmente para quem não tem acesso a instrumentos ou aulas tradicionais.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Pelo Tempo Que Durar",
+    "description": "O final do Ensino Médio marca o encerramento de uma etapa importante, repleta de aprendizados, experiências e momentos compartilhados. Ao longo dos anos, a escola se torna mais do que um espaço de estudo, sendo também um lugar onde são construídas amizades, histórias e memórias\n\nVivências\n\nCom o objetivo de preservar essas lembranças, surge o projeto “Pelo tempo que durar”, que busca registrar a trajetória dos alunos da ETEC por meio da fotografia, valorizando momentos que fazem parte de sua história escolar e pessoal.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["2ºA"],
+    "students": [
+      "Ana Julia Crepaldi Avila",
+      "Eduarda Francini de Oliveira",
+      "Eloá Barros Prado",
+      "Graziela Mendes de Araújo"
+    ],
+    "ods": [
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      }
+    ],
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 25,
+    "name": "PerceptAI",
+    "description": "PerceptAI — Gestão e Monitoramento Hospitalar com IA\nO PerceptAI centraliza a gestão hospitalar (leitos, profissionais, plantões, prontuários e visitas) para combater a fragmentação de dados.\nDiferencial: Utiliza Visão Computacional e Redes Neurais (CNN - MobileNetV2) para identificar expressões faciais de dor, medo, enjoo e sono, além de detectar o estado de consciência e convulsões em tempo real. Uma solução para um atendimento ágil e humanizado.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºF"],
+    "students": [
+      "Laura romano",
+      "Leonardo Teixeira da Silva",
+      "Matheus de Pauli Batista",
+      "Murilo Gonçalves da Silva",
+      "Pietro Jacon Luchesi Versollato"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 162,
+    "name": "Quis assedio sexual",
+    "description": "Quis e informações sobre assedio sexual no ambiente corporativo, suas extenções e quando se aplica, explicações sobre o tema e sobre a ODS escolhida.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "name": "RH Decide",
+    "description": "O objetivo deste projeto consiste em entender uma situação de hípotese de justa causa sobre efeito de álcool. Esperamos que através desse projeto, as pessoas venha entender que um caso de embriaguez no ambiente organizacional nem sempre fácil com parece.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "name": "RH Decide",
+    "description": "O projeto tem como objetivo apresentar uma introdução e aprofundamento sobre os conceitos fundamenetais relacionados á justa causa no âmbito das relações de trabalho. Conceito de justa causa, seus presupostos, caracteristicas e fundamnetos legais.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "RH Decide: Tribunal da Agress",
+    "description": "Nosso projeto aborda a questão da ofensa fisica no ambiente de trabalho que é uma das alineas previstas no art 482 da CLT. Pensando nisso a gente propos um tribunal da agressão em que vamos trazer algumas situações do ambiente de trabalho e colocar o público no papel de quem precisa analisar esses casos.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 8,
+        "name": "Trabalho Decente e Crescimento Econômico"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "RIo LImpo, Oceano Vivo",
+    "description": "Cidade tecnológica que preserva a vida na água, de maneira sustentável, promovendo maior qualidade de vida ao animas marinhos.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Eric Souza SIlva"],
+    "ods": [
+      {
+        "number": 6,
+        "name": "Água Potável e Saneamento"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 14,
+        "name": "Vida na Água"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 149,
+    "name": "S.I.M.G.A",
+    "description": "Projeto de desenvolvimento de um Sistema Inteligente de Gestão e Monitoramento de água. Sua função é reduzir o desperdício de água enquanto permite o acesso e monitoramento do sistema hidraulico de uma residência ou industria, através do uso de Inteligência Artíficial para detectar vazamentos, uso irregular ou danos em encanamentos. Por meio de um aplicativo ou site seria possível monitorar o uso de água mensal, capacidade total dos encanamentos e caixa d'água e a diferença de conta de água ao longo dos messes.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Raphael da Silva Rocha"],
+    "ods": [
+      {
+        "number": 6,
+        "name": "Água Potável e Saneamento"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 114,
+    "name": "ShowMe",
+    "description": "Sistema de Democratização do Acesso à Eventos Culturais, feito com PHP, HTML, CSS e MySQL.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºC"],
+    "students": ["Lorena da Silva Rodrigues"],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 10,
+        "name": "Redução das Desigualdades"
+      }
+    ],
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 153,
+    "name": "Sistema de saúde e bem-estar",
+    "description": "A proposta é monitorar áreas de risco de epidemias utilizando drones com implementação de drones, sistemas integrados a IA e a construção de satélites de monitoramento que mandam dados e informações para postos observatórios  com o objetivo de analisar os dados coletados para confirmar se a área é de risco e, caso for, identificar exatamente a doença e mapear as regiões que tem o maior risco de serem afetadas. Uma vez que o processo seja feito, emitimos alertas por meio dos satélites para as cidades e os dispositivos movéis, isolando a área e enviados profissionais da área da saúde até o local, para ajudar na expurgação da doença e garantir estabiliade para determinado local.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["1ºC"],
+    "students": ["Guilherme Assis Dias"],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 120,
+    "name": "Tempo Certo",
+    "description": "Nosso projeto, tem como objetivo auxiliar o usuário por meio de um site/aplicativo à administrar seu tempo de uso de tela e planejar sua rotina para a melhor divisão do tempo usando metódos como \"eat the frog\" e do \"pomodoro\"",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["1ºA"],
+    "students": ["Davi Azevedo Graminha"],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 146,
+    "name": "Thermautomata",
+    "description": "Um site e jogo que buscam entreter e ensinar sobre política, automação industrial e logística através da gamificação",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºC"],
+    "students": [
+      "Guilherme da Silva Gimenes",
+      "João Arthur Rípoli Pereira Nunes"
+    ],
+    "ods": [
+      {
+        "number": 9,
+        "name": "Indústria, Inovação e Infraestrutura"
+      },
+      {
+        "number": 11,
+        "name": "Cidades e Comunidades Sustentáveis"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      }
+    ],
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Trainly",
+    "description": "Uma rede social de treinos, onde cada usuário tem um perfil, registra suas atividades físicas e compartilha publicações com a sua rede de amigos.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºF"],
+    "students": [
+      "Miguel Bizerra Silva",
+      "Pedro SIlva Miranda",
+      "Victor Gabriel Bessemer Santos",
+      "Vinicius dos Santos Andrade",
+      "Vitor Eduardo Matos Virginio"
+    ],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-03",
+      "label": "Sala 3 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 116,
+    "name": "Valid",
+    "description": "Plataforma para a verificação e autenticação de documentos suspeitos utilizando Inteligência Artificial (IA) e análise a nível de pixels.",
+    "shift": "Manhã",
+    "courses": [],
+    "series": [],
+    "students": [],
+    "ods": [
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Viridis",
+    "description": "Plataforma para incentivar o cultivo de hortas nas escolas, com gamificação e gerenciador de atividades",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºC"],
+    "students": ["Estevão Locks"],
+    "ods": [
+      {
+        "number": 2,
+        "name": "Fome Zero e Agricultura Sustentável"
+      },
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      },
+      {
+        "number": 4,
+        "name": "Educação de Qualidade"
+      },
+      {
+        "number": 12,
+        "name": "Consumo e Produção Responsáveis"
+      },
+      {
+        "number": 13,
+        "name": "Ação Contra a Mudança Global do Clima"
+      },
+      {
+        "number": 15,
+        "name": "Vida Terrestre"
+      }
+    ],
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 124,
+    "name": "VITALIS",
+    "description": "nosso projeto aborda a parte de qualidade de vida e gestão de tempo, utilizando um site criado por nós para administrar a rotina e as atividades cotidianas. Em nosso site encontra-se metodos de gestão de tempo para os estudos, como o método Pomodoro e o Eat the frog. Também temos varias outras abas, dentre elas uma agenda, uma parte para treinos, financeiro,tarefas,cronometro e insights.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["1ºA"],
+    "students": ["Guilherme Roncon Santana", "Marianna Carvalho Batista"],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-04",
+      "label": "Sala 4 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
+  },
+  {
+    "id": 127,
+    "name": "Vitalize",
+    "description": "O vitalize é uma plataforma digital de apoio a pacientes oncológicos e seus familiares. O projeto reune informaçãoes confiaveis, grupos de apoio, relatos, onganização de rotinas e rescursos de inteligência artificial. O projeto busca promover acolhimento,informação, bem-estar e quailidade de vida, relacionado ao ODS 3 - saúde e bem-estar.",
+    "shift": "Manhã",
+    "courses": ["Informática para Internet"],
+    "series": ["3ºC"],
+    "students": ["Mayara de Oliveira Sant’Anna"],
+    "ods": [
+      {
+        "number": 3,
+        "name": "Saúde e Bem-Estar"
+      }
+    ],
+    "location": {
+      "elementId": "sala-08",
+      "label": "Sala 8 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
+  },
+  {
+    "id": 109,
+    "name": "vozes originárias",
+    "description": "Este trabalho tme como objetivo apreentar parte da cultura dos povos originários do Brasil aos alunos e funcionários da Etec Professora Maria Cristina de Medeiro, assim mostrar e divagar parte da ccultura dos ancestrais. Foi se observado que grande parte da comunidade escolar não possui muitos conhecimentos acerca da etnia e sociedade indigena. Conforma a realização destre trabalho, os envolvidos irão se instruir acerca da linguagem, culinário, tradições e arte indigena brasileira com o axuilio dos participantes do projeto.",
+    "shift": "Manhã",
+    "courses": ["Administração"],
+    "series": ["2ºA"],
+    "students": ["isabeline freire de souza"],
+    "ods": [
+      {
+        "number": 16,
+        "name": "Paz, Justiça e Instituições Eficazes"
+      }
+    ],
+    "location": {
+      "elementId": "sala-07",
+      "label": "Sala 7 · Bloco A",
+      "mapId": "bloco-a-salas"
+    }
   }
 ]

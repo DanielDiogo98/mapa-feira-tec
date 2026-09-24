@@ -1,7 +1,40 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import projects from '../lib/projects-data.json' with { type: 'json' };
 import { filterProjects, projectFilterOptions } from '../lib/projects.ts';
+
+const projects = [
+  {
+    id: 1,
+    name: 'CoroaAfro',
+    description: 'Agência digital de marketing',
+    shift: 'Manhã',
+    courses: ['Informática para Internet', 'Administração'],
+    series: ['3°C', '3°A'],
+    students: ['Felipe', 'Daniel'],
+    stand: 1,
+    ods: [],
+  },
+  {
+    id: 2,
+    name: 'Valid',
+    description: 'Autenticação de documentos',
+    shift: 'Manhã',
+    courses: [],
+    series: [],
+    students: [],
+    ods: [],
+  },
+  {
+    id: 3,
+    name: 'ShowMe',
+    description: 'Acesso à cultura',
+    shift: 'Manhã',
+    courses: [],
+    series: [],
+    students: [],
+    ods: [],
+  },
+];
 
 const blank = {
   query: '',

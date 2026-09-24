@@ -373,11 +373,17 @@ export default function VisitorMap() {
     }
   }
   function chooseProject(project: FairProject) {
-    if (!project.location || project.location.mapId !== 'bloco-a-salas') return;
-    const room = rooms.find((p) => p.elementId === project.location?.elementId);
-    if (!room) return;
+    if (!project.location || !(project.location.mapId in graphs)) return;
+    const mapId = project.location.mapId as MapKey;
+    const destination = destinations.find(
+      (item) =>
+        item.mapId === mapId &&
+        graphs[mapId].nodes.find((node) => node.id === item.nodeId)
+          ?.elementId === project.location?.elementId,
+    );
+    if (!destination) return;
     setSelectedProjectId(project.id);
-    setDestinationKey(`bloco-a-salas:${room.id}`);
+    setDestinationKey(destination.key);
     setShowRoute(true);
     setActiveMap(selectedOrigin?.mapId ?? 'patio-biblioteca-auditorio');
   }

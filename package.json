@@ -11,6 +11,7 @@
     "start": "wrangler dev --config dist/server/wrangler.json",
     "start:railway": "node scripts/start-railway.mjs",
     "db:build": "node scripts/build-database-init.mjs",
+    "projects:import": "python scripts/import-hostinger-projects.py",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.mjs",
     "check": "npm run typecheck && npm test",
