@@ -22,10 +22,22 @@ if ($contents === false) {
 }
 $projects = json_decode($contents, true, flags: JSON_THROW_ON_ERROR);
 
-$pdo->exec(
-    'ALTER TABLE projetos ' .
-    'ADD COLUMN IF NOT EXISTS catalogo_publico tinyint(1) NOT NULL DEFAULT 0 AFTER turno',
+$columnExists = $pdo->prepare(
+    <<<'SQL'
+SELECT COUNT(*)
+FROM information_schema.columns
+WHERE table_schema = DATABASE()
+  AND table_name = 'projetos'
+  AND column_name = 'catalogo_publico'
+SQL,
 );
+$columnExists->execute();
+if ((int) $columnExists->fetchColumn() === 0) {
+    $pdo->exec(
+        'ALTER TABLE projetos ' .
+        'ADD COLUMN catalogo_publico tinyint(1) NOT NULL DEFAULT 0 AFTER turno',
+    );
+}
 
 $upsert = $pdo->prepare(
     <<<'SQL'
