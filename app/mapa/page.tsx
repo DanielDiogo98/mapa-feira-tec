@@ -213,7 +213,7 @@ export default function VisitorMap() {
   const destinations = useMemo<Destination[]>(
     () => [
       ...patio.nodes
-        .filter((p) => ['cantina', 'refeitorio'].includes(p.elementId ?? ''))
+        .filter((p) => p.kind === 'destination')
         .map((p) => ({
           key: `patio-biblioteca-auditorio:${p.id}`,
           mapId: 'patio-biblioteca-auditorio' as const,
