@@ -5,6 +5,14 @@ const port = process.env.PORT || '3000';
 const backendUrl =
   process.env.BACKEND_API_URL || 'http://api.railway.internal/api';
 const wrangler = resolve('node_modules/wrangler/bin/wrangler.js');
+const runtimeVariables = {
+  BACKEND_API_URL: backendUrl,
+  STUDENT_PORTAL_URL: process.env.STUDENT_PORTAL_URL,
+  TEACHER_PORTAL_URL: process.env.TEACHER_PORTAL_URL,
+};
+const runtimeVariableArgs = Object.entries(runtimeVariables).flatMap(
+  ([name, value]) => (value ? ['--var', `${name}:${value}`] : []),
+);
 const child = spawn(
   process.execPath,
   [
@@ -16,8 +24,7 @@ const child = spawn(
     '0.0.0.0',
     '--port',
     port,
-    '--var',
-    `BACKEND_API_URL:${backendUrl}`,
+    ...runtimeVariableArgs,
   ],
   { stdio: 'inherit' },
 );
