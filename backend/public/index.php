@@ -10,6 +10,7 @@ require dirname(__DIR__) . '/src/ProjectCatalog.php';
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if ($origin && in_array($origin, $config['allowed_origins'], true)) {
     header('Access-Control-Allow-Origin: ' . $origin);
+    header('Access-Control-Allow-Credentials: true');
     header('Vary: Origin');
 }
 header('Access-Control-Allow-Methods: GET, OPTIONS');
