@@ -2,13 +2,13 @@
   "version": 1,
   "mapId": "bloco-b-andar-2",
   "width": 20498,
-  "height": 14433,
+  "height": 19301,
   "nodes": [
     {
       "id": "passagem-escada-patio",
       "label": "Escada para o pátio e salas do Bloco A",
       "x": 19545,
-      "y": 4761,
+      "y": 9629,
       "kind": "stairs",
       "elementId": "escada-acesso-patio-bloco-a"
     },
@@ -16,7 +16,7 @@
       "id": "passagem-corredor-escada",
       "label": "Corredor da escada",
       "x": 17300,
-      "y": 4761,
+      "y": 9629,
       "kind": "corridor",
       "elementId": "corredor-passagem-bloco-a"
     },
@@ -24,21 +24,21 @@
       "id": "passagem-corredor-lab-01",
       "label": "Corredor do Laboratório 1 do Bloco A",
       "x": 17277.26,
-      "y": 2216.82,
+      "y": 7084.82,
       "kind": "corridor"
     },
     {
       "id": "passagem-lab-01-porta",
       "label": "Porta do Laboratório 1 do Bloco A",
       "x": 16516.09,
-      "y": 2202.75,
+      "y": 7070.75,
       "kind": "door"
     },
     {
       "id": "passagem-lab-01-destino",
       "label": "Laboratório 1 · Bloco A · Passagem",
       "x": 15364.33,
-      "y": 2232.77,
+      "y": 7100.77,
       "kind": "destination",
       "elementId": "sala-lab-bloco-a-01"
     },
@@ -46,21 +46,21 @@
       "id": "passagem-corredor-lab-02",
       "label": "Corredor do Laboratório 2 do Bloco A",
       "x": 17277.26,
-      "y": 4357.61,
+      "y": 9225.61,
       "kind": "corridor"
     },
     {
       "id": "passagem-lab-02-porta",
       "label": "Porta do Laboratório 2 do Bloco A",
       "x": 16577.26,
-      "y": 4357.61,
+      "y": 9225.61,
       "kind": "door"
     },
     {
       "id": "passagem-lab-02-destino",
       "label": "Laboratório 2 · Bloco A · Passagem",
       "x": 15286.89,
-      "y": 4413.16,
+      "y": 9281.16,
       "kind": "destination",
       "elementId": "sala-lab-bloco-a-02"
     },
@@ -68,21 +68,21 @@
       "id": "passagem-corredor-lab-03",
       "label": "Corredor do Laboratório 3 do Bloco A",
       "x": 17282.16,
-      "y": 6563.09,
+      "y": 11431.09,
       "kind": "corridor"
     },
     {
       "id": "passagem-lab-03-porta",
       "label": "Porta do Laboratório 3 do Bloco A",
       "x": 16546.49,
-      "y": 6545.26,
+      "y": 11413.26,
       "kind": "door"
     },
     {
       "id": "passagem-lab-03-destino",
       "label": "Laboratório 3 · Bloco A · Passagem",
       "x": 15478.66,
-      "y": 6509.59,
+      "y": 11377.59,
       "kind": "destination",
       "elementId": "sala-lab-bloco-a-03"
     },
@@ -90,21 +90,21 @@
       "id": "passagem-corredor-lab-04",
       "label": "Corredor do Laboratório 4 do Bloco A",
       "x": 17300,
-      "y": 8592.37,
+      "y": 13460.37,
       "kind": "corridor"
     },
     {
       "id": "passagem-lab-04-porta",
       "label": "Porta do Laboratório 4 do Bloco A",
       "x": 16582.16,
-      "y": 8610.21,
+      "y": 13478.21,
       "kind": "door"
     },
     {
       "id": "passagem-lab-04-destino",
       "label": "Laboratório 4 · Bloco A · Passagem",
       "x": 15550,
-      "y": 8556.7,
+      "y": 13424.7,
       "kind": "destination",
       "elementId": "sala-lab-bloco-a-04"
     },
@@ -112,21 +112,21 @@
       "id": "passagem-corredor-central",
       "label": "Corredor de ligação dos blocos",
       "x": 17300,
-      "y": 11500,
+      "y": 16368,
       "kind": "corridor"
     },
     {
       "id": "passagem-chegada-bloco-b",
       "label": "Chegada ao 2º andar do Bloco B",
       "x": 6918.45,
-      "y": 11493.57,
+      "y": 16361.57,
       "kind": "corridor"
     },
     {
       "id": "b2-escada-destino",
       "label": "Escada para o 1º andar do Bloco B",
       "x": 6263,
-      "y": 5006,
+      "y": 9874,
       "kind": "stairs",
       "elementId": "escadas-acesso-patio"
     },
@@ -134,7 +134,7 @@
       "id": "b2-escada-corredor",
       "label": "Corredor da escada",
       "x": 4863,
-      "y": 5006,
+      "y": 9874,
       "kind": "corridor",
       "elementId": "corredor-principal"
     },
@@ -142,63 +142,63 @@
       "id": "b2-corredor-topo",
       "label": "Corredor superior",
       "x": 4711.36,
-      "y": 11483.34,
+      "y": 16351.34,
       "kind": "corridor"
     },
     {
       "id": "b2-corredor-direito-topo",
       "label": "Corredor dos laboratórios",
       "x": 3664.96,
-      "y": 11386.56,
+      "y": 16254.56,
       "kind": "corridor"
     },
     {
       "id": "b2-corredor-tcc",
       "label": "Corredor do Laboratório TCC",
       "x": 3629.29,
-      "y": 8098.21,
+      "y": 12966.21,
       "kind": "corridor"
     },
     {
       "id": "b2-corredor-lab-04",
       "label": "Corredor do Laboratório 4",
       "x": 3557.95,
-      "y": 5894.05,
+      "y": 10762.05,
       "kind": "corridor"
     },
     {
       "id": "b2-corredor-banheiro-masculino",
       "label": "Corredor do banheiro masculino",
       "x": 4863,
-      "y": 2643,
+      "y": 7511,
       "kind": "corridor"
     },
     {
       "id": "b2-corredor-banheiro-feminino",
       "label": "Corredor do banheiro feminino",
       "x": 4863,
-      "y": 1283,
+      "y": 6151,
       "kind": "corridor"
     },
     {
       "id": "b2-corredor-maker",
       "label": "Corredor do Laboratório Maker",
       "x": 3575.79,
-      "y": 2426.51,
+      "y": 7294.51,
       "kind": "corridor"
     },
     {
       "id": "b2-quimica-01-porta",
       "label": "Porta do Laboratório de Química 1",
       "x": 4653.6,
-      "y": 12317.38,
+      "y": 17185.38,
       "kind": "door"
     },
     {
       "id": "b2-quimica-01-destino",
       "label": "Laboratório de Química 1 · Bloco B · 2º andar",
       "x": 3650.9,
-      "y": 13533,
+      "y": 18401,
       "kind": "destination",
       "elementId": "sala-lab-quimica-01"
     },
@@ -206,14 +206,14 @@
       "id": "b2-quimica-02-porta",
       "label": "Porta do Laboratório de Química 2",
       "x": 1746.33,
-      "y": 11368.72,
+      "y": 16236.72,
       "kind": "door"
     },
     {
       "id": "b2-quimica-02-destino",
       "label": "Laboratório de Química 2 · Bloco B · 2º andar",
       "x": 873.82,
-      "y": 10994.19,
+      "y": 15862.19,
       "kind": "destination",
       "elementId": "sala-lab-quimica-02"
     },
@@ -221,14 +221,14 @@
       "id": "b2-tcc-porta",
       "label": "Porta do Laboratório TCC",
       "x": 1780,
-      "y": 8133.88,
+      "y": 13001.88,
       "kind": "door"
     },
     {
       "id": "b2-tcc-destino",
       "label": "Laboratório TCC · Bloco B · 2º andar",
       "x": 963,
-      "y": 8211.97,
+      "y": 13079.97,
       "kind": "destination",
       "elementId": "sala-lab-tcc"
     },
@@ -236,14 +236,14 @@
       "id": "b2-lab-04-porta",
       "label": "Porta do Laboratório 4",
       "x": 1744.33,
-      "y": 5822.71,
+      "y": 10690.71,
       "kind": "door"
     },
     {
       "id": "b2-lab-04-destino",
       "label": "Laboratório 4 · Bloco B · 2º andar",
       "x": 963,
-      "y": 5858.46,
+      "y": 10726.46,
       "kind": "destination",
       "elementId": "sala-lab-04"
     },
@@ -251,14 +251,14 @@
       "id": "b2-maker-porta",
       "label": "Porta do Laboratório Maker",
       "x": 1793,
-      "y": 2408.67,
+      "y": 7276.67,
       "kind": "door"
     },
     {
       "id": "b2-maker-destino",
       "label": "Laboratório Maker · Bloco B · 2º andar",
       "x": 963,
-      "y": 2433,
+      "y": 7301,
       "kind": "destination",
       "elementId": "sala-lab-maker"
     },
@@ -266,7 +266,7 @@
       "id": "b2-banheiro-masculino-destino",
       "label": "Banheiro masculino · Bloco B · 2º andar",
       "x": 6463,
-      "y": 2643,
+      "y": 7511,
       "kind": "destination",
       "elementId": "banheiro-masculino"
     },
@@ -274,9 +274,53 @@
       "id": "b2-banheiro-feminino-destino",
       "label": "Banheiro feminino · Bloco B · 2º andar",
       "x": 6463,
-      "y": 1283,
+      "y": 6151,
       "kind": "destination",
       "elementId": "banheiro-feminino"
+    },
+    {
+      "id": "passagem-corredor-mbiol",
+      "label": "Corredor do Laboratório MIBOL",
+      "x": 17300,
+      "y": 4080,
+      "kind": "corridor"
+    },
+    {
+      "id": "passagem-mbiol-porta",
+      "label": "Porta do Laboratório MIBOL",
+      "x": 16550,
+      "y": 4080,
+      "kind": "door"
+    },
+    {
+      "id": "passagem-mbiol-destino",
+      "label": "Laboratório MIBOL · Bloco A · Passagem",
+      "x": 15375,
+      "y": 4080,
+      "kind": "destination",
+      "elementId": "sala-lab-mbiol"
+    },
+    {
+      "id": "passagem-corredor-instrumental",
+      "label": "Corredor do Laboratório Instrumental",
+      "x": 17300,
+      "y": 1580,
+      "kind": "corridor"
+    },
+    {
+      "id": "passagem-instrumental-porta",
+      "label": "Porta do Laboratório Instrumental",
+      "x": 16550,
+      "y": 1580,
+      "kind": "door"
+    },
+    {
+      "id": "passagem-instrumental-destino",
+      "label": "Laboratório Instrumental · Bloco A · Passagem",
+      "x": 15375,
+      "y": 1580,
+      "kind": "destination",
+      "elementId": "sala-lab-instrumental"
     }
   ],
   "edges": [
@@ -459,6 +503,36 @@
       "id": "b2-e22",
       "from": "b2-maker-porta",
       "to": "b2-maker-destino"
+    },
+    {
+      "id": "passagem-e23",
+      "from": "passagem-corredor-lab-01",
+      "to": "passagem-corredor-mbiol"
+    },
+    {
+      "id": "passagem-e24",
+      "from": "passagem-corredor-mbiol",
+      "to": "passagem-corredor-instrumental"
+    },
+    {
+      "id": "passagem-mbiol-porta",
+      "from": "passagem-corredor-mbiol",
+      "to": "passagem-mbiol-porta"
+    },
+    {
+      "id": "passagem-mbiol-destino",
+      "from": "passagem-mbiol-porta",
+      "to": "passagem-mbiol-destino"
+    },
+    {
+      "id": "passagem-instrumental-porta",
+      "from": "passagem-corredor-instrumental",
+      "to": "passagem-instrumental-porta"
+    },
+    {
+      "id": "passagem-instrumental-destino",
+      "from": "passagem-instrumental-porta",
+      "to": "passagem-instrumental-destino"
     }
   ]
 }

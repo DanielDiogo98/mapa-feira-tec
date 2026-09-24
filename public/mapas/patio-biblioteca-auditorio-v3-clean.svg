@@ -60,15 +60,4 @@
 <rect width="1741" height="871" fill="#F8F5EF" transform="translate(7421 21421)"/>
 </clipPath>
 </defs>
-<defs>
-<pattern id="interdicao-faixa" width="180" height="180" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-<rect width="90" height="180" fill="#FACC15"/>
-<rect x="90" width="90" height="180" fill="#1F2937"/>
-</pattern>
-</defs>
-<g aria-label="Passagem interditada por obras">
-<rect x="6260" y="7540" width="720" height="920" rx="72" fill="url(#interdicao-faixa)" stroke="#9A6700" stroke-width="28"/>
-<rect x="5770" y="7130" width="1700" height="350" rx="175" fill="#FEF3C7" stroke="#D69E00" stroke-width="20"/>
-<text x="6620" y="7375" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="190" font-weight="800" fill="#7C5200">INTERDITADO · OBRAS</text>
-</g>
 </svg>

@@ -10,10 +10,10 @@ const maps = [
   },
   {
     href: '/editor/patio',
-    title: 'Pátio · Acesso alternativo',
+    title: 'Pátio · Biblioteca',
     description:
-      'Entrada, cantina, refeitório e escada do Bloco A. A passagem antiga está interditada.',
-    status: 'Desvio ativo',
+      'Entrada, pátio, cantina, refeitório, biblioteca e escada do Bloco A.',
+    status: 'Rede pronta',
     icon: Trees,
   },
   {

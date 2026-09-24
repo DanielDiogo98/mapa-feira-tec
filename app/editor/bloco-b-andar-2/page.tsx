@@ -27,7 +27,7 @@ const config: MapEditorConfig = {
   subtitle:
     'Revise a passagem alternativa, os laboratórios e os acessos entre os blocos.',
   workspaceLabel: 'Passagem Bloco A · Bloco B · 2º andar',
-  storageKey: 'feira-tec:bloco-b-andar-2:graph:v2',
+  storageKey: 'feira-tec:bloco-b-andar-2:graph:v3',
   downloadName: 'bloco-b-andar-2-pontos.json',
   otherMapHref: '/editor/mapas',
   otherMapLabel: 'Todos os mapas',

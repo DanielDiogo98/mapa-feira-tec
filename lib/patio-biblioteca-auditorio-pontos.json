@@ -7,70 +7,108 @@
     {
       "id": "patio-entrada",
       "label": "Entrada da escola",
-      "kind": "entrance",
       "x": 1500,
       "y": 20645,
+      "kind": "entrance",
       "elementId": "entrada-principal"
     },
     {
       "id": "patio-sul",
       "label": "Pátio sul",
-      "kind": "corridor",
       "x": 3000,
       "y": 20645,
+      "kind": "corridor",
       "elementId": "area-patio"
     },
     {
       "id": "patio-conexao-a",
       "label": "Conexão com o Bloco A",
-      "kind": "corridor",
       "x": 3000,
-      "y": 16423
+      "y": 16423,
+      "kind": "corridor"
     },
     {
       "id": "patio-meio",
       "label": "Pátio central",
-      "kind": "corridor",
       "x": 3000,
-      "y": 12798
+      "y": 12798,
+      "kind": "corridor"
     },
     {
       "id": "patio-norte",
       "label": "Pátio norte",
-      "kind": "corridor",
       "x": 3000,
-      "y": 8866
+      "y": 8866,
+      "kind": "corridor"
     },
     {
       "id": "patio-escada-a",
       "label": "Escada para as salas do Bloco A",
-      "kind": "stairs",
       "x": 700,
       "y": 16423,
+      "kind": "stairs",
       "elementId": "escadas-bloco-a-salas"
     },
     {
       "id": "patio-corredor-setor",
       "label": "Corredor de ligação",
-      "kind": "corridor",
       "x": 3000,
-      "y": 7410.06
+      "y": 7410.06,
+      "kind": "corridor"
     },
     {
       "id": "patio-cantina",
       "label": "Cantina",
-      "kind": "destination",
       "x": 1500,
       "y": 8866,
+      "kind": "destination",
       "elementId": "cantina"
     },
     {
       "id": "patio-refeitorio",
       "label": "Refeitório",
-      "kind": "destination",
       "x": 1500,
       "y": 12798,
+      "kind": "destination",
       "elementId": "refeitorio"
+    },
+    {
+      "id": "patio-biblioteca-destino",
+      "label": "Biblioteca",
+      "x": 10449.2,
+      "y": 5085.42,
+      "kind": "destination",
+      "elementId": "biblioteca"
+    },
+    {
+      "id": "patio-destino",
+      "label": "Pátio",
+      "kind": "destination",
+      "x": 5066.73,
+      "y": 13976.38,
+      "elementId": "area-patio"
+    },
+    {
+      "id": "patio-corredor-biblioteca-01",
+      "label": "Caminho para a biblioteca",
+      "kind": "corridor",
+      "x": 6322.03,
+      "y": 7341.18
+    },
+    {
+      "id": "patio-corredor-biblioteca-02",
+      "label": "Corredor da biblioteca",
+      "kind": "corridor",
+      "x": 10616.27,
+      "y": 7490.62
+    },
+    {
+      "id": "patio-biblioteca-porta",
+      "label": "Porta da biblioteca",
+      "kind": "door",
+      "x": 10650.33,
+      "y": 6796.68,
+      "elementId": "porta-biblioteca"
     }
   ],
   "edges": [
@@ -113,6 +151,31 @@
       "id": "patio-e09",
       "from": "patio-meio",
       "to": "patio-refeitorio"
+    },
+    {
+      "id": "patio-e10",
+      "from": "patio-conexao-a",
+      "to": "patio-destino"
+    },
+    {
+      "id": "patio-e11",
+      "from": "patio-corredor-setor",
+      "to": "patio-corredor-biblioteca-01"
+    },
+    {
+      "id": "patio-e12",
+      "from": "patio-corredor-biblioteca-01",
+      "to": "patio-corredor-biblioteca-02"
+    },
+    {
+      "id": "patio-e13",
+      "from": "patio-corredor-biblioteca-02",
+      "to": "patio-biblioteca-porta"
+    },
+    {
+      "id": "patio-e14",
+      "from": "patio-biblioteca-porta",
+      "to": "patio-biblioteca-destino"
     }
   ]
 }

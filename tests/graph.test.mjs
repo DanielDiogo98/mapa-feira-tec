@@ -86,19 +86,25 @@ test('patio graph is connected and every public destination is reachable', () =>
   const entrance = graph.nodes.find(
     (node) => node.elementId === 'entrada-principal',
   );
-  const destinations = graph.nodes.filter((node) =>
-    ['cantina', 'refeitorio', 'escadas-bloco-a-salas'].includes(node.elementId),
+  const destinations = graph.nodes.filter(
+    (node) => node.kind === 'destination',
   );
   assert.equal(inspectGraph(graph).components, 1);
   assert.equal(inspectGraph(graph).isolated.length, 0);
   assert.ok(entrance);
-  assert.equal(destinations.length, 3);
+  assert.equal(destinations.length, 4);
+  assert.ok(destinations.some((node) => node.elementId === 'biblioteca'));
+  assert.ok(destinations.some((node) => node.id === 'patio-destino'));
+  assert.equal(
+    graph.nodes.some((node) => node.label === 'Auditório'),
+    false,
+  );
   for (const destination of destinations) {
     assert.ok(shortestPath(graph, entrance.id, destination.id));
   }
 });
 
-test('the construction closure removes the old patio and library connection', () => {
+test('the library passage is open and connected to the patio', () => {
   const raw = JSON.parse(
     readFileSync(
       new URL('../lib/patio-biblioteca-auditorio-pontos.json', import.meta.url),
@@ -106,18 +112,15 @@ test('the construction closure removes the old patio and library connection', ()
     ),
   );
   const graph = parseGraph(raw, PATIO_MAP, PATIO_ELEMENTS);
-  assert.equal(
-    graph.nodes.some((node) => node.id === 'setor-entrada'),
-    false,
+  const entrance = graph.nodes.find(
+    (node) => node.elementId === 'entrada-principal',
   );
-  assert.equal(
-    graph.edges.some((edge) => edge.id === 'patio-e07'),
-    false,
+  const library = graph.nodes.find(
+    (node) => node.elementId === 'biblioteca',
   );
-  assert.equal(
-    graph.edges.some((edge) => edge.id === 'setor-e01'),
-    false,
-  );
+  assert.ok(entrance);
+  assert.ok(library);
+  assert.ok(shortestPath(graph, entrance.id, library.id));
 });
 
 test('the stairs portal joins the patio route to the Bloco A route', () => {
@@ -170,7 +173,13 @@ test('the Bloco B second floor is connected and every destination is reachable',
   assert.equal(inspectGraph(graph).components, 1);
   assert.equal(inspectGraph(graph).isolated.length, 0);
   assert.ok(stairs);
-  assert.equal(destinations.length, 11);
+  assert.equal(destinations.length, 13);
+  assert.ok(
+    destinations.some((node) => node.elementId === 'sala-lab-mbiol'),
+  );
+  assert.ok(
+    destinations.some((node) => node.elementId === 'sala-lab-instrumental'),
+  );
   for (const destination of destinations) {
     assert.ok(shortestPath(graph, stairs.id, destination.id));
   }

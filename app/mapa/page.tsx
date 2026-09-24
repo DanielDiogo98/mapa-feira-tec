@@ -84,8 +84,8 @@ const views: Record<MapKey, MapView> = {
     content: { x: 0, y: 0, width: PATIO_MAP.width, height: PATIO_MAP.height },
     editorImage: '/mapas/patio-biblioteca-auditorio-v3-clean.svg',
     publicImage: '/mapas/patio-biblioteca-auditorio-v3-clean.svg',
-    alt: 'Pátio da escola com a passagem da biblioteca interditada por obras',
-    ariaLabel: 'Pátio e acesso alternativo',
+    alt: 'Pátio da escola com acesso à biblioteca',
+    ariaLabel: 'Pátio, biblioteca e acessos',
   },
   'bloco-a-salas': {
     width: MAP.width,
@@ -126,7 +126,7 @@ const views: Record<MapKey, MapView> = {
   },
 };
 const mapNames: Record<MapKey, string> = {
-  'patio-biblioteca-auditorio': 'Pátio · Acesso alternativo',
+  'patio-biblioteca-auditorio': 'Pátio · Biblioteca',
   'bloco-a-salas': 'Bloco A · Salas',
   'bloco-b-andar-2': 'Passagem Bloco A · Bloco B · 2º andar',
   'bloco-b-andar-1': 'Bloco B · 1º andar',
