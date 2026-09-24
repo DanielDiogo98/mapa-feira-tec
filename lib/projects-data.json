@@ -155,7 +155,12 @@
         "name": "Redução das Desigualdades"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 41,
@@ -395,7 +400,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "AMAURY DIAS PEREIRA"
+    "advisor": "AMAURY DIAS PEREIRA",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 57,
@@ -441,7 +451,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "AMAURY DIAS PEREIRA"
+    "advisor": "AMAURY DIAS PEREIRA",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 75,
@@ -1160,7 +1175,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 131,
@@ -1843,7 +1863,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 147,
@@ -2510,7 +2535,12 @@
         "name": "Paz, Justiça e Instituições Eficazes"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 32,
@@ -3050,7 +3080,12 @@
         "name": "Redução das Desigualdades"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 92,
@@ -3142,7 +3177,12 @@
         "name": "Redução das Desigualdades"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 77,
@@ -3191,7 +3231,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "AMAURY DIAS PEREIRA"
+    "advisor": "AMAURY DIAS PEREIRA",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 50,
@@ -3279,7 +3324,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "AMAURY DIAS PEREIRA"
+    "advisor": "AMAURY DIAS PEREIRA",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 161,
@@ -3303,7 +3353,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "AMAURY DIAS PEREIRA"
+    "advisor": "AMAURY DIAS PEREIRA",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 158,
@@ -3327,7 +3382,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "AMAURY DIAS PEREIRA"
+    "advisor": "AMAURY DIAS PEREIRA",
+    "location": {
+      "elementId": "sala-06",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 150,
@@ -3384,7 +3444,12 @@
         "name": "Trabalho Decente e Crescimento Econômico"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   },
   {
     "id": 149,
@@ -4240,6 +4305,11 @@
         "name": "Igualdade de Gênero"
       }
     ],
-    "advisor": "INGRID DE MAGALHÃES DA SILVA"
+    "advisor": "INGRID DE MAGALHÃES DA SILVA",
+    "location": {
+      "elementId": "sala-05",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "mapId": "bloco-b-andar-1"
+    }
   }
 ]

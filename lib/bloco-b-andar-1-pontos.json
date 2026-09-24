@@ -2,164 +2,214 @@
   "version": 1,
   "mapId": "bloco-b-andar-1",
   "width": 7363,
-  "height": 9312,
+  "height": 13163,
   "nodes": [
     {
       "id": "b1-escada-destino",
       "label": "Escada para o 2º andar",
       "kind": "stairs",
-      "x": 1050,
-      "y": 5650,
+      "x": 1078,
+      "y": 9242,
       "elementId": "escadas-acesso-andar-2"
     },
     {
       "id": "b1-escada-corredor",
       "label": "Corredor da escada",
       "kind": "corridor",
-      "x": 2500,
-      "y": 5650,
+      "x": 2528,
+      "y": 9242,
       "elementId": "corredor-principal"
     },
     {
       "id": "b1-corredor-sala-04",
       "label": "Corredor da Sala 4",
       "kind": "corridor",
-      "x": 5000,
-      "y": 1850,
+      "x": 5028,
+      "y": 5442,
       "elementId": "corredor-principal"
     },
     {
       "id": "b1-corredor-sala-03",
       "label": "Corredor da Sala 3",
       "kind": "corridor",
-      "x": 5000,
-      "y": 4335,
+      "x": 5028,
+      "y": 7927,
       "elementId": "corredor-principal"
     },
     {
       "id": "b1-corredor-sala-02",
       "label": "Corredor da Sala 2",
       "kind": "corridor",
-      "x": 5000,
-      "y": 5160,
+      "x": 5028,
+      "y": 8752,
       "elementId": "corredor-principal"
     },
     {
       "id": "b1-corredor-sala-01",
       "label": "Corredor da Sala 1",
       "kind": "corridor",
-      "x": 5000,
-      "y": 7615,
+      "x": 5028,
+      "y": 11207,
       "elementId": "corredor-principal"
     },
     {
       "id": "b1-sala-04-porta",
       "label": "Porta da Sala 4",
       "kind": "door",
-      "x": 5743,
-      "y": 1850
+      "x": 5771,
+      "y": 5442
     },
     {
       "id": "b1-sala-04-destino",
       "label": "Sala 4 · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 6500,
-      "y": 1100,
+      "x": 6528,
+      "y": 4692,
       "elementId": "sala-04"
     },
     {
       "id": "b1-sala-03-porta",
       "label": "Porta da Sala 3",
       "kind": "door",
-      "x": 5743,
-      "y": 4335
+      "x": 5771,
+      "y": 7927
     },
     {
       "id": "b1-sala-03-destino",
       "label": "Sala 3 · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 6500,
-      "y": 3500,
+      "x": 6528,
+      "y": 7092,
       "elementId": "sala-03"
     },
     {
       "id": "b1-sala-02-porta",
       "label": "Porta da Sala 2",
       "kind": "door",
-      "x": 5743,
-      "y": 5160
+      "x": 5771,
+      "y": 8752
     },
     {
       "id": "b1-sala-02-destino",
       "label": "Sala 2 · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 6500,
-      "y": 5950,
+      "x": 6528,
+      "y": 9542,
       "elementId": "sala-02"
     },
     {
       "id": "b1-sala-01-porta",
       "label": "Porta da Sala 1",
       "kind": "door",
-      "x": 5743,
-      "y": 7615
+      "x": 5771,
+      "y": 11207
     },
     {
       "id": "b1-sala-01-destino",
       "label": "Sala 1 · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 6500,
-      "y": 8300,
+      "x": 6528,
+      "y": 11892,
       "elementId": "sala-01"
     },
     {
       "id": "b1-banheiro-masculino-corredor",
       "label": "Corredor do banheiro masculino",
       "kind": "corridor",
-      "x": 2500,
-      "y": 7250
+      "x": 2528,
+      "y": 10842
     },
     {
       "id": "b1-banheiro-masculino-destino",
       "label": "Banheiro masculino · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 850,
-      "y": 7250,
+      "x": 878,
+      "y": 10842,
       "elementId": "banheiro-masculino"
     },
     {
       "id": "b1-banheiro-feminino-corredor",
       "label": "Corredor do banheiro feminino",
       "kind": "corridor",
-      "x": 2500,
-      "y": 8420
+      "x": 2528,
+      "y": 12012
     },
     {
       "id": "b1-banheiro-feminino-destino",
       "label": "Banheiro feminino · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 850,
-      "y": 8420,
+      "x": 878,
+      "y": 12012,
       "elementId": "banheiro-feminino"
     },
     {
       "id": "b1-saida-corredor",
       "label": "Corredor da saída da quadra",
       "kind": "corridor",
-      "x": 4050,
-      "y": 8800
+      "x": 4078,
+      "y": 12392
     },
     {
       "id": "b1-saida-destino",
       "label": "Saída da quadra · Bloco B · 1º andar",
       "kind": "destination",
-      "x": 4050,
-      "y": 9150,
+      "x": 4078,
+      "y": 12742,
       "elementId": "saida-quadra"
+    },
+    {
+      "id": "b1-corredor-sala-05",
+      "label": "Corredor da Sala 5",
+      "kind": "corridor",
+      "x": 5028,
+      "y": 2859,
+      "elementId": "corredor-principal"
+    },
+    {
+      "id": "b1-sala-05-porta",
+      "label": "Porta da Sala 5",
+      "kind": "door",
+      "x": 5885,
+      "y": 2859
+    },
+    {
+      "id": "b1-sala-05-destino",
+      "label": "Sala 5 · Bloco B · 1º andar",
+      "kind": "destination",
+      "x": 6600,
+      "y": 2200,
+      "elementId": "sala-05"
+    },
+    {
+      "id": "b1-corredor-sala-06",
+      "label": "Corredor da Sala 6",
+      "kind": "corridor",
+      "x": 5249,
+      "y": 2859,
+      "elementId": "corredor-principal"
+    },
+    {
+      "id": "b1-sala-06-porta",
+      "label": "Porta da Sala 6",
+      "kind": "door",
+      "x": 5249,
+      "y": 2549
+    },
+    {
+      "id": "b1-sala-06-destino",
+      "label": "Sala 6 · Bloco B · 1º andar",
+      "kind": "destination",
+      "x": 3700,
+      "y": 1800,
+      "elementId": "sala-06"
     }
   ],
   "edges": [
-    { "id": "b1-e01", "from": "b1-escada-destino", "to": "b1-escada-corredor" },
+    {
+      "id": "b1-e01",
+      "from": "b1-escada-destino",
+      "to": "b1-escada-corredor"
+    },
     {
       "id": "b1-e02",
       "from": "b1-escada-corredor",
@@ -180,14 +230,46 @@
       "from": "b1-corredor-sala-02",
       "to": "b1-corredor-sala-01"
     },
-    { "id": "b1-e06", "from": "b1-corredor-sala-04", "to": "b1-sala-04-porta" },
-    { "id": "b1-e07", "from": "b1-sala-04-porta", "to": "b1-sala-04-destino" },
-    { "id": "b1-e08", "from": "b1-corredor-sala-03", "to": "b1-sala-03-porta" },
-    { "id": "b1-e09", "from": "b1-sala-03-porta", "to": "b1-sala-03-destino" },
-    { "id": "b1-e10", "from": "b1-corredor-sala-02", "to": "b1-sala-02-porta" },
-    { "id": "b1-e11", "from": "b1-sala-02-porta", "to": "b1-sala-02-destino" },
-    { "id": "b1-e12", "from": "b1-corredor-sala-01", "to": "b1-sala-01-porta" },
-    { "id": "b1-e13", "from": "b1-sala-01-porta", "to": "b1-sala-01-destino" },
+    {
+      "id": "b1-e06",
+      "from": "b1-corredor-sala-04",
+      "to": "b1-sala-04-porta"
+    },
+    {
+      "id": "b1-e07",
+      "from": "b1-sala-04-porta",
+      "to": "b1-sala-04-destino"
+    },
+    {
+      "id": "b1-e08",
+      "from": "b1-corredor-sala-03",
+      "to": "b1-sala-03-porta"
+    },
+    {
+      "id": "b1-e09",
+      "from": "b1-sala-03-porta",
+      "to": "b1-sala-03-destino"
+    },
+    {
+      "id": "b1-e10",
+      "from": "b1-corredor-sala-02",
+      "to": "b1-sala-02-porta"
+    },
+    {
+      "id": "b1-e11",
+      "from": "b1-sala-02-porta",
+      "to": "b1-sala-02-destino"
+    },
+    {
+      "id": "b1-e12",
+      "from": "b1-corredor-sala-01",
+      "to": "b1-sala-01-porta"
+    },
+    {
+      "id": "b1-e13",
+      "from": "b1-sala-01-porta",
+      "to": "b1-sala-01-destino"
+    },
     {
       "id": "b1-e14",
       "from": "b1-escada-corredor",
@@ -213,6 +295,40 @@
       "from": "b1-banheiro-feminino-corredor",
       "to": "b1-saida-corredor"
     },
-    { "id": "b1-e19", "from": "b1-saida-corredor", "to": "b1-saida-destino" }
+    {
+      "id": "b1-e19",
+      "from": "b1-saida-corredor",
+      "to": "b1-saida-destino"
+    },
+    {
+      "id": "b1-e20",
+      "from": "b1-corredor-sala-04",
+      "to": "b1-corredor-sala-05"
+    },
+    {
+      "id": "b1-e21",
+      "from": "b1-corredor-sala-05",
+      "to": "b1-sala-05-porta"
+    },
+    {
+      "id": "b1-e22",
+      "from": "b1-sala-05-porta",
+      "to": "b1-sala-05-destino"
+    },
+    {
+      "id": "b1-e23",
+      "from": "b1-corredor-sala-05",
+      "to": "b1-corredor-sala-06"
+    },
+    {
+      "id": "b1-e24",
+      "from": "b1-corredor-sala-06",
+      "to": "b1-sala-06-porta"
+    },
+    {
+      "id": "b1-e25",
+      "from": "b1-sala-06-porta",
+      "to": "b1-sala-06-destino"
+    }
   ]
 }

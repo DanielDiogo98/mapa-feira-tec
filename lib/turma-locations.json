@@ -59,6 +59,26 @@
     "elementId": "sala-04",
     "label": "Sala 4 · Bloco B · 1º andar"
   },
+  "1B": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-05",
+    "label": "Sala 5 · Bloco B · 1º andar"
+  },
+  "1R": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-06",
+    "label": "Sala 6 · Bloco B · 1º andar"
+  },
+  "2R": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-06",
+    "label": "Sala 6 · Bloco B · 1º andar"
+  },
+  "3R": {
+    "mapId": "bloco-b-andar-1",
+    "elementId": "sala-06",
+    "label": "Sala 6 · Bloco B · 1º andar"
+  },
   "1H": {
     "mapId": "bloco-b-andar-2",
     "elementId": "sala-lab-mbiol",

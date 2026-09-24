@@ -25,7 +25,7 @@ Atualizado em 12 de setembro de 2026.
 | ------------------------------ | ------ | ---------------------- | ----------------------------------------- |
 | Pátio / biblioteca / auditório | pronto | 26 pontos, 25 conexões | utilizável                                |
 | Bloco A / salas                | pronto | 25 pontos, 24 conexões | utilizável                                |
-| Bloco B / 1º andar             | pronto | 20 pontos, 19 conexões | utilizável e ligado ao segundo andar      |
+| Bloco B / 1º andar             | pronto | 26 pontos, 25 conexões | utilizável e ligado ao segundo andar      |
 | Bloco B / 2º andar             | pronto | 22 pontos, 22 conexões | utilizável e ligado à escada do auditório |
 
 Todos os grafos cadastrados formam redes conectadas. As rotas públicas atuais partem da entrada da escola. A escada em frente ao auditório está ligada ao segundo andar do Bloco B, que também está ligado ao primeiro andar.
@@ -38,7 +38,7 @@ Todos os grafos cadastrados formam redes conectadas. As rotas públicas atuais p
 
 ## Próxima conferência manual recomendada
 
-Confira no celular as rotas para as salas 1 a 4, banheiros e saída da quadra do **Bloco B · 1º andar**, incluindo as duas trocas guiadas de andar.
+Confira no celular as rotas para as salas 1 a 6, banheiros e saída da quadra do **Bloco B · 1º andar**, incluindo as duas trocas guiadas de andar.
 
 ## Validação técnica
 

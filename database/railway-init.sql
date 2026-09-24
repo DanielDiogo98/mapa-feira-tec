@@ -683,7 +683,7 @@ INSERT INTO mapas (id_mapa, nome, largura, altura, ativo) VALUES
 ('patio-biblioteca-auditorio', 'Pátio · Acesso alternativo', 19062, 24297, 1),
 ('bloco-a-salas', 'Bloco A · Salas', 12861, 42113, 1),
 ('bloco-b-andar-2', 'Passagem Bloco A · Bloco B · 2º andar', 20498, 19301, 1),
-('bloco-b-andar-1', 'Bloco B · 1º andar', 7363, 9312, 1)
+('bloco-b-andar-1', 'Bloco B · 1º andar', 7363, 13163, 1)
 ON DUPLICATE KEY UPDATE nome=VALUES(nome), largura=VALUES(largura), altura=VALUES(altura), ativo=VALUES(ativo);
 
 INSERT INTO mapa_pontos (mapa_id, id_ponto, nome, tipo, x, y, elemento_mapa_id) VALUES
@@ -769,26 +769,32 @@ INSERT INTO mapa_pontos (mapa_id, id_ponto, nome, tipo, x, y, elemento_mapa_id) 
 ('bloco-b-andar-2', 'passagem-corredor-instrumental', 'Corredor do Laboratório Instrumental', 'corridor', 17300, 1580, NULL),
 ('bloco-b-andar-2', 'passagem-instrumental-porta', 'Porta do Laboratório Instrumental', 'door', 16550, 1580, NULL),
 ('bloco-b-andar-2', 'passagem-instrumental-destino', 'Laboratório Instrumental · Bloco A · Passagem', 'destination', 15375, 1580, 'sala-lab-instrumental'),
-('bloco-b-andar-1', 'b1-escada-destino', 'Escada para o 2º andar', 'stairs', 1050, 5650, 'escadas-acesso-andar-2'),
-('bloco-b-andar-1', 'b1-escada-corredor', 'Corredor da escada', 'corridor', 2500, 5650, 'corredor-principal'),
-('bloco-b-andar-1', 'b1-corredor-sala-04', 'Corredor da Sala 4', 'corridor', 5000, 1850, 'corredor-principal'),
-('bloco-b-andar-1', 'b1-corredor-sala-03', 'Corredor da Sala 3', 'corridor', 5000, 4335, 'corredor-principal'),
-('bloco-b-andar-1', 'b1-corredor-sala-02', 'Corredor da Sala 2', 'corridor', 5000, 5160, 'corredor-principal'),
-('bloco-b-andar-1', 'b1-corredor-sala-01', 'Corredor da Sala 1', 'corridor', 5000, 7615, 'corredor-principal'),
-('bloco-b-andar-1', 'b1-sala-04-porta', 'Porta da Sala 4', 'door', 5743, 1850, NULL),
-('bloco-b-andar-1', 'b1-sala-04-destino', 'Sala 4 · Bloco B · 1º andar', 'destination', 6500, 1100, 'sala-04'),
-('bloco-b-andar-1', 'b1-sala-03-porta', 'Porta da Sala 3', 'door', 5743, 4335, NULL),
-('bloco-b-andar-1', 'b1-sala-03-destino', 'Sala 3 · Bloco B · 1º andar', 'destination', 6500, 3500, 'sala-03'),
-('bloco-b-andar-1', 'b1-sala-02-porta', 'Porta da Sala 2', 'door', 5743, 5160, NULL),
-('bloco-b-andar-1', 'b1-sala-02-destino', 'Sala 2 · Bloco B · 1º andar', 'destination', 6500, 5950, 'sala-02'),
-('bloco-b-andar-1', 'b1-sala-01-porta', 'Porta da Sala 1', 'door', 5743, 7615, NULL),
-('bloco-b-andar-1', 'b1-sala-01-destino', 'Sala 1 · Bloco B · 1º andar', 'destination', 6500, 8300, 'sala-01'),
-('bloco-b-andar-1', 'b1-banheiro-masculino-corredor', 'Corredor do banheiro masculino', 'corridor', 2500, 7250, NULL),
-('bloco-b-andar-1', 'b1-banheiro-masculino-destino', 'Banheiro masculino · Bloco B · 1º andar', 'destination', 850, 7250, 'banheiro-masculino'),
-('bloco-b-andar-1', 'b1-banheiro-feminino-corredor', 'Corredor do banheiro feminino', 'corridor', 2500, 8420, NULL),
-('bloco-b-andar-1', 'b1-banheiro-feminino-destino', 'Banheiro feminino · Bloco B · 1º andar', 'destination', 850, 8420, 'banheiro-feminino'),
-('bloco-b-andar-1', 'b1-saida-corredor', 'Corredor da saída da quadra', 'corridor', 4050, 8800, NULL),
-('bloco-b-andar-1', 'b1-saida-destino', 'Saída da quadra · Bloco B · 1º andar', 'destination', 4050, 9150, 'saida-quadra');
+('bloco-b-andar-1', 'b1-escada-destino', 'Escada para o 2º andar', 'stairs', 1078, 9242, 'escadas-acesso-andar-2'),
+('bloco-b-andar-1', 'b1-escada-corredor', 'Corredor da escada', 'corridor', 2528, 9242, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-corredor-sala-04', 'Corredor da Sala 4', 'corridor', 5028, 5442, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-corredor-sala-03', 'Corredor da Sala 3', 'corridor', 5028, 7927, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-corredor-sala-02', 'Corredor da Sala 2', 'corridor', 5028, 8752, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-corredor-sala-01', 'Corredor da Sala 1', 'corridor', 5028, 11207, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-sala-04-porta', 'Porta da Sala 4', 'door', 5771, 5442, NULL),
+('bloco-b-andar-1', 'b1-sala-04-destino', 'Sala 4 · Bloco B · 1º andar', 'destination', 6528, 4692, 'sala-04'),
+('bloco-b-andar-1', 'b1-sala-03-porta', 'Porta da Sala 3', 'door', 5771, 7927, NULL),
+('bloco-b-andar-1', 'b1-sala-03-destino', 'Sala 3 · Bloco B · 1º andar', 'destination', 6528, 7092, 'sala-03'),
+('bloco-b-andar-1', 'b1-sala-02-porta', 'Porta da Sala 2', 'door', 5771, 8752, NULL),
+('bloco-b-andar-1', 'b1-sala-02-destino', 'Sala 2 · Bloco B · 1º andar', 'destination', 6528, 9542, 'sala-02'),
+('bloco-b-andar-1', 'b1-sala-01-porta', 'Porta da Sala 1', 'door', 5771, 11207, NULL),
+('bloco-b-andar-1', 'b1-sala-01-destino', 'Sala 1 · Bloco B · 1º andar', 'destination', 6528, 11892, 'sala-01'),
+('bloco-b-andar-1', 'b1-banheiro-masculino-corredor', 'Corredor do banheiro masculino', 'corridor', 2528, 10842, NULL),
+('bloco-b-andar-1', 'b1-banheiro-masculino-destino', 'Banheiro masculino · Bloco B · 1º andar', 'destination', 878, 10842, 'banheiro-masculino'),
+('bloco-b-andar-1', 'b1-banheiro-feminino-corredor', 'Corredor do banheiro feminino', 'corridor', 2528, 12012, NULL),
+('bloco-b-andar-1', 'b1-banheiro-feminino-destino', 'Banheiro feminino · Bloco B · 1º andar', 'destination', 878, 12012, 'banheiro-feminino'),
+('bloco-b-andar-1', 'b1-saida-corredor', 'Corredor da saída da quadra', 'corridor', 4078, 12392, NULL),
+('bloco-b-andar-1', 'b1-saida-destino', 'Saída da quadra · Bloco B · 1º andar', 'destination', 4078, 12742, 'saida-quadra'),
+('bloco-b-andar-1', 'b1-corredor-sala-05', 'Corredor da Sala 5', 'corridor', 5028, 2859, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-sala-05-porta', 'Porta da Sala 5', 'door', 5885, 2859, NULL),
+('bloco-b-andar-1', 'b1-sala-05-destino', 'Sala 5 · Bloco B · 1º andar', 'destination', 6600, 2200, 'sala-05'),
+('bloco-b-andar-1', 'b1-corredor-sala-06', 'Corredor da Sala 6', 'corridor', 5249, 2859, 'corredor-principal'),
+('bloco-b-andar-1', 'b1-sala-06-porta', 'Porta da Sala 6', 'door', 5249, 2549, NULL),
+('bloco-b-andar-1', 'b1-sala-06-destino', 'Sala 6 · Bloco B · 1º andar', 'destination', 3700, 1800, 'sala-06');
 
 INSERT INTO mapa_conexoes (mapa_id, id_conexao, ponto_origem_id, ponto_destino_id) VALUES
 ('patio-biblioteca-auditorio', 'patio-e01', 'patio-entrada', 'patio-sul'),
@@ -888,7 +894,13 @@ INSERT INTO mapa_conexoes (mapa_id, id_conexao, ponto_origem_id, ponto_destino_i
 ('bloco-b-andar-1', 'b1-e16', 'b1-banheiro-masculino-corredor', 'b1-banheiro-feminino-corredor'),
 ('bloco-b-andar-1', 'b1-e17', 'b1-banheiro-feminino-corredor', 'b1-banheiro-feminino-destino'),
 ('bloco-b-andar-1', 'b1-e18', 'b1-banheiro-feminino-corredor', 'b1-saida-corredor'),
-('bloco-b-andar-1', 'b1-e19', 'b1-saida-corredor', 'b1-saida-destino');
+('bloco-b-andar-1', 'b1-e19', 'b1-saida-corredor', 'b1-saida-destino'),
+('bloco-b-andar-1', 'b1-e20', 'b1-corredor-sala-04', 'b1-corredor-sala-05'),
+('bloco-b-andar-1', 'b1-e21', 'b1-corredor-sala-05', 'b1-sala-05-porta'),
+('bloco-b-andar-1', 'b1-e22', 'b1-sala-05-porta', 'b1-sala-05-destino'),
+('bloco-b-andar-1', 'b1-e23', 'b1-corredor-sala-05', 'b1-corredor-sala-06'),
+('bloco-b-andar-1', 'b1-e24', 'b1-corredor-sala-06', 'b1-sala-06-porta'),
+('bloco-b-andar-1', 'b1-e25', 'b1-sala-06-porta', 'b1-sala-06-destino');
 
 INSERT INTO mapa_portais (mapa_origem_id, ponto_origem_id, mapa_destino_id, ponto_destino_id, descricao) VALUES
 ('patio-biblioteca-auditorio', 'patio-escada-a', 'bloco-a-salas', 'point-8d84b532-9539-42ce-96c2-4c1cc684f945', 'Escada do pátio para as salas do Bloco A'),

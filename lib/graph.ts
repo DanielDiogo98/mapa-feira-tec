@@ -18,7 +18,7 @@ export const PATIO_MAP = {
 export const BLOCO_B_ANDAR_1_MAP = {
   id: 'bloco-b-andar-1',
   width: 7363,
-  height: 9312,
+  height: 13163,
 } as const;
 export const BLOCO_B_ANDAR_1_ELEMENTS = [
   'escadas-acesso-andar-2',
@@ -29,6 +29,8 @@ export const BLOCO_B_ANDAR_1_ELEMENTS = [
   'sala-02',
   'sala-03',
   'sala-04',
+  'sala-05',
+  'sala-06',
   'corredor-principal',
 ] as const;
 export const BLOCO_B_ANDAR_2_MAP = {

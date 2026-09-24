@@ -240,7 +240,15 @@ test('the Bloco B first floor is connected and every destination is reachable', 
   assert.equal(inspectGraph(graph).components, 1);
   assert.equal(inspectGraph(graph).isolated.length, 0);
   assert.ok(stairs);
-  assert.equal(destinations.length, 7);
+  assert.equal(destinations.length, 9);
+  assert.ok(
+    destinations.some((node) => node.elementId === 'sala-05'),
+    'Sala 5 não foi adicionada ao primeiro andar do Bloco B',
+  );
+  assert.ok(
+    destinations.some((node) => node.elementId === 'sala-06'),
+    'Sala 6 não foi adicionada ao primeiro andar do Bloco B',
+  );
   for (const destination of destinations) {
     assert.ok(shortestPath(graph, stairs.id, destination.id));
   }

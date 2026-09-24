@@ -91,3 +91,17 @@ test('numeração do Bloco A segue a planta oficial', async () => {
   assert.ok(rooms['sala-05'].x < rooms['sala-06'].x);
   assert.ok(Math.abs(rooms['sala-05'].y - rooms['sala-06'].y) < 150);
 });
+
+test('turmas novas do Bloco B apontam para as salas 5 e 6', async () => {
+  const locations = await readJson('lib/turma-locations.json');
+  assert.deepEqual(
+    [locations['1B'].mapId, locations['1B'].elementId],
+    ['bloco-b-andar-1', 'sala-05'],
+  );
+  for (const turma of ['1R', '2R', '3R']) {
+    assert.deepEqual(
+      [locations[turma].mapId, locations[turma].elementId],
+      ['bloco-b-andar-1', 'sala-06'],
+    );
+  }
+});

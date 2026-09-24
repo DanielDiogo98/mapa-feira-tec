@@ -1,44 +1,24 @@
-<svg width="7363" height="9312" viewBox="0 0 7363 9312" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_19_8)">
-<rect width="7363" height="9312" fill="#F8F5EF"/>
-<rect width="1741" height="871" transform="translate(-12 6823)" fill="#DED4E4" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-<g clip-path="url(#clip1_19_8)">
-<rect width="1815" height="907" transform="translate(0 7976)" fill="#EBDDEA" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-
-</g>
-<rect width="2233" height="1706" transform="translate(-314 4796)" fill="#FFE3A3" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-
-<rect width="3834" height="9686" transform="translate(1729 -115)" fill="#E5DDE7" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-<rect width="2219" height="923" transform="translate(2951 8430)" fill="#E3E4D8" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-
-
-<rect x="5743" y="4802" width="1614" height="2317" fill="#E5DDE7" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-<rect x="5743" y="4802" width="1614" height="2317" stroke="#806B89" stroke-width="12"/>
-
-<rect x="5737" y="4971" width="240" height="379" fill="#7A4A96"/>
-<rect x="5743" y="4977" width="228" height="367" stroke="#806B89" stroke-opacity="0.72" stroke-width="12"/>
-<rect x="5726" y="6" width="1889" height="2317" fill="#E5DDE7" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-<rect x="5726" y="6" width="1889" height="2317" stroke="#806B89" stroke-width="12"/>
-
-<rect x="5720" y="1662" width="240" height="379" fill="#7A4A96"/>
-<rect x="5726" y="1668" width="228" height="367" stroke="#806B89" stroke-opacity="0.72" stroke-width="12"/>
-<rect x="5743" y="2405" width="1788" height="2317" fill="#E5DDE7" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-<rect x="5743" y="2405" width="1788" height="2317" stroke="#806B89" stroke-width="12"/>
-
-<rect x="5737" y="4148" width="240" height="379" fill="#7A4A96"/>
-<rect x="5743" y="4154" width="228" height="367" stroke="#806B89" stroke-opacity="0.72" stroke-width="12"/>
-<rect x="5743" y="7185" width="1788" height="2317" fill="#E5DDE7" stroke="#806B89" stroke-opacity="0.88" stroke-width="14"/>
-<rect x="5743" y="7185" width="1788" height="2317" stroke="#806B89" stroke-width="12"/>
-
-<rect x="5737" y="7424" width="240" height="379" fill="#7A4A96"/>
-<rect x="5743" y="7430" width="228" height="367" stroke="#806B89" stroke-opacity="0.72" stroke-width="12"/>
-</g>
-<defs>
-<clipPath id="clip0_19_8">
-<rect width="7363" height="9312" fill="#F8F5EF"/>
-</clipPath>
-<clipPath id="clip1_19_8">
-<rect width="1815" height="907" fill="#F8F5EF" transform="translate(0 7976)"/>
-</clipPath>
-</defs>
+<svg width="7363" height="13163" viewBox="0 0 7363 13163" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="7363" height="13163" fill="#F8F5EF"/>
+  <g stroke="#806B89" stroke-opacity="0.88" stroke-width="14">
+    <rect width="1741" height="871" transform="translate(16 10415)" fill="#DED4E4"/>
+    <rect width="1815" height="907" transform="translate(28 11568)" fill="#EBDDEA"/>
+    <rect width="2233" height="1706" transform="translate(-286 8388)" fill="#FFE3A3"/>
+    <rect width="5606" height="12155" transform="translate(1757 1008)" fill="#E5DDE7"/>
+    <rect width="2219" height="923" transform="translate(3021 12240)" fill="#E3E4D8"/>
+    <rect x="5771" y="1014" width="1889" height="2502" fill="#E5DDE7"/>
+    <rect x="1757" y="2669" width="1661" height="3991" transform="rotate(-90 1757 2669)" fill="#E5DDE7"/>
+    <rect x="5754" y="3598" width="1889" height="2317" fill="#E5DDE7"/>
+    <rect x="5771" y="5997" width="1788" height="2317" fill="#E5DDE7"/>
+    <rect x="5771" y="8394" width="1614" height="2317" fill="#E5DDE7"/>
+    <rect x="5771" y="10777" width="1788" height="2317" fill="#E5DDE7"/>
+  </g>
+  <g fill="#7A4A96" stroke="#806B89" stroke-opacity="0.72" stroke-width="12">
+    <rect x="5765" y="2670" width="240" height="379"/>
+    <rect x="5060" y="2669" width="240" height="379" transform="rotate(-90 5060 2669)"/>
+    <rect x="5748" y="5254" width="240" height="379"/>
+    <rect x="5765" y="7740" width="240" height="379"/>
+    <rect x="5765" y="8563" width="240" height="379"/>
+    <rect x="5765" y="11016" width="240" height="379"/>
+  </g>
 </svg>
