@@ -2,9 +2,27 @@ from fastapi import APIRouter, Cookie, HTTPException, Request
 from fastapi.responses import JSONResponse
 
 from app.schemas.visitante import VisitanteResposta
-from app.services.visitante_service import COOKIE_NAME, find_or_create_visitante, generate_visitor_identifier, get_visitor_by_id
+from app.config import settings
+from app.services.visitante_service import COOKIE_NAME, find_or_create_visitante, get_visitor_by_id
 
 router = APIRouter(prefix="/visitantes", tags=["visitantes"])
+
+
+def _client_ip(request: Request) -> str:
+    forwarded = request.headers.get("x-forwarded-for", "")
+    if forwarded:
+        return forwarded.split(",", 1)[0].strip()
+    return request.client.host if request.client else "unknown"
+
+
+def _set_visitor_cookie(response: JSONResponse, visitante_id: int):
+    response.set_cookie(
+        key=COOKIE_NAME,
+        value=str(visitante_id),
+        httponly=True,
+        secure=settings.COOKIE_SECURE,
+        samesite=settings.COOKIE_SAMESITE,
+    )
 
 
 @router.post(
@@ -26,10 +44,10 @@ def identificar_visitante(request: Request):
                         "cookie_name": COOKIE_NAME,
                     }
                 )
-                response.set_cookie(key=COOKIE_NAME, value=str(visitante["id_visitante"]), httponly=True, samesite="lax")
+                _set_visitor_cookie(response, visitante["id_visitante"])
                 return response
 
-        ip = request.client.host if request.client else "unknown"
+        ip = _client_ip(request)
         user_agent = request.headers.get("user-agent")
         visitante = find_or_create_visitante(ip, user_agent)
         response = JSONResponse(
@@ -39,7 +57,7 @@ def identificar_visitante(request: Request):
                 "cookie_name": COOKIE_NAME,
             }
         )
-        response.set_cookie(key=COOKIE_NAME, value=str(visitante["id_visitante"]), httponly=True, samesite="lax")
+        _set_visitor_cookie(response, visitante["id_visitante"])
         return response
     except Exception:
         response = JSONResponse(
@@ -47,11 +65,11 @@ def identificar_visitante(request: Request):
                 "message": "Banco de dados indisponível no momento; visitante não foi persistido.",
                 "visitante": {
                     "id_visitante": 0,
-                    "ip": (request.client.host if request.client else "unknown"),
+                    "ip": _client_ip(request),
                     "modelo_dispositivo": request.headers.get("user-agent", "desconhecido")[:50],
                 },
                 "cookie_name": COOKIE_NAME,
             }
         )
-        response.set_cookie(key=COOKIE_NAME, value="0", httponly=True, samesite="lax")
+        _set_visitor_cookie(response, 0)
         return response

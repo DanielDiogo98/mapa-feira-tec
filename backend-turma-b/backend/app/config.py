@@ -17,6 +17,10 @@ class Settings:
         for origin in os.getenv("CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000,http://localhost:8080,null").split(",")
         if origin.strip()
     ]
+    ADMIN_TOKEN: str = os.getenv("ADMIN_TOKEN", "")
+    COOKIE_SECURE: bool = os.getenv("COOKIE_SECURE", "false").lower() == "true"
+    COOKIE_SAMESITE: str = os.getenv("COOKIE_SAMESITE", "lax").lower()
+    API_ROOT_PATH: str = os.getenv("API_ROOT_PATH", "")
 
 
 settings = Settings()

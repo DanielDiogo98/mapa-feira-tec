@@ -11,6 +11,7 @@ app = FastAPI(
     title="Feira Tecnológica - Backend de Votação",
     version="1.0.0",
     description="Backend para o sistema de votação da Feira Tecnológica, conectado diretamente ao MariaDB com SQL puro.",
+    root_path=settings.API_ROOT_PATH,
 )
 
 app.add_middleware(

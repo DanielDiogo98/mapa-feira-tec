@@ -38,9 +38,10 @@ A página pública começa na entrada da escola. O mesmo mapa reúne o pátio, a
 
 As instruções estão em `backend/README.md`. O backend fornece projetos, catálogo de mapas e grafos somente para leitura. As migrações ficam em `database/` e preservam as tabelas atuais.
 
-O sistema de votação e ranking desenvolvido pela Turma B será integrado como
-um serviço complementar. A compatibilidade do banco, os cuidados de segurança
-e a sequência de integração estão registrados em
+O sistema de votação e ranking desenvolvido pela Turma B está preservado em
+`backend-turma-b/` e é executado junto da API PHP. As duas aplicações usam o
+mesmo MySQL e são publicadas pelo mesmo serviço `api`. A origem do código, as
+rotas e os cuidados de manutenção estão registrados em
 `docs/integracao-backend-turma-b.md`.
 
 ## Produção no Railway
@@ -48,7 +49,8 @@ e a sequência de integração estão registrados em
 O repositório usa três serviços no mesmo projeto Railway:
 
 - `web`: site estático e mapa React, construídos pelo `Dockerfile` da raiz;
-- `api`: backend PHP, construído por `backend/Dockerfile`;
+- `api`: backend PHP do mapa e FastAPI da votação, reunidos pelo
+  `backend/Dockerfile`;
 - `mysql`: banco privado do Railway.
 
 O navegador acessa a API por `/api`. O serviço `web` encaminha essas chamadas

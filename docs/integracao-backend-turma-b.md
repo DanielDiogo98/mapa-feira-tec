@@ -4,7 +4,12 @@ Referência oficial da parte de votação e ranking:
 
 - repositório: https://github.com/vitorgoncalvesb/backend-feira
 - tecnologia: FastAPI com MySQL/MariaDB
-- situação da revisão: os quatro testes do repositório passaram em 23/09/2026
+- situação da revisão: integrado ao repositório principal em 23/09/2026; os
+  cinco testes passam, incluindo a proteção das rotas administrativas
+
+O código original foi incorporado com `git subtree` em `backend-turma-b/`.
+Assim, a autoria e a separação do trabalho da Turma B permanecem claras e
+atualizações futuras podem ser comparadas com o repositório de origem.
 
 ## Responsabilidade de cada backend
 
@@ -38,25 +43,21 @@ Por isso, os dois backends podem usar o mesmo MySQL do Railway. O arquivo
 banco de produção, pois ele contém tabelas e dados de exemplo que divergem da
 base oficial usada pelo mapa.
 
-## Ajustes necessários antes da publicação
+## Ajustes aplicados para a publicação
 
-1. Expor a votação pelo mesmo domínio do site. Isso evita que navegadores de
-   celular bloqueiem o cookie do visitante como cookie de terceiros.
-2. Configurar o FastAPI com as variáveis privadas do MySQL do Railway e com a
-   origem pública real do site.
-3. Adaptar a tela de votação. Atualmente ela envia `POST /api/votos` com
-   `{ projectId, action }`, enquanto o backend da Turma B recebe `PUT /votos`
-   com `{ id_projeto }` e exige que o visitante seja identificado antes.
-4. Usar `credentials: "include"` nas chamadas que dependem do cookie e
-   restaurar o voto atual ao abrir a página.
-5. Alimentar a página de ranking com `GET /ranking` e `GET /ranking/podio` no
-   lugar dos valores de demonstração presentes no HTML.
-6. Proteger `PATCH /votacao/periodo` e `POST /votacao/encerrar`. Essas ações
-   administrativas não podem ficar acessíveis a qualquer visitante.
-7. Ajustar a identificação do IP para considerar com segurança o proxy do
-   Railway. O código atual usa diretamente o endereço da conexão.
-8. Criar testes com um banco de teste. Os testes atuais conferem as rotas, mas
-   aceitam respostas de indisponibilidade e não validam um ciclo real de voto.
+1. A API PHP e o FastAPI são executados no mesmo contêiner e publicados por um
+   único gateway.
+2. As duas aplicações usam as mesmas variáveis privadas do MySQL do Railway.
+3. O cookie pode ser configurado como `Secure` e `SameSite=None` em produção.
+4. A identificação do visitante considera o IP encaminhado pelo proxy.
+5. As ações de configurar e encerrar a votação exigem `X-Admin-Token`.
+6. A documentação Swagger está disponível em `/api/voting/docs`.
+
+Ainda será necessário adaptar a tela de votação quando ela receber os projetos
+reais. Atualmente ela envia `POST /api/votos` com `{ projectId, action }`, mas
+o contrato oficial recebe `PUT /api/votos` com `{ id_projeto }` e exige a
+identificação prévia do visitante. O ranking visual também continua com dados
+de demonstração até a equipe autorizar a alteração dessa tela.
 
 ## Sequência de integração
 
@@ -85,4 +86,3 @@ base oficial usada pelo mapa.
 | Ranking atual | `GET /ranking` |
 | Pódio | `GET /ranking/podio` |
 | Resultado final | `GET /ranking/resultado-final` |
-

@@ -28,3 +28,8 @@ def test_votos_route_requires_visitor_cookie():
 def test_votacao_status_route():
     response = client.get("/votacao/status")
     assert response.status_code == 200
+
+
+def test_admin_routes_are_closed_without_configuration():
+    response = client.post("/votacao/encerrar")
+    assert response.status_code == 503

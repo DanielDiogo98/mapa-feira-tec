@@ -1,12 +1,13 @@
 from datetime import datetime
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Depends, HTTPException
 
 from app.database.connection import execute_query, execute_write
 from app.database.queries.resultado_queries import INSERT_RESULTADO, SELECT_RESULTADO_BY_PROJETO_E_DATA
 from app.database.queries.votacao_queries import SELECT_PERIODO_ATUAL, SELECT_PERIODO_BY_ID
 from app.database.queries.voto_queries import SELECT_RANKING_ATIVO
 from app.schemas.votacao import AtualizarPeriodoPayload, PeriodoStatusResposta
+from app.security import require_admin_token
 from app.services.votacao_service import create_periodo, get_status_payload, update_periodo
 
 router = APIRouter(prefix="/votacao", tags=["votacao"])
@@ -25,7 +26,7 @@ def status_votacao():
 
 
 @router.patch("/periodo", response_model=dict, summary="Atualiza o período de votação ou cria o primeiro período, caso ainda não exista.")
-def patch_periodo(payload: AtualizarPeriodoPayload):
+def patch_periodo(payload: AtualizarPeriodoPayload, _admin=Depends(require_admin_token)):
     periodo = execute_query(SELECT_PERIODO_ATUAL, fetch="one")
     try:
         if not periodo:
@@ -48,7 +49,7 @@ def patch_periodo(payload: AtualizarPeriodoPayload):
 
 
 @router.post("/encerrar", summary="Encerra a votação, calcula o ranking final e salva o resultado definitivo.")
-def encerrar_votacao():
+def encerrar_votacao(_admin=Depends(require_admin_token)):
     periodo = execute_query(SELECT_PERIODO_ATUAL, fetch="one")
     if not periodo:
         raise HTTPException(status_code=404, detail="Nenhum período de votação encontrado.")

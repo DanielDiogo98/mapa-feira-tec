@@ -21,3 +21,23 @@ Para importar um JSON produzido pelo editor:
 Ao importar o segundo dos dois grafos, o script reconhece `lib/map-portals.json` e grava automaticamente a passagem da escada. O arquivo `database/mapa-portais-seed.sql` permite repetir somente essa etapa quando necessário.
 
 O endpoint é somente leitura. Isso evita que qualquer visitante altere os caminhos do mapa; a publicação de grafos continua sendo uma tarefa administrativa.
+
+## Votação e ranking
+
+O serviço publicado também executa o backend FastAPI da Turma B, preservado em
+`backend-turma-b/`. O gateway interno encaminha estas rotas para ele:
+
+- `POST /api/visitantes/identificar`
+- `GET /api/votos/meu-voto`
+- `PUT /api/votos`
+- `DELETE /api/votos`
+- `GET /api/votacao/status`
+- `PATCH /api/votacao/periodo` (requer `X-Admin-Token`)
+- `POST /api/votacao/encerrar` (requer `X-Admin-Token`)
+- `GET /api/ranking`
+- `GET /api/ranking/podio`
+- `GET /api/ranking/resultado-final`
+- documentação interativa em `/api/voting/docs`
+
+As variáveis adicionais de produção são `CORS_ORIGINS`, `COOKIE_SECURE`,
+`COOKIE_SAMESITE`, `API_ROOT_PATH` e `ADMIN_TOKEN`.
