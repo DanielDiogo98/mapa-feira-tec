@@ -39,6 +39,10 @@ if ((int) $columnExists->fetchColumn() === 0) {
     );
 }
 
+// O catálogo oficial possui descrições maiores que o limite de 500 caracteres
+// usado pelo banco inicial da votação.
+$pdo->exec('ALTER TABLE projetos MODIFY COLUMN descricao TEXT NULL');
+
 $upsert = $pdo->prepare(
     <<<'SQL'
 INSERT INTO projetos (id_projeto, nome_projeto, descricao, turno, catalogo_publico)
