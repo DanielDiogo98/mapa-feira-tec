@@ -1,7 +1,7 @@
 const ACCESS_PAGE =
   '/pages/Tipo_visitante/tipo_visitante.html?erro=acesso-nao-configurado';
 
-export function portalRedirect(variableName: string, requestUrl: string) {
+export function portalRedirect(variableName: string) {
   const configuredUrl = process.env[variableName]?.trim();
 
   if (configuredUrl) {
@@ -15,5 +15,8 @@ export function portalRedirect(variableName: string, requestUrl: string) {
     }
   }
 
-  return Response.redirect(new URL(ACCESS_PAGE, requestUrl), 307);
+  return new Response(null, {
+    status: 307,
+    headers: { Location: ACCESS_PAGE },
+  });
 }
