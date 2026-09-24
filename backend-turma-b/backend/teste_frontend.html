@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste do Backend de Votação</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+        background: #f4f7fb;
+        color: #1a1a1a;
+      }
+
+      h1 {
+        margin-bottom: 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      input, button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 6px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #ccd6e6;
+        font-size: 14px;
+      }
+
+      button {
+        background: #2f6bed;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      button.secondary {
+        background: #4d5d75;
+      }
+
+      button.danger {
+        background: #d64545;
+      }
+
+      pre {
+        margin-top: 22px;
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 16px;
+        border-radius: 10px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        min-height: 220px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Teste do Backend de Votação</h1>
+
+    <div class="grid">
+      <section class="card">
+        <label>
+          URL da API
+          <input id="apiUrl" value="http://localhost:8000" />
+        </label>
+        <button id="identifyBtn">Identificar visitante</button>
+        <button id="statusBtn" class="secondary">Status da votação</button>
+        <button id="myVoteBtn" class="secondary">Meu voto</button>
+        <button id="rankingBtn" class="secondary">Ranking</button>
+        <button id="podioBtn" class="secondary">Pódio</button>
+        <button id="finalizeBtn" class="danger">Encerrar votação</button>
+      </section>
+
+      <section class="card">
+        <label>
+          ID do projeto
+          <input id="projectId" type="number" value="1" min="1" />
+        </label>
+        <button id="voteBtn">Registrar voto</button>
+        <button id="removeVoteBtn" class="danger">Remover voto</button>
+      </section>
+
+      <section class="card">
+        <label>
+          Data de início
+          <input id="startDate" type="datetime-local" />
+        </label>
+        <label>
+          Data de encerramento
+          <input id="endDate" type="datetime-local" />
+        </label>
+        <label>
+          Votação aberta?
+          <input id="andamento" type="checkbox" checked />
+        </label>
+        <button id="savePeriodBtn">Salvar período</button>
+      </section>
+    </div>
+
+    <pre id="output">Aguardando ação...</pre>
+
+    <script>
+      const output = document.getElementById('output');
+      const apiUrlInput = document.getElementById('apiUrl');
+
+      function log(message) {
+        output.textContent = typeof message === 'string' ? message : JSON.stringify(message, null, 2);
+      }
+
+      function getApiUrl() {
+        return apiUrlInput.value.trim() || 'http://localhost:8000';
+      }
+
+      async function request(path, options = {}) {
+        const response = await fetch(`${getApiUrl()}${path}`, {
+          credentials: 'include',
+          ...options,
+          headers: {
+            'Content-Type': 'application/json',
+            ...(options.headers || {})
+          }
+        });
+
+        const text = await response.text();
+        let data = null;
+
+        try {
+          data = text ? JSON.parse(text) : null;
+        } catch (error) {
+          data = text;
+        }
+
+        if (!response.ok) {
+          throw new Error(JSON.stringify(data, null, 2));
+        }
+
+        return data;
+      }
+
+      document.getElementById('identifyBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/visitantes/identificar', { method: 'POST' });
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao identificar visitante');
+        }
+      });
+
+      document.getElementById('statusBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/votacao/status');
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao consultar status da votação');
+        }
+      });
+
+      document.getElementById('myVoteBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/votos/meu-voto');
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao consultar meu voto');
+        }
+      });
+
+      document.getElementById('rankingBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/ranking');
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao consultar ranking');
+        }
+      });
+
+      document.getElementById('podioBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/ranking/podio');
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao consultar pódio');
+        }
+      });
+
+      async function ensureVisitorSession() {
+        try {
+          const data = await request('/visitantes/identificar', { method: 'POST' });
+          log('Visitante identificado: ' + JSON.stringify(data, null, 2));
+          return data;
+        } catch (error) {
+          log('Não foi possível identificar visitante. O cookie pode não estar sendo salvo em um arquivo local. Use HTTP local em vez de file://');
+          throw error;
+        }
+      }
+
+      document.getElementById('voteBtn').addEventListener('click', async () => {
+        try {
+          const idProjeto = Number(document.getElementById('projectId').value);
+          const visitorCookie = document.cookie.includes('visitante_id=');
+          if (!visitorCookie) {
+            await ensureVisitorSession();
+          }
+
+          const data = await request('/votos', {
+            method: 'PUT',
+            body: JSON.stringify({ id_projeto: idProjeto })
+          });
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao registrar voto');
+        }
+      });
+
+      window.addEventListener('load', async () => {
+        try {
+          const visitorCookie = document.cookie.includes('visitante_id=');
+          if (!visitorCookie) {
+            await ensureVisitorSession();
+          }
+        } catch (error) {
+          log('Identificação automática falhou. Use a página via HTTP local para que o cookie seja salvo corretamente.');
+        }
+      });
+
+      document.getElementById('removeVoteBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/votos', { method: 'DELETE' });
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao remover voto');
+        }
+      });
+
+      document.getElementById('finalizeBtn').addEventListener('click', async () => {
+        try {
+          const data = await request('/votacao/encerrar', { method: 'POST' });
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao encerrar votação');
+        }
+      });
+
+      document.getElementById('savePeriodBtn').addEventListener('click', async () => {
+        try {
+          const dataInicio = document.getElementById('startDate').value;
+          const dataEncerramento = document.getElementById('endDate').value;
+
+          if (!dataInicio || !dataEncerramento) {
+            throw new Error('Preencha as datas de início e encerramento.');
+          }
+
+          const payload = {
+            data_inicio: new Date(dataInicio).toISOString().slice(0, 19).replace('T', ' '),
+            data_encerramento: new Date(dataEncerramento).toISOString().slice(0, 19).replace('T', ' '),
+            andamento: document.getElementById('andamento').checked
+          };
+
+          const data = await request('/votacao/periodo', {
+            method: 'PATCH',
+            body: JSON.stringify(payload)
+          });
+          log(data);
+        } catch (error) {
+          log(error.message || 'Erro ao atualizar período');
+        }
+      });
+    </script>
+  </body>
+</html>
