@@ -15,13 +15,6 @@ async function proxy(request: Request, context: RouteContext) {
   const incoming = new URL(request.url);
   const target = `${upstream}/${path.map(encodeURIComponent).join('/')}${incoming.search}`;
 
-  // O runtime local do mapa não confia na cadeia TLS do domínio gerado pelo
-  // Railway. No Railway, deixe o navegador seguir o redirecionamento: ele usa
-  // a cadeia normal do sistema e a API continua protegida pelas regras CORS.
-  if (new URL(upstream).hostname.endsWith('.up.railway.app')) {
-    return Response.redirect(target, 307);
-  }
-
   const headers = new Headers(request.headers);
   headers.delete('host');
   headers.delete('content-length');
