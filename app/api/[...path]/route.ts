@@ -16,8 +16,23 @@ async function proxy(request: Request, context: RouteContext) {
   const target = `${upstream}/${path.map(encodeURIComponent).join('/')}${incoming.search}`;
 
   const headers = new Headers(request.headers);
-  headers.delete('host');
-  headers.delete('content-length');
+  // Cabeçalhos de transporte pertencem à conexão entre o navegador e o
+  // Railway. Repassá-los para outra conexão pode fazer o fetch do Node falhar.
+  for (const header of [
+    'host',
+    'connection',
+    'content-length',
+    'transfer-encoding',
+    'upgrade',
+    'keep-alive',
+    'proxy-authenticate',
+    'proxy-authorization',
+    'te',
+    'trailer',
+  ]) {
+    headers.delete(header);
+  }
+  headers.set('accept-encoding', 'identity');
 
   try {
     const response = await fetch(target, {
@@ -37,7 +52,8 @@ async function proxy(request: Request, context: RouteContext) {
       status: response.status,
       headers: outgoingHeaders,
     });
-  } catch {
+  } catch (error) {
+    console.error('Falha ao acessar a API do site:', error);
     return Response.json(
       { error: 'A API está temporariamente indisponível.' },
       { status: 502 },
