@@ -1,0 +1,20 @@
+Options -Indexes
+RewriteEngine On
+
+# Keep old bookmarks working while the main domain becomes the single site.
+RewriteCond %{HTTP_HOST} ^sistema\.etecmcmexpo\.com\.br(?::[0-9]+)?$ [NC]
+RewriteRule ^(.*)$ https://etecmcmexpo.com.br/$1 [R=301,L]
+
+# New application files live in their own folder. Physical registration files
+# keep their original paths and contents on the main domain.
+RewriteRule ^\.mcm-private(?:/|$) - [F,L]
+RewriteRule ^api/(health|projects|maps(?:/[a-z0-9-]+/graph)?|portals|ranking(?:/podio|/resultado-final)?|votacao/(?:status|periodo|encerrar)|visitantes/identificar|votos(?:/meu-voto)?)$ mcm-api.php?route=$1 [QSA,L]
+RewriteRule ^api/voting/(.*)$ mcm-api.php?route=$1 [QSA,L]
+
+RewriteRule ^$ mcm-public/index.html [L]
+RewriteRule ^(?:mapa|editor(?:/mapas|/patio|/bloco-b-andar-[12])?)/?$ mcm-public/map-app.html [L]
+RewriteCond %{DOCUMENT_ROOT}/mcm-public/$1 -f
+RewriteRule ^(.*)$ mcm-public/$1 [L]
+
+RewriteRule ^entrar/aluno/?$ /3F/aluno.html [R=307,L]
+RewriteRule ^entrar/professor/?$ /3F/professor/login.php [R=307,L]

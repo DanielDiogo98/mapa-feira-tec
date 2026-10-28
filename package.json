@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "build:hostinger": "vite build --config vite.hostinger.config.ts && node scripts/package-hostinger.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "start:railway": "node scripts/start-railway.mjs",
     "db:build": "node scripts/build-database-init.mjs",

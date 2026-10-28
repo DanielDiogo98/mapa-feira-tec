@@ -64,6 +64,12 @@ rotas e os cuidados de manutenção estão registrados em
 
 ## Produção no Railway
 
+Para a publicação atual em **Hostinger Single**, consulte
+[`docs/hostinger.md`](docs/hostinger.md). Use `npm run build:hostinger` para
+gerar o pacote PHP/HTML com o mapa React estático. O site completo não
+depende da Railway nesse modo. A configuração abaixo permanece como
+referência da implantação anterior.
+
 O repositório usa três serviços no mesmo projeto Railway:
 
 - `web`: site estático e mapa React, construídos pelo `Dockerfile` da raiz;

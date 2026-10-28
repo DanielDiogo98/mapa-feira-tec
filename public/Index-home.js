@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
     applyMilestone(distance);
   }
 
-  updateCountdown();
   const countdownInterval = setInterval(updateCountdown, 1000);
+  updateCountdown();
 
   /* =======================================================
      2. MENU HAMBÚRGUER ANIMADO (3 barras → X)
